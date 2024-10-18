@@ -1,8 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-  .bebasNeue {
-    font-family: var(--font-bebasNeue);
-  }
-  
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.bebasNeue {
+  font-family: var(--font-bebasNeue);
+}
+
+body {
+  background-color: #FAFBFD;
+}
