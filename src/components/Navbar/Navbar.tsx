@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Navbar: FC = () => {
     return (
-        <div className='fixed top-0 w-full flex justify-between px-20 h-[9rem] bg-opacity-40'>
+        <div className='fixed bg-[#FAFBFD] top-0 z-[10000] w-full flex justify-between px-20 h-[9rem] bg-opacity-80'>
 
             {/* left section */}
             <section className=' flex items-center'>
