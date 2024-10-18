@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Navbar: FC = () => {
     return (
-        <div className='flex justify-between px-20 h-[9rem]'>
+        <div className='fixed top-0 w-full flex justify-between px-20 h-[9rem] bg-opacity-40'>
 
             {/* left section */}
             <section className=' flex items-center'>
@@ -17,7 +17,10 @@ const Navbar: FC = () => {
             {/* right section */}
             <section className=' w-auto flex items-center'>
                 <ul className='flex gap-10'>
-                    <li className=' text-primary text-xl tracking-widest py-3'>
+                    <li className=' text-primary text-xl tracking-wider py-3'>
+                        <Link href='/'>Home</Link>
+                    </li>
+                    <li className=' text-primary text-xl tracking-wider py-3'>
                         <Link href='./about'>About</Link>
                     </li>
                     <li className='w-full bg-blue-dark text-white text-base px-5 py-3 hover:bg-blue-light'>
