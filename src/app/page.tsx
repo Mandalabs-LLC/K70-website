@@ -1,10 +1,9 @@
-
+import Herosection from "@/components/Hero-section/Herosection";
 
 export default function Home() {
   return (
-   <div className="">
-    Hello
-    <p className="bebasNeue ">This is HomePage</p>
-   </div>
+   <>
+   <Herosection/>
+   </>
   );
 }

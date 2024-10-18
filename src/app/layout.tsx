@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue } from 'next/font/google';
 import { Be_Vietnam_Pro } from 'next/font/google';
 import "./globals.css";
+import Navbar from "@/components/Navbar/Navbar";
 
 const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${beVietnamPro.className} antialiased`}
       >
+        <Navbar/>
         {children}
       </body>
     </html>
