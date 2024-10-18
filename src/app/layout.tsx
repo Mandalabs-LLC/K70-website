@@ -3,6 +3,7 @@ import { Bebas_Neue } from 'next/font/google';
 import { Be_Vietnam_Pro } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
