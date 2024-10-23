@@ -16,7 +16,7 @@ interface GridItem {
 
 export const gridData: GridItem[] = [
     {
-        event: "place in world",
+        event: "place in the world",
         link: "#",
         photo: placeinworld
     },

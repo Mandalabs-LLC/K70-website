@@ -1,11 +1,11 @@
-import GridSection from "@/components/Grid-section/GridSection";
-import Herosection from "@/components/Hero-section/Herosection";
+import GridSection from "@/components/GridSection/GridSection";
+import HeroSection from "@/components/HeroSection/HeroSection";
 
 export default function Home() {
   return (
-   <>
-   <Herosection/>
-   <GridSection/>
-   </>
+    <>
+      <HeroSection/>
+      <GridSection/>
+    </>
   );
 }
