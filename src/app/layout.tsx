@@ -16,7 +16,6 @@ const beVietnamPro = Be_Vietnam_Pro({
   weight: ['400', '700'],
 });
 
-
 export const metadata: Metadata = {
   title: "K70",
   description: "70 years completion of climbing",
@@ -30,11 +29,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${beVietnamPro.className} antialiased`}
+        className={`${bebasNeue.variable} ${beVietnamPro.className} antialiased flex flex-col min-h-screen`}
       >
-        <Navbar/>
-        {children}
-        <Footer/>
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Main content */}
+        <main className="flex-grow mt-[9rem]">
+          {children}
+        </main>
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );
