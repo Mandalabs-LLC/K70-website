@@ -18,6 +18,9 @@ const config: Config = {
           DEFAULT: '#1B1F2A', // default black text
           light: '#2D4249',   // greyish-blue 
         },
+        white:{
+          DEFAULT:'#FAFBFD',
+        }
       },
     },
   },
