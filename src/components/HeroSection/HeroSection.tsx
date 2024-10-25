@@ -4,11 +4,10 @@ import threepeople from '../../../public/images/threepeople.jpg';
 import group from '../../../public/images/group.jpg';
 import map from '../../../public/images/map.jpg';
 import background from '../../../public/images/background.jpg';
-// import K70_video from '../../../public/video/K70_video.mp4';
 
-const Herosection: FC = () => {
+const HeroSection: FC = () => {
     return (
-        <div className='relative h-[684px] top-[9rem]'>
+        <div className='relative h-[684px]'>
             <Image src={background} alt='K70_mountain' className='w-full h-full object-cover opacity-60' />
 
             {/* left section */}
@@ -29,4 +28,4 @@ const Herosection: FC = () => {
     )
 }
 
-export default Herosection
+export default HeroSection
