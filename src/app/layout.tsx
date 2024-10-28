@@ -35,7 +35,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* Main content */}
-        <main className="flex-grow mt-[4rem] md:mt-[9rem]">
+        <main className="flex-grow">
           {children}
         </main>
 

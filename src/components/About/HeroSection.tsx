@@ -8,14 +8,17 @@ const HeroSection: FC = () => {
             <Image
                 src={background}
                 alt='Hero_Section_Images'
-                className=' -z-40 fixed w-full h-[100vh] bottom-0 object-cover'
+                className=' -z-40 fixed w-full h-[100vh]  bottom-0 object-cover'
                 loading='lazy'
             />
-            <div className='flex w-full h-auto bg-[#F5F4F3] opacity-95 pl-20 py-20 relative overflow-x-hidden overflow-y-hidden'>
-                <div className='w-[64%] space-y-[48px]'>
-                    <h2 className='text-6xl bebasNeue tracking-widest bg-clip-text text-transparent bg-[url("/images/clipImage.png")] bg-cover'>
+            <div className='flex w-full md:h-[900px] bg-[#F5F4F3] opacity-95 px-4 md:pl-20 py-20 relative overflow-x-hidden overflow-y-hidden'>
+                <div className='relative w-full md:w-[64%] space-y-6 md:space-y-[48px] top-[25px] md:top-[144px]'>
+                    <h2 className='text-4xl md:text-6xl bebasNeue tracking-widest bg-clip-text text-transparent bg-[url("/images/clipImage.png")] bg-cover'>
                         70 years of <br /> Majestic Mountain
                     </h2>
+
+                    <Image src={background} alt='k70' className='block md:hidden h-[250px] w-full object-cover' />
+
                     <p className='text-lg tracking-wider text-primary-light'>
                         Mount Kanchenjunga, standing at an altitude of
                         <span className='text-black font-semibold'>8,586 meters (28,169 feet)</span> is the <span className='text-black font-semibold'>third-highest peak</span> in the world.
@@ -31,7 +34,7 @@ const HeroSection: FC = () => {
                             We aim to raise awareness and encourage visitors to explore this stunning area, supporting local communities while protecting the environment.</p>
                     </div>
                 </div>
-                <div className='w-[430px] absolute right-0 -top-[15rem]  h-[1084px] -rotate-[15deg]'>
+                <div className='hidden md:block w-[430px] absolute right-4 -top-[5rem]  h-[1080px] -rotate-[15deg] '>
                     <p className='text-[#FAFBFD] bebasNeue text-6xl tracking-widest  left-14 text-center absolute top-[15rem] rotate-[15deg]'>8,586 m</p>
                     <Image src={background} alt='k70' className='h-full w-[319px] object-cover' />
                 </div>

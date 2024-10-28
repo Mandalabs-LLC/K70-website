@@ -6,17 +6,32 @@ import about3 from '../../../public/images/partners.jpg';
 
 const OurMission: FC = () => {
     return (
-        <div className='w-full h-auto bg-[#FAFBFD] px-20 py-[6.25rem]'>
-            <h1 className='bebasNeue text-6xl tracking-widest uppercase bg-gradient-to-t from-[#1B588A] to-[#071724] bg-clip-text text-transparent w-full text-center'>Our Mission</h1>
-            <div className='w-full mt-[88px] flex gap-10 justify-start items-center'>
+        <div className='w-full h-auto bg-[#FAFBFD] px-4 py-10 md:px-20 md:py-[6.25rem] 2xl:px-[6.5rem]'>
+            <h1 className='bebasNeue text-4xl md:text-6xl tracking-widest uppercase bg-gradient-to-t from-[#1B588A] to-[#071724] bg-clip-text text-transparent w-full text-center'>Our Mission</h1>
+            <div className='w-full mt-4 md:mt-[88px] flex flex-col md:flex-row gap-10 2xl:gap-20 justify-start items-center'>
 
-                <div className='w-[490px] h-[463px] relative'>
-                    <Image src={about3} alt='k70' className='w-[285px] h-[240px] object-cover absolute top-0 right-10' />
-                    <Image src={about1} alt='k70' className='w-[285px] h-[240px] object-cover absolute left-0 top-[133px]' />
-                    <Image src={about2} alt='k70' className='w-[285px] h-[240px] object-cover absolute right-0 bottom-0' />
+                <div className='w-full h-[300px] md:w-[490px] md:h-[463px] relative'>
+                    <Image src={about3} alt='k70' className='w-[180px] h-[154px] md:w-[285px] md:h-[240px] object-cover absolute top-[12px] right-[26px] md:top-0 md:right-10' />
+                    <Image src={about1} alt='k70' className='w-[180px] h-[154px] md:w-[285px] md:h-[240px] object-cover absolute left-[20px] top-[102px]  md:left-0 md:top-[133px]' />
+                    <Image src={about2} alt='k70' className='w-[180px] h-[154px] md:w-[285px] md:h-[240px] object-cover absolute bottom-[12px] right-[6px] md:right-0 md:bottom-0' />
                 </div>
 
-                <div className='w-[820px]'>
+                <div className='flex flex-col gap-5 justify-center items-center w-full h-auto mb-20 md:hidden'>
+                    <div className='py-5 space-y-5 border-b border-[#93B5C1]'>
+                        <h1 className='text-black text-2xl font-semibold tracking-wider'>Honoring History</h1>
+                        <p className='text-[#2D4249]'>The K70 event hopes to celebrate the legacy that has inspired many through special events hosted in Nepal, United Kingdom.</p>
+                    </div>
+                    <div className='py-5 space-y-5 border-b border-[#93B5C1]'>
+                        <h1 className='text-black text-2xl font-semibold tracking-wider'>Promoting Sustainable Tourism</h1>
+                        <p className='text-[#2D4249]'>Developing a new model of tourism that prioritizes environmental preservation and supports local communities.</p>
+                    </div>
+                    <div className='py-5 space-y-5 border-b border-[#93B5C1]'>
+                        <h1 className='text-black text-2xl font-semibold tracking-wider'>Raising Awareness</h1>
+                        <p className='text-[#2D4249]'>Encouraging visitors to explore the Kangchenjunga region responsibly and contribute to ongoing conservation efforts.</p>
+                    </div>
+
+                </div>
+                <div className='hidden md:block w-[820px] 2xl:w-[1100px]'>
 
                     <div className='relative group'>
                         <p className='text-4xl tracking-widest font-medium text-black py-10 border-b border-[#93B5C1] cursor-default'>
