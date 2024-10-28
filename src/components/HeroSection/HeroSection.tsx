@@ -11,17 +11,17 @@ const HeroSection: FC = () => {
             <Image src={background} alt='K70_mountain' className='w-full h-full object-cover opacity-60' />
 
             {/* left section */}
-            <section className='absolute top-[247px] left-16  w-[920px]'>
-                <p className='text-primary bebasNeue text-5xl tracking-[0.5rem] leading-[4.5rem]'>Celebrating a last legacy and working towards a promising future for Kanchenjunga </p>
+            <section className='absolute top-[120px] md:top-[247px] md:left-16 w-full md:w-[920px]'>
+                <p className='text-primary bebasNeue px-5 md:px-0 text-2xl md:text-5xl tracking-widest md:tracking-[0.5rem] leading-1 md:leading-[4.5rem]'>Celebrating a last legacy and working towards a promising future for Kanchenjunga </p>
             </section>
 
             {/* right section */}
             <section className=' '>
-                <Image src={group} alt='group' className='absolute right-[188px] top-[43px] w-[359px] h-[255px] border-8 border-white' />
-                <Image src={map} alt='map' className='absolute right-[85px] top-[220px] w-[359px] h-[255px] border-8 border-white z-50' />
-                <Image src={threepeople} alt='threepeople' className='absolute right-[153px] bottom-[42px] w-[359px] h-[255px] border-8 border-white' />
-                <div className='absolute right-[420px] top-[195px] w-[451px] h-[328px] border-8 border-white flex justify-center items-center z-50'>
-                    <video src='/video/K70_video.mp4' autoPlay muted loop  className='-z-10 object-cover h-[320px]' />
+                <Image src={group} alt='group' className='absolute left-[20px] bottom-[106px] md:right-[188px] md:top-[43px] w-[200px] h-[123px] md:w-[359px] md:h-[255px] border-8 border-white' />
+                <Image src={map} alt='map' className='absolute right-[32px] bottom-[48px] md:right-[85px] md:top-[220px] w-[200px] h-[123px] md:w-[359px] md:h-[255px] border-8 border-white z-50' />
+                <Image src={threepeople} alt='threepeople' className='absolute right-[20px] bottom-[126px] md:right-[153px] md:bottom-[42px] w-[200px] h-[123px] md:w-[359px] md:h-[255px] border-8 border-white' />
+                <div className='absolute left-[35px] top-[250px] h-[223px] w-[313px]  md:right-[420px] md:top-[195px] md:w-[451px] md:h-[328px] border-8 border-white flex justify-center items-center z-50'>
+                    <video src='/video/K70_video.mp4' autoPlay muted loop  className='-z-10 object-cover h-[210px] md:h-[320px]' />
                 </div>
             </section>
         </div>
