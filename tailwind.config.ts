@@ -8,6 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '480px',       // Extra small devices
+        'sm': '640px',       // Small devices
+        'md': '820px',       // Medium devices
+        'lg': '1024px',      // Large devices
+        'xl': '1280px',      // Extra large devices
+        '2xl': '1596px',     // 2x extra large devices
+        '3xl': '1920px',     // Large screen laptops
+        '4xl': '2560px',     // Larger monitors
+        '5xl': '3840px',     // 4K monitors
+      },
       colors:{
         blue: {
           DEFAULT: '#EAEFFAE5', //footer bg-color

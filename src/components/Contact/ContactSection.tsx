@@ -5,16 +5,16 @@ import ContactForm from './ContactForm';
 
 const ContactSection: FC = () => {
     return (
-        <div className='h-[920px] w-full  relative flex justify-center items-center'>
+        <div className='h-[1176px] md:h-[920px] w-full  relative flex justify-center items-center'>
             <Image src={ContactImage} alt='k70' className='h-full w-full object-cover opacity-45 absolute' />
-            <div className='flex absolute w-full justify-center items-center gap-20 py-[100px] px-20'>
-                <div className='w-1/2 '>
+            <div className='flex flex-col-reverse md:flex-row absolute w-full justify-center items-center gap-10 md:gap-20 px-5 py-10 md:py-[100px] md:px-20'>
+                <div className='w-full md:w-1/2 '>
                     <ContactForm />
                 </div>
-                <div className='w-1/2 h-full flex flex-col justify-center items-center gap-20'>
-                    <p className='bebasNeue text-blue-dark uppercase tracking-[5px] text-6xl text-center leading-[90px]'>“ Climbers are the ones who dare to reach beyond the skies. ”</p>
+                <div className='w-full md:w-1/2 h-full flex flex-col justify-center items-center gap-5 md:gap-20'>
+                    <p className='bebasNeue text-blue-dark uppercase tracking-[5px] text-4xl md:text-6xl text-center leading-[60px] md:leading-[90px]'>“ Climbers are the ones who dare to reach beyond the skies. ”</p>
                     <div className='w-full flex justify-end'>
-                        <p className='uppercase text-black bebasNeue tracking-[0.25rem] text-4xl'>- name</p>
+                        <p className='uppercase text-black bebasNeue tracking-[0.25rem] text-2xl md:text-4xl'>- name</p>
                     </div>
                 </div>
             </div>
