@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="w-full py-10 px-20 bg-blue-dark text-white tracking-wider">
+        <form onSubmit={handleSubmit} className="w-full py-10 px-10 md:px-20 bg-blue-dark text-white tracking-wider">
             <p className=' bebasNeue uppercase tracking-[0.25rem] text-4xl text-center pb-10'>Get In Touch</p>
             <div className="mb-5">
                 <label htmlFor="fullName">
