@@ -1,0 +1,109 @@
+version: 2.1
+
+executors:
+  default:
+    docker:
+      - image: cimg/base:2024.02
+  bun_node:
+    docker:
+      - image: imbios/bun-node:20-slim
+
+
+jobs:
+  build:
+    executor: bun_node
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "bun.lockb" }}
+
+      - run:
+          name: Install dependencies
+          command: bun install
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "bun.lockb" }}
+          paths:
+            - ./node_modules
+
+      - run:
+          name: Build
+          command: bun run build
+
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - .next/
+
+
+  package:
+    executor: default
+    parameters:
+        environment:
+            type: string
+            default: prod
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - .env
+            - .env.production
+            - docker/<< parameters.environment >>/*
+            - public/
+            - scripts/
+
+
+  deploy:
+    executor: default
+    parameters:
+      host:
+        type: string
+        default: $DEV_HOST
+      deploy-script:
+        type: string
+        default: ./scripts/ssh-deploy-qa.sh
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Docker ssh Setup
+          command: |
+            mkdir -p ~/.ssh
+            [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+      - run:
+          name: Login to the server and deploy
+          command: |
+            tar -czf /tmp/webapp.tar.gz .
+            ls -a
+            ssh << parameters.host >> 'bash -s' < ./scripts/ssh-setup.sh
+            scp /tmp/webapp.tar.gz << parameters.host >>:~/mdlabs/
+            ssh << parameters.host >> 'bash -s' < << parameters.deploy-script >>
+
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - main
+
+  deploy-web-alpha:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - main
+      - package:
+          environment: prod
+          requires:
+            - build
+      - deploy:
+          deploy-script: ./scripts/ssh-deploy-qa.sh
+          requires:
+            - package
