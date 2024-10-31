@@ -47,12 +47,7 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - .env
-            - .env.production
             - docker/<< parameters.environment >>/*
-            - public/
-            - scripts/
-
 
   deploy:
     executor: default
