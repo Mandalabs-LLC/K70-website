@@ -78,7 +78,7 @@ jobs:
             tar -czf /tmp/webapp.tar.gz .
             ls -a
             ssh << parameters.host >> 'bash -s' < ./scripts/ssh-setup.sh
-            scp /tmp/webapp.tar.gz << parameters.host >>:~/mdlabs/
+            scp /tmp/webapp.tar.gz << parameters.host >>:~/k70/
             ssh << parameters.host >> 'bash -s' < << parameters.deploy-script >>
 
 
