@@ -6,45 +6,42 @@ executors:
       - image: cimg/base:2024.02
   bun_node:
     docker:
-      - image: imbios/bun-node:18-slim
+      - image: imbios/bun-node:20-slim
+
 
 jobs:
   build:
     executor: bun_node
-    parameters:
-      build-mode:
-        type: string
-        default: build:qa
     steps:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "bun.lockb" }}
+
       - run:
-          name: Test If we have a valid build or not
-          command: |
-            pwd
-            bun install
-            bun run << parameters.build-mode >>
+          name: Install dependencies
+          command: bun install
+
       - save_cache:
           key: dependency-cache-{{ checksum "bun.lockb" }}
           paths:
             - ./node_modules
+
+      - run:
+          name: Build
+          command: bun run build
+
       - persist_to_workspace:
           root: ./
           paths:
-            - .env
-            - .env.development
-            - .env.production
             - .next/
-            - public/
-            - scripts/
+
 
   package:
     executor: default
     parameters:
-      environment:
-        type: string
-        default: dev
+        environment:
+            type: string
+            default: prod
     steps:
       - checkout
       - persist_to_workspace:
@@ -76,13 +73,12 @@ jobs:
             tar -czf /tmp/webapp.tar.gz .
             ls -a
             ssh << parameters.host >> 'bash -s' < ./scripts/ssh-setup.sh
-            scp /tmp/webapp.tar.gz << parameters.host >>:~/webapp/
+            scp /tmp/webapp.tar.gz << parameters.host >>:~/k70/
             ssh << parameters.host >> 'bash -s' < << parameters.deploy-script >>
 
 
-
-# With package
 workflows:
+  version: 2
   test:
     jobs:
       - build:
@@ -90,39 +86,19 @@ workflows:
             branches:
               ignore:
                 - main
-                - prod
 
-  deploy-webapp-alpha:
+  deploy-web-alpha:
     jobs:
       - build:
-          build-mode: build:qa
           filters:
             branches:
               only:
                 - main
       - package:
-          environment: dev
-          requires:
-            - build
-      - deploy:
-          deploy-script: ./scripts/ssh-deploy-qa.sh
-          requires:
-            - package
-
-  deploy-webapp-prod:
-    jobs:
-      - build:
-          build-mode: build:prod
-          filters:
-            branches:
-              only:
-                - prod
-      - package:
           environment: prod
           requires:
             - build
       - deploy:
-          deploy-script: ./scripts/ssh-deploy-prod.sh
-          host: $PROD_HOST
+          deploy-script: ./scripts/ssh-deploy-qa.sh
           requires:
             - package
