@@ -4,6 +4,6 @@ cd k70
 
 # build the image
 docker build -f docker/prod/Dockerfile -t k70-web-app:latest .
-docker rm -f k70-web-app || true
+docker container rm -f k70-web-app || true
 docker image prune -f
 docker run -d --network frontend -e "VIRTUAL_HOST1=qa.kanchenjunga70.com" --name k70-web-app k70-web-app:latest
