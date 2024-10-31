@@ -34,7 +34,8 @@ jobs:
           root: ./
           paths:
             - .next/
-
+            - public/
+            - scripts/
 
   package:
     executor: default
