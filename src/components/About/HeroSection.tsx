@@ -28,7 +28,7 @@ const HeroSection: FC = () => {
                         This majestic peak has long been shrouded in myth and legend, captivating climbers since the early 20th century and revered in folklore and sacred religious texts.
                     </p>
                     <div className='h-auto bg-[#93B5C1] rounded-2xl p-5'>
-                        <p className='text-lg text-primary-light tracking-wider'>The Kanchenjunga region is not merely a destination but a vibrant ecosystem that requires protection and appreciation. Our initiative aims to foster sustainable
+                        <p className='text-lg text-primary-light tracking-wider'> The Kanchenjunga region is not merely a destination but a vibrant ecosystem that requires protection and appreciation. Our initiative aims to foster sustainable
                             tourism in this area, enhancing local livelihoods while ensuring environmental conservation and the preservation of its unique cultural heritage.
                             The Kanchenjunga 70 event hopes to celebrate the legacy that has inspired many through special events hosted in Nepal and the United Kingdom.
                             We aim to raise awareness and encourage visitors to explore this stunning area, supporting local communities while protecting the environment.</p>
