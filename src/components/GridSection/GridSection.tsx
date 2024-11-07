@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { gridData } from '@/data/gridData';
-import ImageCard from '@/components/ImageCard/ImageCard';
+import ImageCard from '@/components/ImageCards/ImageCard';
 
 const GridSection: FC = () => {
     return (
