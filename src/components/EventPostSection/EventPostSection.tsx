@@ -27,7 +27,7 @@ const EventPostComponent = () => {
     }, []);
 
     // Calculate the end index for the images to display
-    const endIndex = startIndex + imagesToShow;
+    // const endIndex = startIndex + imagesToShow;
 
     // Carousel navigation handlers
     const handlePrev = () => {
