@@ -16,7 +16,7 @@ import ArrowRight from '../../../../public/images/arrow-right.png';
 import ArrowLeft from '../../../../public/images/arrow-left.png';
 
 
-const page: FC = () => {
+const DetailsPage: FC = () => {
     const [currentComponentIndex, setCurrentComponentIndex] = useState(0);
     const pathname = usePathname();
     const router = useRouter();
@@ -90,4 +90,4 @@ const page: FC = () => {
     );
 };
 
-export default page;
+export default DetailsPage;
