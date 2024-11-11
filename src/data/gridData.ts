@@ -11,48 +11,48 @@ import { StaticImageData } from 'next/image';
 interface GridItem {
     event: string;
     link: string;
-    photo: StaticImageData;
+    photo: StaticImageData
 }
 
 export const gridData: GridItem[] = [
     {
         event: "place in the world",
-        link: "#",
+        link: "/details/place-in-the-world",
         photo: placeinworld
     },
     {
         event: "people",
-        link: "#",
+        link: "/details/people",
         photo: people
     },
     {
         event: "nature",
-        link: "#",
+        link: "/details/nature",
         photo: nature
     },
     {
         event: "climbing history",
-        link: "#",
+        link: "/details/climbing-history",
         photo: climbinghistory
     },
     {
         event: "future",
-        link: "#",
+        link: "/details/future",
         photo: future
     },
     {
         event: "k70 events",
-        link: "#",
+        link: "/details/k70-events",
         photo: k70events
     },
     {
         event: "partners",
-        link: "#",
+        link: "/details/partners",
         photo: partners
     },
     {
         event: "gallery",
-        link: "#",
+        link: "/details/gallery",
         photo: gallery
     },
 ];
