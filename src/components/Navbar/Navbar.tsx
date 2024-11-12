@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { footerData } from '@/data/footerData';
 
 const Navbar: FC = () => {
 
@@ -30,32 +31,31 @@ const Navbar: FC = () => {
                         <Link href='/'>Home</Link>
                     </li>
                     <li className=' text-primary text-xl tracking-wider py-3'>
-                        <Link href='./about'>About</Link>
+                        <Link href='/about'>About</Link>
                     </li>
                     <li className='w-full bg-blue-dark text-white text-base px-5 py-3 hover:bg-blue-light'>
-                        <Link href='./contact'> Get In Touch</Link>
+                        <Link href='/contact'> Get In Touch</Link>
                     </li>
                 </ul>
             </section>
 
             {/* mobile section */}
             {isOpen &&
-                <section className='block md:hidden absolute h-[90vh] w-full left-0 top-[4.5rem]  bg-white z-50 '>
-                <div className='flex justify-end p-8 text-2xl text-[#2B76A3] gap-2' onClick={()=> setOpen(!isOpen)}>
-                    <p className='text-base'>CLOSE</p> <IoIosCloseCircleOutline />
-                </div>
-                <ul className='flex flex-col gap-5  text-primary text-2xl tracking-widest py-3 px-4'>
-                    <li className='bebasNeue'>
-                        <Link href='/'>Home</Link>
-                    </li>
-                    <li className='bebasNeue'>
-                        <Link href='./about'>About</Link>
-                    </li>
-                    <li className='w-[13rem] bg-blue-dark text-white  px-5 py-3 text-center text-xl tracking-widest hover:bg-blue-light'>
-                        <Link href='./contact'> Get In Touch</Link>
-                    </li>
-                </ul>
-            </section>
+                <section className='block md:hidden absolute h-screen w-full left-0 top-[4.5rem]  bg-white z-50 '>
+                    <div className='flex justify-end p-8 text-2xl text-[#2B76A3] gap-2' onClick={() => setOpen(!isOpen)}>
+                        <p className='text-base'>CLOSE</p> <IoIosCloseCircleOutline />
+                    </div>
+                    <ul className='flex flex-col gap-5  text-primary text-2xl tracking-widest py-3 px-6'>
+                        {footerData.map((data, index) => (
+                            <li key={index} className={`bebasNeue ${index === 1 ? 'pb-10' : 'pb-0'}`} onClick={() => setOpen(!isOpen)}>
+                                <Link href={data.href}>{data.section}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <button className='flex w-full justify-center py-10' onClick={() => setOpen(!isOpen)}>
+                        <Link href='/contact' className='w-[13rem] bg-blue-dark text-white  px-5 py-3 text-center text-xl tracking-widest hover:bg-blue-light'> Get In Touch</Link>
+                    </button>
+                </section>
             }
 
         </div>

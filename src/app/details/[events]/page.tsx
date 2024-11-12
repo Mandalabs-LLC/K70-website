@@ -52,7 +52,7 @@ const DetailsPage: FC = () => {
     };
 
     return (
-        <div className="pt-[9rem] flex flex-col items-center ">
+        <div className="pt-[70px] md:pt-[9rem] flex flex-col items-center ">
             {/* Navigation Arrows */}
             <div className="flex justify-between items-center w-full bg-[#FAFBFD] p-4">
                 {/* Previous Item */}
