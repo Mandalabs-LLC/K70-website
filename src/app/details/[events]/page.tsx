@@ -54,7 +54,7 @@ const DetailsPage: FC = () => {
     return (
         <div className="pt-[70px] md:pt-[9rem] flex flex-col items-center ">
             {/* Navigation Arrows */}
-            <div className="flex justify-between items-center w-full bg-[#FAFBFD] p-4">
+            <div className="flex justify-between items-center w-full bg-[#f2f6fe] p-4 text-blue-dark bebasNeue tracking-widest">
                 {/* Previous Item */}
                 <button
                     className="flex items-center"

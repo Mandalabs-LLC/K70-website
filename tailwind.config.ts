@@ -21,7 +21,7 @@ const config: Config = {
       },
       colors:{
         blue: {
-          DEFAULT: '#EAEFFAE5', //footer bg-color
+          DEFAULT: '#EAEFFA', //footer bg-color
           light: '#2B76A3',     //text light-blue
           dark: '#024B66',      //text and bg dark-blue
         },
