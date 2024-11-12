@@ -14,35 +14,35 @@ export const footerData: FooterItem[] = [
     },
     {
       section: 'place in world',
-      href: '#',
+      href: '/details/place-in-the-world',
     },
     {
       section: 'people',
-      href: '#',
+      href: '/details/people',
     },
     {
       section: 'nature',
-      href: '#',
+      href: '/details/nature',
     },
     {
       section: 'climbing history',
-      href: '#',
+      href: '/details/climbing-history',
     },
     {
       section: 'future',
-      href: '#',
+      href: '/details/future',
     },
     {
       section: 'k70 events',
-      href: '#',
+      href: '/details/k70-events',
     },
     {
       section: 'partners',
-      href: '#',
+      href: '/details/partners',
     },
     {
       section: 'gallery',
-      href: '#',
+      href: '/details/gallery',
     },
   ];
   
