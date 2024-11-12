@@ -52,9 +52,9 @@ const DetailsPage: FC = () => {
     };
 
     return (
-        <div className="pt-[9rem] px-5 md:px-20 flex flex-col items-center space-y-5">
+        <div className="pt-[9rem] flex flex-col items-center ">
             {/* Navigation Arrows */}
-            <div className="flex justify-between items-center w-full">
+            <div className="flex justify-between items-center w-full bg-[#FAFBFD] p-4">
                 {/* Previous Item */}
                 <button
                     className="flex items-center"
@@ -83,7 +83,7 @@ const DetailsPage: FC = () => {
             </div>
 
             {/* Component Rendering */}
-            <div className="w-full max-w-4xl">
+            <div className="w-full">
                 {ComponentToRender}
             </div>
         </div>
