@@ -54,7 +54,7 @@ const DetailsPage: FC = () => {
     return (
         <div className="pt-[70px] md:pt-[9rem] flex flex-col items-center ">
             {/* Navigation Arrows */}
-            <div className="flex justify-between items-center w-full bg-[#f2f6fe] p-4 text-blue-dark bebasNeue tracking-widest">
+            <div className="flex justify-between items-center w-full bg-[#f2f6fe] p-4 text-blue-dark bebasNeue tracking-widest text-base md:text-xl leading-none">
                 {/* Previous Item */}
                 <button
                     className="flex items-center"
@@ -65,15 +65,16 @@ const DetailsPage: FC = () => {
                         alt='ArrowLeft'
                         className=' h-[25px] w-[25px] object-contain'
                     />
-                    <span className="text-base leading-none">{gridData[prevIndex].event.toUpperCase()}</span>
+                    <span className='pt-[2px]'>{gridData[prevIndex].event.toUpperCase()}</span>
                 </button>
 
+                    <p>{gridData[currentComponentIndex].event.toUpperCase()}</p>
                 {/* Next Item */}
                 <button
                     className="flex items-center"
                     onClick={() => handleNavigation(nextIndex)}
                 >
-                    <span className="text-base leading-none">{gridData[nextIndex].event.toUpperCase()}</span>
+                    <span className='pt-[2px]'>{gridData[nextIndex].event.toUpperCase()}</span>
                     <Image
                         src={ArrowRight}
                         alt='ArrowRight'
