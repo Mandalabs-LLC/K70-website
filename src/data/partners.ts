@@ -11,7 +11,7 @@ import nma from '../../public/images/partners/nma.png';
 import redpanda from '../../public/images/partners/redpanda.png';
 import sedra from '../../public/images/partners/sedra.png';
 import snv from '../../public/images/partners/snv.png';
-import unesco from '../../public/images/partners/unesco.png';
+import unesco from '../../public/images/partners/unesco.svg';
 import wwf from '../../public/images/partners/wwf.png';
 
 interface Partner {

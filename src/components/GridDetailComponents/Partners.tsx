@@ -40,7 +40,7 @@ export const Partners = () => {
                   <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
                     {data.title}
                   </p>
-                  <Image alt='logo' src={data.logo} />
+                  <Image alt='logo' src={data.logo}/>
                 </div>
               ))}
             </div>
