@@ -16,68 +16,80 @@ import wwf from '../../public/images/partners/wwf.png';
 
 interface Partner {
     title: string;
+    link:string;
     logo: StaticImageData;
 }
 
-export const privateSectorPartner:Partner[] =[
-    {
-        title: "worldlink",
-        logo: worldlink,
-    },
-    {
-        title: "Nepal Investment Bank Limited",
-        logo: nimb,
-    },
-    {
-        title: "Microsoft Airband",
-        logo: airband,
-    },
-]
-
-
-export const developmentSectorPartner:Partner[] =[
-    {
-        title: "UNESCO",
-        logo: unesco,
-    },
-    {
-        title: "Red Panda Network",
-        logo: redpanda,
-    },
-    {
-        title: "World Wide Fund for Nature",
-        logo: wwf,
-    },
-    {
-        title: "SNV",
-        logo: snv,
-    },
+export const ourPartners:Partner[] =[
     {
         title: "International Centre for Integrated Mountain Development.",
+        link:"https://www.icimod.org/",
         logo: icmod,
     },
     {
-        title: "Kreditanstalt für Wiederaufbau",
-        logo: kfw,
-    },
-    {
-        title: "Special Education Data Reporting Application",
-        logo: sedra,
-    },
-    {
         title: "Kathmandu Environmental Education Project",
+        link:"https://keepnepal.org/",
         logo: keep,
     },
     {
-        title: "Nepal Mountaineering Association",
-        logo: nma,
+        title: "Kreditanstalt für Wiederaufbau",
+        link:"https://www.kfw.de/kfw.de.html",
+        logo: kfw,
+    },
+    {
+        title: "Microsoft Airband",
+        link:"https://www.microsoft.com/en-us/corporate-responsibility/airband-initiative",
+        logo: airband,
     },
     {
         title: "Ministry of Energy, Water Resources and Irrigation",
+        link:"https://moewri.gov.np/",
         logo: mewi,
     },
     {
         title: "Nepal Electricity Authority",
+        link:"https://www.nea.org.np/",
         logo: nea ,
     },
+    {
+        title: "Nepal Investment Bank Limited",
+        link:"https://www.nimb.com.np/",
+        logo: nimb,
+    },
+    {
+        title: "Nepal Mountaineering Association",
+        link:"https://www.nepalmountaineering.org/home",
+        logo: nma,
+    },
+    {
+        title: "Red Panda Network",
+        link:"https://redpandanetwork.org/",
+        logo: redpanda,
+    },
+    {
+        title: "SNV",
+        link:"https://www.snv.org/",
+        logo: snv,
+    },
+    {
+        title: "Special Education Data Reporting Application",
+        link:"https://education.mn.gov/mde/index.htm",
+        logo: sedra,
+    },
+    {
+        title: "UNESCO",
+        link:"https://www.unesco.org/en",
+        logo: unesco,
+    },
+    {
+        title: "World Wide Fund for Nature",
+        link:"https://www.worldwildlife.org/",
+        logo: wwf,
+    },
+    {
+        title: "worldlink",
+        link:"https://worldlink.com.np/",
+        logo: worldlink,
+    },
+     
 ]

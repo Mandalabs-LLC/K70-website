@@ -1,7 +1,6 @@
 import Image from "next/image";
 import background2 from '../../../public/images/background2.jpg';
-import { developmentSectorPartner } from '../../data/partners';
-import { privateSectorPartner } from '../../data/partners';
+import { ourPartners } from '../../data/partners';
 import Link from "next/link";
 
 export const Partners = () => {
@@ -19,32 +18,15 @@ export const Partners = () => {
         <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
           Over the past decade, we have engaged in a collaborative effort involving various partners to bring sustainable change to the region.
         </p>
-        <div className="flex flex-col md:flex-row gap-10 py-4 md:py-[60px]">
-          <div className="flex flex-col items-center gap-5 border border-blue-light p-10 md:w-1/3">
-            <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-xl  md:text-3xl text-center">PRIVATE SECTOR Partner</h1>
-            {privateSectorPartner.map((data, index: number) => (
-              <div key={index} className="p-5 md:p-10 space-y-5 flex flex-col items-center ">
-                <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
-                  {data.title}
-                </p>
-                <Image alt='logo' src={data.logo} />
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center p-10 gap-5">
+            {ourPartners.map((partner, index)=>(
+               <Link key={index}  href={partner.link} className="p-5 md:p-10 space-y-5 flex flex-col items-center">
+               <p className="text-primary-light text-base md:text-lg tracking-wider text-start">
+                 {partner.title}
+               </p>
+               <Image alt='logo' src={partner.logo}/>
+             </Link>
             ))}
-          </div>
-
-          <div className="border border-blue-light p-10 md:w-2/3">
-            <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-xl  md:text-3xl text-center">Development sector Partner</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
-              {developmentSectorPartner.map((data, index: number) => (
-                <div key={index} className="p-5 md:p-10 space-y-5 flex flex-col items-center">
-                  <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
-                    {data.title}
-                  </p>
-                  <Image alt='logo' src={data.logo}/>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         <div className="flex flex-col justify-center items-center">
