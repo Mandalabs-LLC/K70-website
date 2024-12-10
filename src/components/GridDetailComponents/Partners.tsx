@@ -18,10 +18,10 @@ export const Partners = () => {
         <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
           Over the past decade, we have engaged in a collaborative effort involving various partners to bring sustainable change to the region.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center p-10 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-10 gap-5">
             {ourPartners.map((partner, index)=>(
                <Link key={index}  href={partner.link} className="p-5 md:p-10 space-y-5 flex flex-col items-center">
-               <p className="text-primary-light text-base md:text-lg tracking-wider text-start">
+               <p className="text-primary-light text-base md:text-lg tracking-wider text-center md:text-start">
                  {partner.title}
                </p>
                <Image alt='logo' src={partner.logo}/>
