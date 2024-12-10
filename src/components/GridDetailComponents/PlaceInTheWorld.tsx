@@ -21,7 +21,7 @@ export const PlaceInTheWorld = () => {
               </div>
               <div className="relative w-full h-full md:w-1/3">
                 <Image src={data.image} alt="images" className={`shadow-md border-8 border-white 2xl:w-[480px] ${index===0? 'h-[500px]':''}`}/>
-                <p className={`bg-white shadow-md text-blue-light text-xs tracking-wider text-center w-full 2xl:w-[480px] px-4 pb-2 ${index===0 ? 'hidden':'block'}`}>{data.imageDescription}</p>
+                <p className={`bg-white shadow-md text-blue-light text-xs tracking-wider text-center w-full 2xl:w-[480px] px-4  ${index===0 ? 'hidden':'block'}`}>{data.imageDescription}</p>
                 <Image src={map3} alt="images" className={`absolute -bottom-20 left-0 md:-left-14  h-[309px] w-[258px] shadow-md border-8 border-white ${index===0 ? "block":"hidden"}`}/>
                 <p className={`bg-white absolute -bottom-36 w-[258px] left-0 md:-left-14 shadow-md text-blue-light text-xs tracking-wider text-center  p-2 ${index===0 ? 'block':'hidden'}`}>{data.imageDescription}</p>
               </div>

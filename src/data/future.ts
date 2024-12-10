@@ -34,27 +34,27 @@ interface futureSecondSectionImagesData {
 export const futureSecondSectionImages:futureSecondSectionImagesData[] = [
     {
         image: intersect,
-        title: "Piller 1",
+        title: "Pillar 1",
         content: `Environment & conservation`
     },
     {
         image: intersect1,
-        title: "Piller 2",
+        title: "Pillar 2",
         content: `Sustainable tourism infrastructure`
     },
     {
         image: intersect2,
-        title: "Piller 3",
+        title: "Pillar 3",
         content: `Community Human Capital & economic development`
     },
     {
         image: intersect3,
-        title: "Piller 4",
+        title: "Pillar 4",
         content: `Smart technology`
     },
     {
         image: intersect4,
-        title: "Piller 5",
+        title: "Pillar 5",
         content: `Destination Marketing`
     },
     
