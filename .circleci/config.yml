@@ -65,8 +65,8 @@ jobs:
       - run:
           name: Docker ssh Setup
           command: |
-            mkdir -p ~/.ssh
-            [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+            mkdir -p ~/.ssh && chmod 700 ~/.ssh
+            echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
       - run:
           name: Login to the server and deploy
