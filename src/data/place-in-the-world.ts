@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import  placeintheworld from '../../public/images/place-in-the-world/place_in_the_world.jpg';
-import map1 from '../../public/images/place-in-the-world/map1.jpg';
-import map2 from '../../public/images/place-in-the-world/map2.jpg';
+import map1 from '../../public/images/place-in-the-world/map1.png';
+import map2 from '../../public/images/place-in-the-world/map2.png';
 
 interface placeInTheWorldData {
     heading?:string;
@@ -34,8 +34,7 @@ export const placeInTheWorldData = [
           serves as a habitat for many endangered species, including the snow leopard and the red panda. The KCA has been a 
           collaborative project with organizations like WWF, which has been instrumental in the conservation efforts aimed at
          preserving this unique environment.`,
-         image:map2,
-         imageDescription: `Sketch Map of the Glaciers of Kangchenjunga constructed by Edmund J. Garwood,  Garwood lantern slide  (*NHR)`,     
+         image:map2,    
     },
     {
         content:`Essentially, Mount Kanchenjunga represents not only a geographical wonder but also an integral part of Nepal 
@@ -45,8 +44,6 @@ export const placeInTheWorldData = [
          Crowley's fascination with the mystical and the unknown later led to his inclusion on the iconic Sgt. Pepper's Lonely Hearts
         Club Band album cover, where he appears among other cultural figures representing the spirit of exploration and challenge.`,
         image:map1,       
-        imageDescription: `Panorama of the Kangchenjunga Range from Darjeeling, from a sketch published at the Surveyor General’s Office,
-         Calcutta 1882 - credited:  Frederick Dangerfield, Lith, London, ref 8758`,
     },
   
 ] 

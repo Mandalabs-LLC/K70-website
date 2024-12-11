@@ -12,9 +12,11 @@ const ContactSection: FC = () => {
                     <ContactForm />
                 </div>
                 <div className='w-full md:w-1/2 h-full flex flex-col justify-center items-center gap-5 md:gap-20'>
-                    <p className='bebasNeue text-blue-dark uppercase tracking-[5px] text-4xl md:text-6xl text-center leading-[60px] md:leading-[90px]'>“ Climbers are the ones who dare to reach beyond the skies. ”</p>
+                    <p className='bebasNeue text-blue-dark uppercase tracking-[5px] text-4xl md:text-6xl text-center leading-[60px] md:leading-[90px]'>
+                        “ BE CORAGEOUS ENOUGH TO EXHIBIT YOUR KINDNESS AND COMPASSION. ”
+                    </p>
                     <div className='w-full flex justify-end'>
-                        <p className='uppercase text-black bebasNeue tracking-[0.25rem] text-2xl md:text-4xl'>- name</p>
+                        <p className='uppercase text-black bebasNeue tracking-[0.25rem] text-2xl md:text-4xl'>- Ani Choying Drolma</p>
                     </div>
                 </div>
             </div>
