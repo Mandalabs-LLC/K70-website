@@ -8,7 +8,6 @@ executors:
     docker:
       - image: imbios/bun-node:20-slim
 
-
 jobs:
   build:
     executor: bun_node
@@ -33,16 +32,17 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - .next/
+            - .next/standalone
+            - .next/static
             - public/
             - scripts/
 
   package:
     executor: default
     parameters:
-        environment:
-            type: string
-            default: prod
+      environment:
+        type: string
+        default: prod
     steps:
       - checkout
       - persist_to_workspace:
@@ -77,7 +77,6 @@ jobs:
             scp /tmp/webapp.tar.gz << parameters.host >>:~/k70/
             ssh << parameters.host >> 'bash -s' < << parameters.deploy-script >>
 
-
 workflows:
   version: 2
   test:
@@ -87,6 +86,7 @@ workflows:
             branches:
               ignore:
                 - main
+                - deploy-to-qa
 
   deploy-web-alpha:
     jobs:
@@ -94,7 +94,7 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - deploy-to-qa
       - package:
           environment: prod
           requires:
