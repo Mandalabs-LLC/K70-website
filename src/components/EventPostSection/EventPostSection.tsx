@@ -73,7 +73,7 @@ const EventPostComponent = () => {
                             key={index}
                             className="min-w-[calc(100%/3)] 2xl:min-w-[calc(100%/4)] flex-shrink-0"
                         >
-                            <InstagramImageCard imageUrl={data.photo} altText={`Post ${index + 1}`} />
+                            <InstagramImageCard link={data.link} imageUrl={data.photo} altText={`Post ${index + 1}`} />
                         </div>
                     ))}
                 </div>
