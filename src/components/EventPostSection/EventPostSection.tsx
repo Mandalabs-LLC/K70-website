@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { gridData } from '@/data/gridData';
 import InstagramImageCard from '@/components/ImageCards/InstagramImageCard';
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const EventPostComponent = () => {
     const [startIndex, setStartIndex] = useState(0);
@@ -24,6 +25,7 @@ const EventPostComponent = () => {
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // Calculate the end index for the images to display
@@ -81,10 +83,10 @@ const EventPostComponent = () => {
 
             <div className="flex justify-center items-center gap-4 mt-10">
                 <button onClick={handlePrev} className="w-[48px] h-[48px] outline rounded-full flex justify-center items-center">
-                    &larr;
+                    <FaArrowLeft />
                 </button>
                 <button onClick={handleNext} className="w-[48px] h-[48px] outline rounded-full flex justify-center items-center">
-                    &rarr;
+                    <FaArrowRight />
                 </button>
             </div>
         </div>
