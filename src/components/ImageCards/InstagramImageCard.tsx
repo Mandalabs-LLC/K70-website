@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { FaInstagram } from 'react-icons/fa';
+import { AiOutlineEye } from 'react-icons/ai';
 
 interface InstagramImageCardProps {
     imageUrl: StaticImageData;
@@ -25,9 +26,9 @@ const InstagramImageCard: FC<InstagramImageCardProps> = ({ imageUrl, altText, li
                     href={link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-200 transition-colors"
+                    className="flex gap-2 items-center px-4 py-5 bg-white text-blue-light font-semibold hover:bg-gray-200 transition-colors"
                 >
-                    View Post
+                  <AiOutlineEye size={20}/> View Post
                 </a>
             </div>
         </div>
