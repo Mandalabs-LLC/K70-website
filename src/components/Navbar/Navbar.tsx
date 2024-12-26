@@ -12,7 +12,7 @@ const Navbar: FC = () => {
     const [isOpen, setOpen] = useState<boolean>(false);
 
     return (
-        <div className='fixed bg-[#FAFBFD] top-0 z-[10000] w-full flex flex-col md:flex-row justify-between px-5 md:px-20 h-[4.45rem] md:h-[9rem] bg-opacity-80'>
+        <div className='fixed bg-[#FAFBFD] top-0 z-[1000] w-full flex flex-col md:flex-row justify-between px-5 md:px-20 h-[4rem] md:h-[8rem] bg-opacity-80'>
 
             {/* left section */}
             <section className='w-full md:w-auto flex items-center justify-between'>
