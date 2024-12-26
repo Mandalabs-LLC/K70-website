@@ -33,9 +33,7 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${beVietnamPro.className} antialiased flex flex-col min-h-screen`}
       >
-        {/* Navbar */}
         <Navbar />
-
         {/* Main content */}
         <main className="flex-grow overflow-x-hidden">
           <div className="h-auto w-auto bg-white space-y-4 fixed top-[40vh] right-0 z-50 px-1 py-3 md:px-3 md:py-4">
