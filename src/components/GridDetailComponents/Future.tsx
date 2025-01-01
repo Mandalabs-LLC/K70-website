@@ -36,7 +36,7 @@ export const Future = () => {
                         <p className="text-primary-light text-base md:text-lg tracking-wider r" dangerouslySetInnerHTML={{ __html: data.content }}></p>
                     </div>
                     <div className=" w-full h-full md:w-1/3 flex flex-col items-center">
-                        <Image onClick={() => openModal(data.image as any)} src={data.image} alt="images" className='shadow-md border-8 border-white md:h-[396px] md:w-[379px]' />
+                        <Image onClick={() => openModal(data.image as any)} src={data.image} alt="images" className='shadow-md border-8 border-white md:h-[496px] md:w-full' />
                     </div>
                 </div>
             ))}
