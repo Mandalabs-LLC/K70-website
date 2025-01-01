@@ -25,6 +25,7 @@ export const peopleData = [
          behind Beyul Demoshong, considered a land of immortality, which adds spiritual significance to Kanchenjunga for these 
          communities.`,
         image: people,
+        customHeight: 500
     },
     {
         content:`The Sherpa community is renowned for its exceptional mountaineering skills and deep spiritual connection to the
@@ -48,7 +49,8 @@ export const peopleData = [
         <br/><br/>
         These communities celebrate vibrant festivals that honor agricultural cycles, often accompanied by music and dance, emphasizing 
         communal living and strong family ties.`,
-        image:k70event,       
+        image:k70event,   
+        customHeight: 400    
     },
   
 ] 
