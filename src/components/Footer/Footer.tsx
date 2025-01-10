@@ -24,7 +24,7 @@ const Footer: FC = () => {
                 <div className='hidden md:grid grid-cols-5 gap-5 2xl:gap-10'>
                     {footerData.map((data, index) => (
                         <Link href={data.href} key={index}>
-                            <p className='text-base text-primary uppercase bebasNeue tracking-widest'>{data.section}</p>
+                            <p className='text-lg text-primary uppercase bebasNeue tracking-widest'>{data.section}</p>
                         </Link>
                     ))}
                 </div>
