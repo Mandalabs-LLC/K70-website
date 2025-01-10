@@ -1,21 +1,17 @@
-import { CiFacebook, CiInstagram, CiYoutube } from "react-icons/ci";
 
 interface socialMediaIcons {
-    icon: React.ElementType;
+    icon: string;
     href:string;
 }
 
 export const socialMediaIcons: socialMediaIcons[] = [
     {
-      icon:CiFacebook,
-      href: "#"
+      icon:'facebook',
+      href: "https://www.facebook.com/"
     },
     {
-      icon:CiInstagram,
-      href: "#"
+      icon:'instagram',
+      href: "https://www.instagram.com/"
     },
-    {
-      icon:CiYoutube,
-      href: "#"
-    },
+    
   ];
