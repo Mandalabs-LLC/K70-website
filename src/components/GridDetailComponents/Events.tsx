@@ -17,7 +17,7 @@ export const Events = () => {
         loading='lazy'
       />
       <div className="bg-white opacity-90 w-full h-auto flex flex-col  p-4 md:px-20 md:py-[60px]">
-        <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  md:text-6xl pb-4 md:pb-6 z-10">Activities for the event in Nepal</h1>
+        <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  md:text-6xl pb-4 md:pb-6 z-10">Celebrations</h1>
 
         <div className="hidden md:flex gap-[160px] my-[60px]">
           <div className="w-1/3 flex flex-col justify-end">

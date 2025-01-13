@@ -32,7 +32,7 @@ export const ClimbingHistory = () => {
             <Image
                 src={background}
                 alt='Hero_Section_Images'
-                className=' -z-40 fixed w-full h-screen top-0 left-0 object-cover'
+                className=' -z-40 fixed w-full h-screen top-[4.5rem] md:top-[12rem] left-0 object-cover'
                 loading='lazy'
             />
             <div className='w-full h-auto bg-white opacity-95 px-4 py-4 md:px-[62px] 2xl:px-[112px] md:py-[56px]'>
@@ -69,7 +69,7 @@ export const ClimbingHistory = () => {
                         {/* Right content */}
                         <div className={`w-full pl-[25%] md:pl-0  md:w-1/2 flex flex-col gap-4 items-center py-5 md:py-[34px] ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                             {data.image.map((img, index: number) => (
-                                <Image onClick={() => openModal(img as any)} key={index} alt="image" src={img} className="w-[141px] h-[141px] md:w-[189px] md:h-[189px] object-cover" />
+                                <Image onClick={() => openModal(img as any)} key={index} alt="image" src={img} className="shadow-md border-8 border-white w-[150px] h-[150px] md:w-[200px] md:h-[200px] object-cover" />
                             ))}
                             <p className="text-base md:text-xl">{data.content}</p>
                         </div>

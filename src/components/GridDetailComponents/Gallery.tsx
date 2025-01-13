@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FaRegTimesCircle } from "react-icons/fa";
 import { galleryData } from "@/data/gallery";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
@@ -8,7 +8,7 @@ import background2 from '../../../public/images/background2.jpg';
 interface ModalProps {
     isOpen: boolean;
     currentIndex: number;
-    images: string[];
+    images: (StaticImageData | string)[];
     onClose: () => void;
     onNavigate: (direction: 'next' | 'prev') => void;
 }
@@ -18,7 +18,6 @@ export const CustomModal: React.FC<ModalProps> = ({
     currentIndex,
     images,
     onClose,
-    // onNavigate,
 }) => {
     if (!isOpen) return null;
 
@@ -39,20 +38,6 @@ export const CustomModal: React.FC<ModalProps> = ({
                     <FaRegTimesCircle size={40} />
                 </button>
 
-                {/* Navigation Arrows */}
-                {/* <button
-                    onClick={() => onNavigate('prev')}
-                    className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-3 z-10"
-                >
-                    &#9664;
-                </button>
-                <button
-                    onClick={() => onNavigate('next')}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-3 z-10"
-                >
-                    &#9654;
-                </button> */}
-
                 {/* Image Display */}
                 <div className="w-full h-full flex items-center justify-center bg-gray-100">
                     <Image
@@ -70,10 +55,9 @@ export const CustomModal: React.FC<ModalProps> = ({
     );
 };
 
-
 // Gallery Component
 interface GalleryItem {
-    imageUrl: string;
+    imageUrl: StaticImageData | string;
     title: string;
     description: string;
 }
@@ -129,7 +113,7 @@ export const Gallery: React.FC = () => {
                                     className="shadow-lg"
                                 />
                             </div>
-                            <div className="pt-5 pb-4">
+                            <div className="pt-5 pb-4 text-[14px] font-normal text-gray-500">
                                 <p>{item.description}</p>
                             </div>
                         </div>

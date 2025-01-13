@@ -1,8 +1,10 @@
+import SketchGalcier from '../../public/images/gallery/sketch-glacier.jpg';
+
 export const galleryData = [
     {
-      "imageUrl": "https://imgcdn.stablediffusionweb.com/2024/9/6/dc7ff734-413c-4d0c-a6fd-07a9ffc43ba5.jpg", // Image 1 from Unsplash
+      "imageUrl": SketchGalcier,
       "title": "Image 1",
-      "description": "This is a variable description for image 1. It can be a short sentence or a longer paragraph depending on the content."
+      "description": "Sketch Map of the Glaciers of Kangchenjunga constructed by Edmund J. Garwood, Garwood lantern slide (*NHR)"
     },
     {
       "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/thor-1658259662.jpeg?crop=0.84375xw:1xh;center,top&resize=1200:*", // Image 2 from Unsplash
