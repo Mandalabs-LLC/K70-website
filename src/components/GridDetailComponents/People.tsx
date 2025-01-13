@@ -50,13 +50,18 @@ export const People: React.FC = () => {
                             // eslint-disable-next-line @typescript-eslint/no-explicit-any
                             onClick={() => openModal(data.image as any)} // Open modal on click
                             className={`shadow-md border-8 border-white cursor-pointer w-auto h-[${data?.customHeight}px] ${index === 1 ? 'w-[300px]' : ''}`}
+                            style={{ width: index === 1 ? '300px' : 'auto' }}
                         />
 
                         {data.imageDescription && (
-                            <p className="bg-white shadow-md text-blue-light text-xs tracking-wider text-center px-4 pb-2 w-[280px]">
+                            <p
+                                className="bg-white shadow-md text-blue-light text-xs tracking-wider text-center px-4 pb-2"
+                                style={{ width: index === 1 ? '300px' : 'auto' }}
+                            >
                                 {data.imageDescription}
                             </p>
                         )}
+
                     </div>
                 </div>
             ))}

@@ -27,11 +27,11 @@ const AboutClimbers: FC = () => {
                 <h1 className='block md:hidden bebasNeue text-4xl tracking-widest uppercase bg-gradient-to-t from-[#1B588A] to-[#071724] bg-clip-text text-transparent'>The first ascent of kanchenjunga</h1>
                 <div className='md:w-1/2 flex gap-4 md:gap-10 '>
                     <div className='relative w-full flex justify-center'>
-                        <Image src={george} alt='george' onClick={() => openModal(george as any)} />
+                        <Image src={george} alt='george' className='shadow-md border-8 border-white' onClick={() => openModal(george as any)} />
                         <p className='absolute bottom-4 text-3xl text-white tracking-wider font-semibold w-[150px]'>George Band</p>
                     </div>
                     <div className='relative w-full flex justify-center'>
-                        <Image src={joe} alt='joe' onClick={() => openModal(joe as any)} />
+                        <Image src={joe} alt='joe' className='shadow-md border-8 border-white' onClick={() => openModal(joe as any)} />
                         <p className='absolute bottom-4 text-3xl text-white tracking-wider font-semibold w-[150px]'>Joe Brown</p>
                     </div>
                 </div>
