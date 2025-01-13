@@ -62,7 +62,7 @@ export const Events = () => {
         <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
           2025 marks the 70th anniversary since the first summit to Kanchenjunga in 1955. It is a voyage of celebration that will honor a legacy inspiring many. Various events are planned to commemorate this milestone, hosted by communities in both Nepal and the United Kingdom.
           <br /><br />
-          These celebrations will mirror the success of the Everest 70 event in 2023 <Link href="www.everest70.com" className="text-blue-light underline">(www.everest70.com)</Link>, showcasing the deep connections and shared history between the two regions. It promises to be a meaningful occasion filled with activities that highlight the enduring impact of this legacy.
+          These celebrations will mirror the success of the Everest 70 event in 2023 <Link target="_blank" href="https://www.everest70.com" className="text-blue-light underline">(www.everest70.com)</Link>, showcasing the deep connections and shared history between the two regions. It promises to be a meaningful occasion filled with activities that highlight the enduring impact of this legacy.
           <br /><br />
           celebrations will honor pioneering climbers and foster community engagement while highlighting the region&apos;s rich cultural heritage.
         </p>

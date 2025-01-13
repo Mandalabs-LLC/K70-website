@@ -1,45 +1,238 @@
-import SketchGalcier from '../../public/images/gallery/sketch-glacier.jpg';
+import Image1 from '../../public/images/gallery/img1.jpg';
+import Image2 from '../../public/images/gallery/img2.jpg';
+import Image3 from '../../public/images/gallery/img3.jpg';
+import Image4 from '../../public/images/gallery/img4.jpg';
+import Image5 from '../../public/images/gallery/img5.jpg';
+import Image6 from '../../public/images/gallery/img6.jpg';
+import Image7 from '../../public/images/gallery/img7.jpg';
+import Image8 from '../../public/images/gallery/img8.jpg';
+import Image9 from '../../public/images/gallery/img9.jpg';
+import Image10 from '../../public/images/gallery/img10.jpg';
+import Image11 from '../../public/images/gallery/img11.jpg';
+import Image12 from '../../public/images/gallery/img12.jpg';
+import Image13 from '../../public/images/gallery/img13.jpg';
+import Image14 from '../../public/images/gallery/img14.jpg';
+import Image15 from '../../public/images/gallery/img15.jpg';
+import Image16 from '../../public/images/gallery/img16.jpg';
+import Image17 from '../../public/images/gallery/img17.jpg';
+import Image18 from '../../public/images/gallery/img18.jpg';
+import Image19 from '../../public/images/gallery/img19.jpg';
+import Image20 from '../../public/images/gallery/img20.jpg';
+import Image21 from '../../public/images/gallery/img21.jpg';
+import Image22 from '../../public/images/gallery/img22.jpg';
+import Image23 from '../../public/images/gallery/img23.jpg';
+import Image24 from '../../public/images/gallery/img24.jpg';
+import Image25 from '../../public/images/gallery/img25.jpg';
+import Image26 from '../../public/images/gallery/img26.jpg';
+import Image27 from '../../public/images/gallery/img27.jpg';
+import Image28 from '../../public/images/gallery/img28.jpg';
+import Image29 from '../../public/images/gallery/img29.jpg';
+import Image30 from '../../public/images/gallery/img30.jpg';
+import Image31 from '../../public/images/gallery/img31.jpg';
+import Image32 from '../../public/images/gallery/img32.jpg';
+import Image33 from '../../public/images/gallery/img33.jpg';
+import Image34 from '../../public/images/gallery/img34.jpg';
+import Image35 from '../../public/images/gallery/img35.jpg';
+import Image36 from '../../public/images/gallery/img36.jpg';
+import Image37 from '../../public/images/gallery/img37.jpg';
+import Image38 from '../../public/images/gallery/img38.jpg';
+import Image39 from '../../public/images/gallery/img39.jpg';
 
 export const galleryData = [
     {
-      "imageUrl": SketchGalcier,
-      "title": "Image 1",
-      "description": "Sketch Map of the Glaciers of Kangchenjunga constructed by Edmund J. Garwood, Garwood lantern slide (*NHR)"
-    },
-    {
-      "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/thor-1658259662.jpeg?crop=0.84375xw:1xh;center,top&resize=1200:*", // Image 2 from Unsplash
-      "title": "Image 2",
-      "description": "This image captures a beautiful sunset by the ocean, showcasing vibrant hues of orange, red, and purple. The sky and water blend seamlessly, creating a breathtaking view. The reflection in the water adds a sense of calmness and tranquility, inviting the viewer to immerse themselves in the beauty of nature."
-    },
-    {
-      "imageUrl": "https://media.istockphoto.com/id/516294750/photo/little-boy-having-fun-with-friends-in-park-blowing-bubbles.jpg?s=2048x2048&w=is&k=20&c=yJIO0Nge_DN0G1CdNxSpToWwlJQpJJaSVlElxGk_s9c=", // Image 4 from Unsplash
-      "title": "Image 4",
-      "description": "This description is a bit longer. It can explain the scene in the image, give context about the place, or even talk about the photographer's experience. The image shows a bustling street filled with people, cars, and lights. It represents the energy and hustle of a city that never sleeps, with various elements coming together to create a vibrant urban atmosphere."
-    },
-    {
-        "imageUrl": "https://media.istockphoto.com/id/516294750/photo/little-boy-having-fun-with-friends-in-park-blowing-bubbles.jpg?s=2048x2048&w=is&k=20&c=yJIO0Nge_DN0G1CdNxSpToWwlJQpJJaSVlElxGk_s9c=", // Image 4 from Unsplash
-        "title": "Image 4",
-        "description": "This description is a bit longer. It can explain the scene in the image, give context about the place, or even talk about the photographer's experience. The image shows a bustling street filled with people, cars, and lights. It represents the energy and hustle of a city that never sleeps, with various elements coming together to create a vibrant urban atmosphere."
-      },
-    {
-        "imageUrl": "https://imgcdn.stablediffusionweb.com/2024/9/6/dc7ff734-413c-4d0c-a6fd-07a9ffc43ba5.jpg", // Image 1 from Unsplash
+        "imageUrl": Image1,
         "title": "Image 1",
-        "description": "This is a variable description for image 1. It can be a short sentence or a longer paragraph depending on the content. For example, this description can explain the image or describe the scene in detail. The length of the description is flexible and adaptable to fit the content."
-      },
-      {
-        "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/thor-1658259662.jpeg?crop=0.84375xw:1xh;center,top&resize=1200:*", // Image 2 from Unsplash
+        "description": "Sketch Map of the Glaciers of Kangchenjunga constructed by Edmund J. Garwood, Garwood lantern slide (*NHR)"
+    },
+    {
+        "imageUrl": Image2,
         "title": "Image 2",
-        "description": "This image captures a beautiful sunset by the ocean, showcasing vibrant hues of orange, red, and purple. The sky and water blend seamlessly, creating a breathtaking view. The reflection in the water adds a sense of calmness and tranquility, inviting the viewer to immerse themselves in the beauty of nature."
-      },
-      {
-        "imageUrl": "https://cdn.pixabay.com/photo/2016/02/28/12/55/boy-1226964_1280.jpg", // Image 3 from Unsplash
+        "description": "Map of Sikkim showing Kangchenjunga,Garwood lantern slide, 1899 (*NHR). n.b. spelling on map: Kanchinjinca and Sikhim"
+    },
+    {
+        "imageUrl": Image3,
+        "title": "Image 4",
+        "description": "Doug SCOTT, at the 50th Anniversary Celebration of the First Ascent of Kangchenjunga in May 1955, at the Alpine Club, 55 Charlotte Road, London, by Malcolm Eldridge, May 2005"
+    },
+    {
+        "imageUrl": Image4,
+        "title": "Image 4",
+        "description": "Oxygen Sleeping Set: a pair of oxygen facemasks for connection to an oxygentank whilst sleeping , 1955 Kangchenjunga Expedition (*NHR)"
+    },
+    {
+        "imageUrl": Image5,
+        "title": "Image 1",
+        "description": "Freshfield and Headmen, Kangchenjunga Expedition, Garwood lantern slide, 1899 (*NHR)"
+    },
+    {
+        "imageUrl": Image6,
+        "title": "Image 2",
+        "description": "Panorama of the Kangchenjunga Range from Darjeeling, from a sketch published at the Surveyor General’s Office, Calcutta 1882 - credited: Frederick Dangerfield, Lith, London, ref 8758"
+    },
+    {
+        "imageUrl": Image7,
         "title": "Image 3",
-        "description": "A serene landscape of a misty forest with trees covered in morning dew. The light filtering through the leaves creates a soft, ethereal glow. The atmosphere is calm and peaceful, inviting one to step into the quiet solitude of nature. It’s a beautiful representation of the stillness found in the great outdoors."
-      },
-      {
-        "imageUrl": "https://cdn.pixabay.com/photo/2016/02/28/12/55/boy-1226964_1280.jpg", // Image 3 from Unsplash
+        "description": "Kanchenjau looking south-east from near Tinki Dzong, 1936 Everest Expedition,by Charles Warren - 1 of a set of 19 colour transparencies, being the first colour photographs taken on a British Everest expedition - others in the set were given by Charles Warren to Michael Ward and are now in the possession of Jane Ward"
+    },
+    {
+        "imageUrl": Image8,
         "title": "Image 3",
-        "description": "A serene landscape of a misty forest with trees covered in morning dew. The light filtering through the leaves creates a soft, ethereal glow. The atmosphere is calm and peaceful, inviting one to step into the quiet solitude of nature. It’s a beautiful representation of the stillness found in the great outdoors."
-      }
-  ];
-  
+        "description": "Peter Boardman and Joe Tasker, climbing with Doug Scott up the north side of Kangchenjunga, pause at the Pinnacles on the west ridge before making the third ascent, and the first without supplementary oxygen, by Doug Scott, 1979"
+    },
+    {
+        "imageUrl": Image9,
+        "title": "",
+        "description": "Georges BETTEMBOURG leading an ice pitch on the face below the North Col of Kangchenjunga, by Doug Scott, 1979"
+    },
+    {
+        "imageUrl": Image10,
+        "title": "",
+        "description": "George Band and John Jackson enjoying Chang and celebrating success at Tonglu, Kangchenjunga Expedition, 1955, June 1955"
+    },
+    {
+        "imageUrl": Image11,
+        "title": "",
+        "description": "Looking west from 8,535m on Kangchenjunga, on the left is Yalung Kang (Kangchenjunga West, 8,505m); on the horizon are the Makalu and Everest massifs, by Joe Brown, 25 May 1955"
+    },
+    {
+        "imageUrl": Image12,
+        "title": "",
+        "description": "N. A. TOMBAZI, from his Account of a Photographic Expedition to the Southern Glaciers of Kangchenjunga"
+    },
+    {
+        "imageUrl": Image13,
+        "title": "",
+        "description": "Kangchenjunga from Basecamp 1930 by Wieland"
+    },
+    {
+        "imageUrl": Image14,
+        "title": "",
+        "description": "Kangchenjunga 1930, Expedition members, back row left to right , Hoerlin, Schneider, Wieland, Dyhrenfurth, Kurz, Johnson, front row left to right, Richter, Hedddy Dyhrenfurth, Duvanel, Smythe."
+    },
+    {
+        "imageUrl": Image15,
+        "title": "",
+        "description": "Kangchenjunga by H. Schalgintweit, framed 34” by 25.5”"
+    },
+    {
+        "imageUrl": Image16,
+        "title": "",
+        "description": "A cairn marking the spot where lieutenant Alexis Pache was killed, Expedition to Kangchenjunga, 1905 (from a newspaper cutting)"
+    },
+    {
+        "imageUrl": Image17,
+        "title": "",
+        "description": "View of Kangchenjunga from the East, on way to Phari Dzong, 1924 Everest Expedition"
+    },
+    {
+        "imageUrl": Image18,
+        "title": "",
+        "description": "Northwest face of Kangchenjunga, Nepal, by George Band"
+    },
+    {
+        "imageUrl": Image19,
+        "title": "",
+        "description": "Kangchenjunga from Jongsong Glacier 1930, by F.S. Smythe"
+    },
+    {
+        "imageUrl": Image20,
+        "title": "",
+        "description": "Kangchenjunga, 1930, by F.S. Smythe"
+    },
+    {
+        "imageUrl": Image21,
+        "title": "",
+        "description": "George BAND, at about 8,470m on Kangchenjunga, by Joe Brown, 25 May 1955 "
+    },
+    {
+        "imageUrl": Image22,
+        "title": "",
+        "description": "Kangchenjunga, by Vittorio Sella, *NHR"
+    },
+    {
+        "imageUrl": Image23,
+        "title": "",
+        "description": "Kangchenjunga from Darjeeling, by Vittorio Sella, *NHR"
+    },
+    {
+        "imageUrl": Image24,
+        "title": "",
+        "description": "Peter BOARDMAN (1950-1982), Kangchenjunga Expedition, by Doug Scott, 1979"
+    },
+    {
+        "imageUrl": Image25,
+        "title": "",
+        "description": "J. Jackson, N. Mather, C. Evans, G. Band after Kangchenjunga, 1955"
+    },
+    {
+        "imageUrl": Image26,
+        "title": "",
+        "description": "J. Jackson, N. Mather, C. Evans, G. Band after Kangchenjunga, 1955"
+    },
+    {
+        "imageUrl": Image27,
+        "title": "",
+        "description": "Frank Smythe (English), Erwin Schneider (Austrian) and George Wood-Johnson (English), on Jongsong Peak during the 1930 Kangchenjunga expedition led by Norman Dyhrenfurth, by Hermann Hörlin. 28 x 21.5 cm"
+    },
+    {
+        "imageUrl": Image28,
+        "title": "",
+        "description": "Kangchenjunga, North-west face, and Wedge Peak (on right) from west bank of S. Jongsong Glacier, by Alexander Kellas, 1912. 28.5 x 8 cm"
+    },
+    {
+        "imageUrl": Image29,
+        "title": "",
+        "description": "Pyramid Peak, and Kangchenjunga, from the Langpo Peak, 21,000ft, looking South, also Tent Peak, Jannu and Wedge Peak, by Alexander Kellas, 1912. 28.5 x 8 cm"
+    },
+    {
+        "imageUrl": Image30,
+        "title": "",
+        "description": "Kangchenjunga and Wedge Peak, 1930, by F.S. Smythe from Base Camp"
+    },
+    {
+        "imageUrl": Image31,
+        "title": "",
+        "description": "John Jackson (leading) and George Band in the Lower Icefall, Kangchenjunga Expedition, 1955 "
+    },
+    {
+        "imageUrl": Image32,
+        "title": "",
+        "description": "Tashi Sherpa, a sherpa on the Kangchenjunga Expedition, 1955"
+    },
+    {
+        "imageUrl": Image33,
+        "title": "",
+        "description": "Sherpa Tashi, 1955. Possibly Kangchenjunga expedition member?"
+    },
+    {
+        "imageUrl": Image34,
+        "title": "",
+        "description": "Charles Evans, leader of the first expedition to climb Kangchenjunga in 1955 - RGS photo - taken on Everest 1953 or Kangch 1955 ?"
+    },
+    {
+        "imageUrl": Image35,
+        "title": "",
+        "description": "George Christopher BAND, with Kangchenjunga tankard at a Kangchenjunga 1st Ascent anniversary event, at the Pen-y- Gwryd Hotel, Capel Curig, North Wales, by John Jackson, 20th May 2000"
+    },
+    {
+        "imageUrl": Image36,
+        "title": "",
+        "description": "Joe Brown on the final crack, just below the summit, by George Band,25 May 1955"
+    },
+    {
+        "imageUrl": Image37,
+        "title": "",
+        "description": "Peter Boardman on the last day, Kangchenjunga Expedition, by Doug Scott, 1979"
+    },
+    {
+        "imageUrl": Image38,
+        "title": "",
+        "description": "Siniolchu, Sikkim, by Vittorio Sella, 1899, *NHR - taken during the Kangchenjunga expedition of 1899."
+    },
+    {
+        "imageUrl": Image39,
+        "title": "",
+        "description": "Siniolchu, Sikkim, by Vittorio Sella, 1899, *NHR - taken during the Kangchenjunga expedition of 1899."
+    },
+
+];
