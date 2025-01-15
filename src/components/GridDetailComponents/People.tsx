@@ -37,10 +37,12 @@ export const People: React.FC = () => {
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl md:text-6xl pb-4 md:pb-10">
                             {data.heading}
                         </h1>
-                        <p
-                            className="text-primary-light text-base md:text-lg tracking-wider"
-                            dangerouslySetInnerHTML={{ __html: data.content }}
-                        ></p>
+
+
+                        <p className={`text-primary-light text-base md:text-lg tracking-wider r ${index % 2 === 0 ? '-mr-12' : '-ml-36'}`}
+                            dangerouslySetInnerHTML={{ __html: data.content }}></p>
+
+
                     </div>
                     <div className="w-full h-full md:w-1/3 flex flex-col items-center">
                         {/* Clickable Image */}
