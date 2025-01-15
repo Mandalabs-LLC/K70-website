@@ -54,7 +54,7 @@ const DetailsPage: FC = () => {
     return (
         <div className="pt-[70px] md:pt-[9rem] flex flex-col items-center ">
             {/* Navigation Arrows */}
-            <div className="flex justify-between items-center w-full bg-[#f2f6fe] p-4 text-blue-dark bebasNeue tracking-widest text-base md:text-xl leading-none">
+            <div className="fixed z-50 -mt-4 flex justify-between items-center w-full bg-[#f2f6fe] p-4 text-blue-dark bebasNeue tracking-widest text-base md:text-xl leading-none">
                 {/* Previous Item */}
                 <button
                     className="flex items-center"
@@ -84,7 +84,7 @@ const DetailsPage: FC = () => {
             </div>
 
             {/* Component Rendering */}
-            <div className="w-full">
+            <div className="w-full mt-10">
                 {ComponentToRender}
             </div>
         </div>
