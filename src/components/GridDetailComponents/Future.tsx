@@ -44,7 +44,7 @@ export const Future = () => {
                     Samriddha Pahad is a Nepali social organisation with a 13-year track record of enhancing livelihoods in Nepal&apos;s hill
                     and mountain communities. Since 2016, Samriddha Pahad has been actively working in the Kanchenjunga region in collaboration
                     with the KCAMC and aims to empower local communities through sustainable development initiatives, improve access to
-                    finance, promote tourism, and enhance overall living standards. <a href="https://www.spnepal.org.np/" target="_blank" className="text-[#2B76A3] underline">www.spnepal.org.np</a>
+                    finance, promote tourism, and enhance overall living standards. <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">www.spnepal.org</a>
                     <br /><br />
                     Samriddha Pahad in a joint venture partnership with Kanchenjunga Conservation Area Management Council (KCAMC) has developed
                     Samriddha Kanchenjunga Program for sustainable tourism development in the Kanchenjunga Conservation Area.
@@ -67,11 +67,12 @@ export const Future = () => {
                     leading to an increase in biodiversity.
                 </p>
 
-                <h2 className="text-white bebasNeue tracking-widest text-xl md:text-3xl text-center pt-10 pb-10" style={{ background: ' #2B76A3' }}>
-                    “Conserving nature whilst empowering communities of Kanchenjunga, the world’s third highest mountain” <br />
-                    <p className="text-lg mt-4">– Samriddha Kanchenjunga</p>
-                </h2>
+
             </div>
+            <h2 className="text-white bebasNeue tracking-widest text-xl md:text-3xl text-center pt-16 pb-16" style={{ background: ' #2B76A3' }}>
+                “Conserving nature whilst empowering communities of Kanchenjunga, the world’s third highest mountain” <br />
+                <p className="text-lg mt-4">– Samriddha Kanchenjunga</p>
+            </h2>
 
             {/* Modal */}
             <CustomModal
