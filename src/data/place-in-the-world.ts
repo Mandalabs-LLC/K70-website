@@ -35,7 +35,7 @@ export const placeInTheWorldData = [
           serves as a habitat for many endangered species, including the snow leopard and the red panda. The KCA has been a 
           collaborative project with organizations like WWF, which has been instrumental in the conservation efforts aimed at
          preserving this unique environment.`,
-         customHeight: 400,
+         customHeight: 100,
          image:map2,    
     },
     {
