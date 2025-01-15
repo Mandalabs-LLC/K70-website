@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import { FaRegTimesCircle } from "react-icons/fa";
 import { galleryData } from "@/data/gallery";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import background2 from '../../../public/images/background2.jpg';
+// import background2 from '../../../public/images/background2.jpg';
 
 interface ModalProps {
     isOpen: boolean;
@@ -88,13 +88,13 @@ export const Gallery: React.FC = () => {
     };
 
     return (
-        <div className="p-10">
-            <Image
+        <div className="p-10 bg-[#F5F0EC]">
+            {/* <Image
                 src={background2}
                 alt="Hero_Section_Images"
-                className="-z-40 fixed w-full h-screen top-[4.5rem] md:top-[12rem] left-0 object-cover opacity-20"
+                className="-z-40 fixed w-full h-screen top-[4.5rem] md:top-[12rem] left-0 object-cover bg[#F5F0EC]"
                 loading="lazy"
-            />
+            /> */}
             <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 600: 2, 900: 3, 1200: 4 }}>
                 <Masonry columnsCount={2} gutter="20px" className="mb-10">
                     {galleryData.map((item: GalleryItem, index: number) => (

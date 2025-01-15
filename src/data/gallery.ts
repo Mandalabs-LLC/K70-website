@@ -30,7 +30,7 @@ import Image29 from '../../public/images/gallery/img29.jpg';
 import Image30 from '../../public/images/gallery/img30.jpg';
 import Image31 from '../../public/images/gallery/img31.jpg';
 import Image32 from '../../public/images/gallery/img32.jpg';
-import Image33 from '../../public/images/gallery/img33.jpg';
+// import Image33 from '../../public/images/gallery/img33.jpg';
 import Image34 from '../../public/images/gallery/img34.jpg';
 import Image35 from '../../public/images/gallery/img35.jpg';
 import Image36 from '../../public/images/gallery/img36.jpg';
@@ -199,11 +199,11 @@ export const galleryData = [
         "title": "",
         "description": "Tashi Sherpa, a sherpa on the Kangchenjunga Expedition, 1955"
     },
-    {
-        "imageUrl": Image33,
-        "title": "",
-        "description": "Sherpa Tashi, 1955. Possibly Kangchenjunga expedition member?"
-    },
+    // {
+    //     "imageUrl": Image33,
+    //     "title": "",
+    //     "description": "Sherpa Tashi, 1955. Possibly Kangchenjunga expedition member?"
+    // },
     {
         "imageUrl": Image34,
         "title": "",
