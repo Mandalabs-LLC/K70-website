@@ -3,46 +3,41 @@
 import React, { useState, useEffect } from 'react';
 import { gridData } from '@/data/gridData';
 import InstagramImageCard from '@/components/ImageCards/InstagramImageCard';
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
 
 const EventPostComponent = () => {
     const [startIndex, setStartIndex] = useState(0);
-
-    // Determine the number of images to show based on the screen size
-    let imagesToShow = 3; // Default to 3 for smaller screens
+    const [imagesToShow, setImagesToShow] = useState(3);
 
     // Function to handle the responsive display of images
     const handleResize = () => {
         if (window.innerWidth >= 1596) {
-            imagesToShow = 4; // Show 4 on 2xl screens and above
+            setImagesToShow(4); // Show 4 on 2xl screens and above
+        } else if (window.innerWidth >= 1024) {
+            setImagesToShow(3); // Show 3 on medium to large screens
         } else {
-            imagesToShow = 3; // Show 3 on smaller screens
+            setImagesToShow(1); // Show 1 on smaller screens
         }
     };
 
     // Listen for screen resize to adjust the number of images
-    useEffect(() => {                
+    useEffect(() => {
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // Calculate the end index for the images to display
-    // const endIndex = startIndex + imagesToShow;
-
-    // Carousel navigation handlers
+    // Carousel navigation handlers for infinite scrolling
     const handlePrev = () => {
-        setStartIndex((prev) => Math.max(prev - imagesToShow, 0));
+        setStartIndex((prev) => (prev - 1 + gridData.length) % gridData.length);
     };
 
     const handleNext = () => {
-        console.log("prev == ", startIndex, imagesToShow);
-        
-        setStartIndex((prev) =>
-            prev + imagesToShow < gridData.length ? prev + imagesToShow : prev
-        );
+        setStartIndex((prev) => (prev + 1) % gridData.length);
     };
+
+    // To make the infinite loop work, append the first item to the end of the list
+    const carouselData = [...gridData, gridData[0]]; // Cloning the first item at the end
 
     return (
         <div className="py-10 px-5 md:px-20 bg-[#FAFBFD]">
@@ -63,32 +58,44 @@ const EventPostComponent = () => {
                 </div>
             </div>
 
-            {/* TODO: this section needs some refactoring as the carousel effect doesn't seem to be working properly in some cases.  */}
             {/* Carousel Container */}
             <div className="relative overflow-hidden">
                 <div
-                    className="flex transition-transform duration-300"
-                    style={{ transform: `translateX(-${startIndex * (100 / imagesToShow)}%)` }}
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{
+                        transform: `translateX(-${(startIndex * (100 / imagesToShow))}%)`,
+                    }}
                 >
-                    {gridData.map((data, index) => (
+                    {carouselData.map((data, index) => (
                         <div
                             key={index}
                             className="min-w-[calc(100%/3)] 2xl:min-w-[calc(100%/4)] flex-shrink-0"
                         >
-                            <InstagramImageCard link={data.link} imageUrl={data.photo} altText={`Post ${index + 1}`} />
+                            <InstagramImageCard
+                                link={data.link}
+                                imageUrl={data.photo}
+                                altText={`Post ${index + 1}`}
+                            />
                         </div>
                     ))}
                 </div>
             </div>
 
             <div className="flex justify-center items-center gap-4 mt-10">
-                <button onClick={handlePrev} className="w-[48px] h-[48px] outline rounded-full flex justify-center items-center">
-                    <FaArrowLeft />
+                <button
+                    onClick={handlePrev}
+                    className="w-[48px] h-[48px] border-[2px] border-black rounded-full flex justify-center items-center"
+                >
+                    <FaLongArrowAltLeft size={20} />
                 </button>
-                <button onClick={handleNext} className="w-[48px] h-[48px] outline rounded-full flex justify-center items-center">
-                    <FaArrowRight />
+                <button
+                    onClick={handleNext}
+                    className="w-[48px] h-[48px] border-[2px] border-black rounded-full flex justify-center items-center"
+                >
+                    <FaLongArrowAltRight size={20} />
                 </button>
             </div>
+
         </div>
     );
 };

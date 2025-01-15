@@ -21,17 +21,18 @@ export const futureData = [
          line with directives of Government of Nepal, Department of National Park and Wildlife Conservation.
          <a href="https://kanchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> https://kanchenjunga.org/ </a>`,
         image: future,
+        
     },
 ]
 
 interface futureSecondSectionImagesData {
-        image: StaticImageData;
-        title: string;
-        content: string;
+    image: StaticImageData;
+    title: string;
+    content: string;
 
 }
 
-export const futureSecondSectionImages:futureSecondSectionImagesData[] = [
+export const futureSecondSectionImages: futureSecondSectionImagesData[] = [
     {
         image: intersect,
         title: "Pillar 1",
@@ -57,5 +58,5 @@ export const futureSecondSectionImages:futureSecondSectionImagesData[] = [
         title: "Pillar 5",
         content: `Destination Marketing`
     },
-    
+
 ]

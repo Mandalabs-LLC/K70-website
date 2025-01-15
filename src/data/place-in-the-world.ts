@@ -24,6 +24,7 @@ export const placeInTheWorldData = [
         Kangbachen—each rising above 8,000 meters. The center, primary, and south peaks are situated in Taplejung, Nepal, while
         the north peak is found in Sikkim.`,
         image:placeintheworld,
+        customHeight: 400,
         imageDescription: `Map of Sikkim showing Kangchenjunga, Garwood lantern slide, 1899   (*NHR). n.b. spelling on map: Kanchinjinca and Sikhim`,
     },
     {
@@ -34,6 +35,7 @@ export const placeInTheWorldData = [
           serves as a habitat for many endangered species, including the snow leopard and the red panda. The KCA has been a 
           collaborative project with organizations like WWF, which has been instrumental in the conservation efforts aimed at
          preserving this unique environment.`,
+         customHeight: 100,
          image:map2,    
     },
     {
@@ -43,7 +45,8 @@ export const placeInTheWorldData = [
         is highlighted by Aleister Crowley, who led an early expedition to Kanchenjunga in 1905 and became an emblem of adventure.
          Crowley's fascination with the mystical and the unknown later led to his inclusion on the iconic Sgt. Pepper's Lonely Hearts
         Club Band album cover, where he appears among other cultural figures representing the spirit of exploration and challenge.`,
-        image:map1,       
+        image:map1,  
+        customHeight: 400,     
     },
   
 ] 

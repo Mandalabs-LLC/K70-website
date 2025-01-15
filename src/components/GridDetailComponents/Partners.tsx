@@ -32,14 +32,14 @@ export const Partners = () => {
                 </div>
 
 
+
             </div>
-            <div className="flex flex-col justify-center items-center bg-white pt-10 pb-10">
+            <div className="flex flex-col justify-center items-center bg-white pt-16 pb-16">
                 <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
                     As we prepare for our upcoming event, we are seeking strategic partners who share our vision and commitment to community development.
                 </p>
                 <Link href='/contact' className="uppercase text-blue-dark tracking-wide text-xl pt-2 underline">Get in touch</Link>
             </div>
-
         </>
     )
 

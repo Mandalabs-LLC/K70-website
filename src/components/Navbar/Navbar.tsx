@@ -1,5 +1,6 @@
 'use client'
 import React, { FC, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import logo from '../../../public/logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,11 +9,11 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { footerData } from '@/data/footerData';
 
 const Navbar: FC = () => {
-
     const [isOpen, setOpen] = useState<boolean>(false);
+    const pathname = usePathname(); 
 
     return (
-        <div className='fixed bg-[#FAFBFD] top-0 z-[1000] w-full flex flex-col md:flex-row justify-between px-5 md:px-20 h-[4rem] md:h-[8rem] bg-opacity-80'>
+        <div className='fixed bg-[#FAFBFD] top-0 z-[1000] w-full flex flex-col md:flex-row justify-between px-5 md:px-20 h-[4rem] md:h-[8rem]'>
 
             {/* left section */}
             <section className='w-full md:w-auto flex items-center justify-between'>
@@ -27,10 +28,10 @@ const Navbar: FC = () => {
             {/* right section */}
             <section className='hidden w-auto md:flex items-center'>
                 <ul className='flex gap-10'>
-                    <li className=' text-primary text-xl tracking-wider py-3'>
+                    <li className={`text-xl tracking-wider py-3 ${pathname === '/' ? 'text-[#2B76A3]' : 'text-primary'}`}>
                         <Link href='/'>Home</Link>
                     </li>
-                    <li className=' text-primary text-xl tracking-wider py-3'>
+                    <li className={`text-xl tracking-wider py-3 ${pathname === '/about' ? 'text-[#2B76A3]' : 'text-primary'}`}>
                         <Link href='/about'>About</Link>
                     </li>
                     <li className='w-full bg-blue-dark text-white text-base px-5 py-3 hover:bg-blue-light'>
@@ -45,21 +46,23 @@ const Navbar: FC = () => {
                     <div className='flex justify-end p-8 text-2xl text-[#2B76A3] gap-2' onClick={() => setOpen(!isOpen)}>
                         <p className='text-base'>CLOSE</p> <IoIosCloseCircleOutline />
                     </div>
-                    <ul className='flex flex-col gap-5  text-primary text-2xl tracking-widest py-3 px-6'>
+                    <ul className='flex flex-col gap-5 text-primary text-2xl tracking-widest py-3 px-6'>
                         {footerData.map((data, index) => (
-                            <li key={index} className={`bebasNeue ${index === 1 ? 'pb-10' : 'pb-0'}`} onClick={() => setOpen(!isOpen)}>
+                            <li 
+                                key={index} 
+                                className={`bebasNeue ${pathname === data.href ? 'text-[#2B76A3]' : 'text-primary'} ${index === 1 ? 'pb-10' : 'pb-0'}`} 
+                                onClick={() => setOpen(!isOpen)}>
                                 <Link href={data.href}>{data.section}</Link>
                             </li>
                         ))}
                     </ul>
                     <button className='flex w-full justify-center py-10' onClick={() => setOpen(!isOpen)}>
-                        <Link href='/contact' className='w-[13rem] bg-blue-dark text-white  px-5 py-3 text-center text-xl tracking-widest hover:bg-blue-light'> Get In Touch</Link>
+                        <Link href='/contact' className='w-[13rem] bg-blue-dark text-white px-5 py-3 text-center text-xl tracking-widest hover:bg-blue-light'> Get In Touch</Link>
                     </button>
                 </section>
             }
-
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
