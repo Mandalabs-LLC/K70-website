@@ -20,7 +20,7 @@ export const Partners = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-10 gap-5">
                     {ourPartners.map((partner, index) => (
-                        <Link key={index} href={partner.link} className="p-5 md:p-10 space-y-5 flex flex-col items-center">
+                    <Link target="_blank" key={index} href={partner.link} className="p-5 md:p-10 space-y-5 flex flex-col items-center">
                             <p className="text-primary-light text-base md:text-lg tracking-wider text-center ">
                                 {partner.title}
                             </p>

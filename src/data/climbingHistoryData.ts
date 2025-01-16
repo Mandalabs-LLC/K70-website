@@ -10,6 +10,7 @@ import hungarian from '../../public/images/history/hungarian.png';
 import indianarmy from '../../public/images/history/indianarmy.png';
 import japanese from '../../public/images/history/japanese.png';
 import jerjy from '../../public/images/history/jerjy.png';
+import ttf from '../../public/images/history/twentytwentyfour.png'
 
 interface climbingHistoryData {
     date: string;
@@ -68,4 +69,9 @@ export const climbingHistory: climbingHistoryData[] = [
         content: "Bulgarian climber Boyan Petrov summits without supplemental oxygen. Chhanda Gayen becomes the first Indian woman to summit but tragically dies in an avalanche during her descent.",
         image: [bulgarian],
     },
+    {
+        date: '2024',
+        content:"Nepali climber Nima Rinji Sherpa successfully summited Kanchenjunga at age 18, becoming the youngest person to complete all 14 of the world's highest peaks.",
+        image: [ttf],
+    }
 ];

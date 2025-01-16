@@ -53,20 +53,24 @@ export const Future = () => {
                     Samriddha Kanchenjunga’s holistic program has a five-pillar approach of focused development in the Kanchenjunga region.
                 </p>
 
-                <div className="flex flex-col md:flex-row justify-center gap-8 h-auto w-full">
+                <div className="flex flex-col">
                     {futureSecondSectionImages.map((data, index) => (
-                        <div key={index} className="flex flex-col items-center gap-2 ">
-                            <Image src={data.image} alt="img" className="shadow-md border-8 border-white" onClick={() => openModal(data.image as any)} />
-                            <p className="text-center text-base">{data.title}</p>
-                            <h2 className="text-blue-light text-xl text-center font-bold max-w-[240px]">{data.content}</h2>
+                        <div key={index} className="flex items-center gap-6 mb-4 border-b-2">
+                            <div>
+                                <h2 className="text-blue-light text-xl font-bold mb-6">{data.title}</h2>
+                                <p className="text-lg mb-4">{data.content}</p>
+                            </div>
+                            <Image
+
+                                src={data.image}
+                                alt="img"
+                                className="shadow-md border-8 border-white object-cover mb-4"
+                                onClick={() => openModal(data.image as any)}
+                            />
+
                         </div>
                     ))}
                 </div>
-
-                <p className="text-center py-4">
-                    The program will have significant economic benefit and provide sustainable income to the local community, while conserving nature and
-                    leading to an increase in biodiversity.
-                </p>
 
 
             </div>

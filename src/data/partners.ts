@@ -13,7 +13,7 @@ import sedra from '../../public/images/partners/sedra.png';
 import snv from '../../public/images/partners/snv.png';
 import unesco from '../../public/images/partners/unesco.svg';
 import wwf from '../../public/images/partners/wwf.png';
-
+import tbct from '../../public/images/partners/The_blueberry_charitable_trust.jpg'
 interface Partner {
     title: string;
     link:string;
@@ -75,6 +75,11 @@ export const ourPartners:Partner[] =[
         title: "Special Education Data Reporting Application",
         link:"https://education.mn.gov/mde/index.htm",
         logo: sedra,
+    },
+    {
+        title: "The Blueberry Charitable Trust",
+        link:"#",
+        logo: tbct,
     },
     {
         title: "UNESCO",
