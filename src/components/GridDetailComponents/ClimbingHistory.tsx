@@ -45,30 +45,30 @@ export const ClimbingHistory = () => {
                     <p className="text-lg">In a remarkable display of humility and reverence for the mountain&apos;s sacred significance to the local Sikkimese people, they chose to leave the final snow cone untouched. This decision reflected their commitment to honour their promise to the Chogyal of the Kingdom of Sikkim.</p>
                     <p className="text-lg">The climbing duo was followed the next day by climbers Norman Hardie and Tony Streather. The expedition also included sirdar Dawa Tensing and deputy sirdar, Annullu – both of whom had climbed to the South Col on the 1953 British Everest expedition - the team doctor, John Clegg, John Jackson, Neil Mather, and Tom McKinnon.</p>
                     <div className="flex flex-wrap justify-between">
-    {legacyClimbers.map((data: LegacyClimber, index: number) => (
-        <div
-            key={index}
-            className="flex flex-col items-center w-1/5 text-center mb-6" // Adjust w-1/5 based on the number of items per row
-        >
-            {/* Image */}
-            <Image
-                src={data.image}
-                alt={data.name}
-                width={200}
-                height={200}
-                onClick={() => openModal(data.image as any)}
-                className="cursor-pointer shadow-md border-8 border-white object-cover"
-            />
-            {/* Name below image */}
-            <div
-                className="bg-[#fff]"
-                style={{ width: "200px" }} // Match image width
-            >
-                <p className="py-2 text-[#2B76A3]">{data.name}</p>
-            </div>
-        </div>
-    ))}
-</div>
+                        {legacyClimbers.map((data: LegacyClimber, index: number) => (
+                            <div
+                                key={index}
+                                className="flex flex-col items-center w-1/5 text-center mb-6"
+                            >
+
+                                <Image
+                                    src={data.image}
+                                    alt={data.name}
+                                    width={200}
+                                    height={200}
+                                    onClick={() => openModal(data.image as any)}
+                                    className="cursor-pointer shadow-md border-8 border-white object-cover"
+                                />
+
+                                <div
+                                    className="bg-[#fff]"
+                                    style={{ width: "200px" }}
+                                >
+                                    <p className="py-2 text-[#2B76A3]">{data.name}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
 
                 </div>
