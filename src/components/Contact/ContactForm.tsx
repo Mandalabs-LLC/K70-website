@@ -41,7 +41,6 @@ const ContactForm: React.FC = () => {
                     id="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
-                    required
                     className="mt-2 block w-full p-2 border border-white focus:outline-none bg-blue-dark focus:ring-2 focus:ring-blue-500"
                 />
             </div>

@@ -5,22 +5,22 @@ import intersect1 from '../../public/images/future/Intersect-1.svg';
 import intersect2 from '../../public/images/future/Intersect-2.svg';
 import intersect3 from '../../public/images/future/Intersect-3.svg';
 import intersect4 from '../../public/images/future/Intersect-4.svg';
+import logo from '../../public/images/future/KCAMC logo.svg';
 
 interface futureData {
     content: string;
     image: StaticImageData;
     heading?: string;
+    logo: StaticImageData;
 }
 
 export const futureData = [
     {
         heading: 'future',
-        content: `Kanchenjunga Conservation Area Management Council (KCAMC) was formed in 2003 under the provision of Conservation
-         Area Management Regulation 2001 (Government Management) with an aim of management of KCA through mobilizing local 
-         communities. KCAMC and its affiliated bodies are working in conservation and sustainable development activities in 
-         line with directives of Government of Nepal, Department of National Park and Wildlife Conservation.
+        content: `Kanchenjunga Conservation Area Management Council (KCAMC) was formed in 2003 under the provision of Conservation Area Management Regulation 2001 (Government Management) with the goal of mobilizing local communities to serve as the active managers of the KCA. KCAMC and its affiliated bodies are working in conservation and sustainable development activities in line with directives of the Government of Nepal, Department of National Park and Wildlife Conservation.
          <a href="https://kanchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> https://kanchenjunga.org/ </a>`,
         image: future,
+        logo: logo
         
     },
 ]

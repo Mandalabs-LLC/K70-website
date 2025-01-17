@@ -31,10 +31,21 @@ export const Future = () => {
             {futureData.map((data, index) => (
                 <div key={index} className={`flex flex-col justify-center items-center bg-white gap-4 p-4 md:gap-20 md:p-20  ${index % 2 === 0 ? 'md:flex-row bg-opacity-90' : 'md:flex-row-reverse opacity-1'}`}>
                     <div className="w-full h-full md:w-2/3 flex flex-col justify-center">
-                        <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  md:text-6xl pb-4 md:pb-10">{data.heading}</h1>
-                        <p className={`text-primary-light text-base md:text-lg tracking-wider r ${index % 2 === 0 ? '-mr-20' : '-ml-36'}`}
-                            dangerouslySetInnerHTML={{ __html: data.content }}></p>
+                        <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl md:text-6xl pb-4 md:pb-10">{data.heading}</h1>
+                        <p
+                            className={`text-primary-light text-base md:text-lg tracking-wider ${index % 2 === 0 ? '-mr-20' : '-ml-36'}`}
+                            dangerouslySetInnerHTML={{ __html: data.content }}
+                        ></p>
+                        <div className="flex justify-end">
+                            <Image
+                                src={data.logo}
+                                alt="images"
+                                className="right-0 -mr-6 mt-4"
+                                onClick={() => openModal(data.logo as any)}
+                            />
+                        </div>
                     </div>
+
                     <div className=" w-full h-full md:w-1/3 flex flex-col items-center">
                         <Image src={data.image} alt="images" className='shadow-md border-8 border-white md:h-[396px] md:w-[500px]' onClick={() => openModal(data.image as any)} />
                     </div>
@@ -42,13 +53,9 @@ export const Future = () => {
             ))}
             <div className="flex flex-col justify-center items-center bg-white gap-4 px-4 py-8 md:gap-20 md:p-20 text-primary-light text-lg tracking-wider">
                 <p>
-                    Samriddha Pahad is a Nepali social organisation with a 13-year track record of enhancing livelihoods in Nepal&apos;s hill
-                    and mountain communities. Since 2016, Samriddha Pahad has been actively working in the Kanchenjunga region in collaboration
-                    with the KCAMC and aims to empower local communities through sustainable development initiatives, improve access to
-                    finance, promote tourism, and enhance overall living standards. <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">www.spnepal.org</a>
+                    Samriddha Pahad is a Nepali social organisation with a 13-year track record of enhancing livelihoods in Nepal&apos;s hill and mountain communities. Since 2016, Samriddha Pahad has been actively working in the Kanchenjunga region in collaboration with the KCAMC with the goal of empowering local communities through sustainable development initiatives, improving access to finance, promoting sustainable tourism, and enhancing overall living standards.<a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">www.spnepal.org</a>
                     <br /><br />
-                    Samriddha Pahad in a joint venture partnership with Kanchenjunga Conservation Area Management Council (KCAMC) has developed
-                    Samriddha Kanchenjunga Program for sustainable tourism development in the Kanchenjunga Conservation Area.
+                    In a joint venture partnership with Kanchenjunga Conservation Area Management Council (KCAMC), Samriddha Pahad has developed the Samriddha Kanchenjunga Program for sustainable tourism development in the Kanchenjunga Conservation Area.
                     <br /><br />
                     Samriddha Kanchenjunga’s holistic program has a five-pillar approach of focused development in the Kanchenjunga region.
                 </p>
