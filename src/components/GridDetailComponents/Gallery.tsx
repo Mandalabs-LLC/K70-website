@@ -59,7 +59,7 @@ export const CustomModal: React.FC<ModalProps> = ({
 interface GalleryItem {
     imageUrl: StaticImageData | string;
     title: string;
-    description: string;
+    description?: string;
 }
 
 export const Gallery: React.FC = () => {
@@ -113,9 +113,9 @@ export const Gallery: React.FC = () => {
                                     className="shadow-lg"
                                 />
                             </div>
-                            <div className="pt-5 pb-4 text-[14px] font-normal text-gray-500">
+                            {item.description && item.description.length > 0 && <div className="pt-5 pb-4 text-[14px] font-normal text-gray-500">
                                 <p>{item.description}</p>
-                            </div>
+                            </div>}
                         </div>
                     ))}
                 </Masonry>

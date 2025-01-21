@@ -54,6 +54,11 @@ export const climbingHistory: climbingHistoryData[] = [
         content: 'Polish climbers Wojciech Wróż and Eugeniusz Chrobak achieve the first ascent of Kangchenjunga South summit.',
         image: [polish],
     },
+    // {
+    //     date: '1980',
+    //     content: 'The first Nepali to climb this peak was Anfg',
+    //     image: [jerjy],
+    // },
     {
         date: '1980s - 1990s',
         content: "Various expeditions occur, including a notable solo ascent by climber Jerzy Kukuczka in 1991.",

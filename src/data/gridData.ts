@@ -1,11 +1,11 @@
-import placeinworld from '../../public/images/placeinworld.jpg';
-import people from '../../public/images/people.jpg';
+import placeinworld from '../../public/images/placeiw.jpg';
+import people from '../../public/images/people.svg';
 import climbinghistory from '../../public/images/climbinghistory.jpg';
-import future from '../../public/images/future.png';
-import k70events from '../../public/images/k70events.png';
+import future from '../../public/images/future.jpg';
+import k70events from '../../public/images/k70events.jpg';
 import partners from '../../public/images/partners.jpg';
 import gallery from '../../public/images/gallery.png';
-import nature from '../../public/images/nature.jpeg';
+import nature from '../../public/images/nature2.png';
 import { StaticImageData } from 'next/image';
 
 interface GridItem {

@@ -37,6 +37,23 @@ import Image36 from '../../public/images/gallery/img36.jpg';
 import Image37 from '../../public/images/gallery/img37.jpg';
 import Image38 from '../../public/images/gallery/img38.jpg';
 import Image39 from '../../public/images/gallery/img39.jpg';
+import Image40 from '../../public/images/gallery/img40.jpg';
+import Image41 from '../../public/images/gallery/img41.jpg';
+import Image42 from '../../public/images/gallery/img42.jpg';
+import Image43 from '../../public/images/gallery/img43.jpg';
+import Image44 from '../../public/images/gallery/img44.jpg';
+import Image45 from '../../public/images/gallery/img45.jpg';
+import Image46 from '../../public/images/gallery/img46.jpg';
+import Image47 from '../../public/images/gallery/img47.jpg';    
+import Image48 from '../../public/images/gallery/img48.jpg';
+import Image49 from '../../public/images/gallery/img49.jpg';
+import Image50 from '../../public/images/gallery/img50.jpg';
+import Image51 from '../../public/images/gallery/img51.jpg';
+import Image52 from '../../public/images/gallery/img52.jpg';
+import Image53 from '../../public/images/gallery/img53.jpg';
+import Image54 from '../../public/images/gallery/img54.jpg';
+import Image55 from '../../public/images/gallery/img55.jpg';
+import Image56 from '../../public/images/gallery/img56.jpg';
 
 export const galleryData = [
     {
@@ -234,5 +251,89 @@ export const galleryData = [
         "title": "",
         "description": "Siniolchu, Sikkim, by Vittorio Sella, 1899, *NHR - taken during the Kangchenjunga expedition of 1899."
     },
-
+    {
+        "imageUrl": Image40,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image41,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image42,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image43,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image44,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image45,
+        "title": "",
+        "description": ""    
+    },
+    {
+        "imageUrl": Image46,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image47,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image48,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image49,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image50,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image51,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image52,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image53,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image54,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image55,
+        "title": "",
+        "description": ""
+    },
+    {
+        "imageUrl": Image56,
+        "title": "",
+        "description": ""
+    }
 ];

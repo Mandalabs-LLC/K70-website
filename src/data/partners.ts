@@ -92,7 +92,7 @@ export const ourPartners:Partner[] =[
         logo: wwf,
     },
     {
-        title: "worldlink",
+        title: "Worldlink",
         link:"https://worldlink.com.np/",
         logo: worldlink,
     },
