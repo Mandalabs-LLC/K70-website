@@ -1,5 +1,5 @@
 # pull base image
-FROM imbios/bun-node:20-slim
+FROM node:20-alpine
 
 # set working directory
 WORKDIR /app
