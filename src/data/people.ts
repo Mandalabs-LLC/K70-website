@@ -8,24 +8,18 @@ interface peopleData {
     content: string;
     image: StaticImageData;
     imageDescription?: string;    
+    video?:string;
 }
 
 export const peopleData = [
     {
         heading: "people",
-        content:`In Nepal's Koshi Province, the surroundings of Kanchenjunga are home to a rich cultural heritage. To the 
-        locals, Kanchenjunga commands great respect, hence being represented through festivities and religious expressions. This
-         aspect of culture further identifies Kanchenjunga as something much more than a natural feature but part of the people's 
-         heritage and spirituality. The region has long been shrouded in myth and legend, captivating climbers since the early 
-         20th century, and being revered in folklore.
+        content:`The land surrounding Kangchenjunga, in the province of Koshi in Eastern Nepal, is home to a rich cultural heritage. Kangchenjunga commands great respect among the local people and is represented through festivities and religious expression. Kangchenjunga is something much more than a natural feature but part of the people's heritage and spirituality. The region has long been shrouded in myth and legend, captivating climbers since the early 20th century and being revered in folklore.
         <br/><br/>
-        The Kanchenjunga region represents a range of ethnic groups but comprises mainly of the Sherpa, Rai, and Limbu communities. Each
-         group contributes unique traditions and ways of life that reflect their deep connection to the mountainous landscape. All 
-         communities have influences from the Tibetan culture due to their proximity. Local tradition refers to a hidden valley 
-         behind Beyul Demoshong, considered a land of immortality, which adds spiritual significance to Kanchenjunga for these 
-         communities.`,
+        The Kangchenjunga region represents a range of ethnic groups but comprises mainly the Sherpa, Rai, and Limbu communities. Each group contributes unique traditions and ways of life that reflect their deep connection to the mountainous landscape.  All the communities are influenced by Tibetan culture because of their close proximity to Tibet, and local tradition has it that there is a hidden valley behind Beyul Demoshong, considered a land of immortality.`,
         image: people,
-        customHeight: 500
+        customHeight: 300,
+        video: "/video/people.mp4"
     },
     {
         content:`The Sherpa community is renowned for its exceptional mountaineering skills and deep spiritual connection to the

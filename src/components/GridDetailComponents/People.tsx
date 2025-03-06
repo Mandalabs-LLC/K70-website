@@ -33,7 +33,7 @@ export const People: React.FC = () => {
                     className={`flex flex-col justify-center items-center bg-white gap-4 p-4 md:gap-20 md:p-20 ${index % 2 === 0 ? "md:flex-row bg-opacity-90" : "md:flex-row-reverse opacity-1"
                         }`}
                 >
-                    <div className="w-full h-full md:w-2/3 flex flex-col justify-center">
+                    <div className="w-full h-full md:w-1/2 flex flex-col justify-center">
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl md:text-6xl pb-4 md:pb-10">
                             {data.heading}
                         </h1>
@@ -44,7 +44,11 @@ export const People: React.FC = () => {
 
 
                     </div>
-                    <div className="w-full h-full md:w-1/3 flex flex-col items-center">
+                    <div className="w-full h-full md:w-1/2 flex flex-col items-center">
+                    <div className="flex">
+                        {data.video && (
+                            <video src={data.video} autoPlay muted loop className="shadow-md border-8 border-white object-cover h-[300px]" />
+                        )}
                         {/* Clickable Image */}
                         <Image
                             src={data.image}
@@ -54,6 +58,7 @@ export const People: React.FC = () => {
                             className={`shadow-md border-8 border-white cursor-pointer w-auto h-[${data?.customHeight}px] ${index === 1 ? 'w-[300px]' : ''}`}
                             style={{ width: index === 1 ? '300px' : 'auto' }}
                         />
+                        </div>
 
                         {data.imageDescription && (
                             <p
