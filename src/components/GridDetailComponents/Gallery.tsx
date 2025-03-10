@@ -119,7 +119,7 @@ export const Gallery: React.FC = () => {
                         </div>
                     ))}
                 </Masonry>
-            </ResponsiveMasonry>bg-white
+            </ResponsiveMasonry>
 
             {/* Modal */}
             <CustomModal

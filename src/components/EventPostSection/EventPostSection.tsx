@@ -40,26 +40,26 @@ const EventPostComponent = () => {
     const carouselData = [...gridData, gridData[0]]; // Cloning the first item at the end
 
     return (
-        <div className="py-10 px-5 md:px-20 bg-[#FAFBFD]">
+        <div className="py-10 md:px-20 bg-[#FAFBFD]">
             <div className="text-center mb-8">
                 <h2 className="text-4xl md:text-5xl font-[400] tracking-wide text-blue-light bebasNeue">
                     EVENT POSTS
                 </h2>
             </div>
 
-            <div className="flex justify-between items-center mb-10 p-[20px_16px] bg-[#ECF7F9] rounded-md border border-[#FAFBFD]">
-                <div className="flex flex-col items-center w-1/3 text-center">
-                    <p className="text-lg md:text-xl tracking-wide font-bold">Follow Us On Instagram</p>
-                    <p className="text-lg md:text-xl text-blue-light font-bold">@KANGCHENJUNGA70</p>
+            <div className="flex justify-between items-center mb-10 gap-10 p-4 md:px-5 md:py-4 bg-[#ECF7F9] rounded-md border border-[#FAFBFD]">
+                <div className="flex flex-col items-center w-1/2 text-center">
+                    <p className="text-base md:text-xl tracking-wide font-bold">Follow Us On Instagram</p>
+                    <p className="text-lg tracking-widest md:text-xl text-blue-light font-bold bebasNeue">@KANGCHENJUNGA70</p>
                 </div>
-                <div className="flex flex-col items-center w-1/3 text-center">
-                    <p className="text-lg md:text-xl tracking-wide font-bold">Tag us in your posts</p>
-                    <p className="text-lg md:text-xl text-blue-light font-bold">#KANGCHENJUNGA70</p>
+                <div className="flex flex-col items-center w-1/2 text-center">
+                    <p className="text-base md:text-xl tracking-wide font-bold">Tag us in your posts</p>
+                    <p className="text-lg tracking-widest md:text-xl text-blue-light font-bold bebasNeue">#KANGCHENJUNGA70</p>
                 </div>
             </div>
 
             {/* Carousel Container */}
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden px-5">
                 <div
                     className="flex transition-transform duration-500 ease-in-out"
                     style={{

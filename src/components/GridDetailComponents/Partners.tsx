@@ -19,7 +19,7 @@ export const Partners = () => {
                     </p>
 
                     {/* Partner Boxes */}
-                    <div className="flex md:flex-row gap-6">
+                    <div className="flex flex-col lg:flex lg:flex-row  gap-6">
                         {/* Partner 1 */}
                         <div className="bg-[#fff] p-6 rounded-lg shadow-md flex flex-col items-center">
                             <Image src={KCAMCLOGO} alt="KCAMCLOGO" width={200} height={100} className="w-auto h-auto" />
