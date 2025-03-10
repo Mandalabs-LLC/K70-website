@@ -4,23 +4,23 @@ import Image from "next/image";
 import background2 from '../../../public/images/background2.jpg';
 import { k70Events } from '../../data/k70events';
 import Link from "next/link";
-// import { CustomModal } from "./Gallery";
+import { CustomModal } from "./Gallery";
 
 export const Events = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  // const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  // const [modalImage, setModalImage] = useState<string>("");
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [modalImage, setModalImage] = useState<string>("");
 
-  // const openModal = (imageUrl: string): void => {
-  //   setModalImage(imageUrl);
-  //   setIsModalOpen(true);
-  //   document.body.style.overflow = "hidden"; // Disable scrolling
-  // };
+  const openModal = (imageUrl: string): void => {
+    setModalImage(imageUrl);
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden"; // Disable scrolling
+  };
 
-  // const closeModal = (): void => {
-  //   setIsModalOpen(false);
-  //   document.body.style.overflow = ""; // Re-enable scrolling
-  // };
+  const closeModal = (): void => {
+    setIsModalOpen(false);
+    document.body.style.overflow = ""; // Re-enable scrolling
+  };
 
   return (
     <>
@@ -34,12 +34,12 @@ export const Events = () => {
         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  md:text-6xl pb-4 md:pb-6 z-10">Celebrations</h1>
 
         <div className="hidden md:flex gap-[160px] my-[60px]">
-          <div className="w-1/3 flex flex-col justify-end">
+          <div className="w-1/3 flex flex-col justify-start">
             {k70Events.map((data, index) => (
               <div key={index} className={` flex flex-row items-center border-b border-blue-light p-3 cursor-pointer text-blue-light text-3xl ${index === currentIndex && 'text-primary text-5xl pb-5'}`}
                 onMouseEnter={() => setCurrentIndex(index)}
               >
-                <div className={`absolute left-0 bg-black h-2 w-20 ${index === currentIndex ? 'block' : 'hidden'}`}></div>
+                <div className={`absolute left-0 bg-black h-2 w-20  ${index === currentIndex ? 'block' : 'hidden'}`}></div>
                 <p className="uppercase bebasNeue tracking-wider">{data.date}</p>
               </div>
             ))}
@@ -49,21 +49,21 @@ export const Events = () => {
             <p className="text-primary-light text-base md:text-lg tracking-wider">
               {k70Events[currentIndex].content}
             </p>
-            {/* {
-              k70Events[currentIndex].images && (
-                <div className="grid grid-cols-3 gap-4 pt-10">
-                  {k70Events[currentIndex].images && k70Events[currentIndex].images[0] && (
-                    <Image onClick={() => openModal(k70Events[currentIndex].images[0].src)} height={220} src={k70Events[currentIndex].images[0]} alt={k70Events[currentIndex]?.title} className="shadow-md border-8 border-white" />
-                  )}
-                  {k70Events[currentIndex].images && k70Events[currentIndex].images[1] && (
-                    <Image onClick={() => openModal(k70Events[currentIndex].images[1].src)} height={220} src={k70Events[currentIndex].images[1]} alt={k70Events[currentIndex]?.title} className="shadow-md border-8 border-white" />
-                  )}
-                  {k70Events[currentIndex].images && k70Events[currentIndex].images[2] && (
-                    <Image onClick={() => openModal(k70Events[currentIndex].images[2].src)} height={220} src={k70Events[currentIndex].images[2]} alt={k70Events[currentIndex]?.title} className="shadow-md border-8 border-white" />
-                  )}
-                </div>
-              )
-            } */}
+            {k70Events[currentIndex]?.images?.filter(Boolean).length ? (
+              <div className="grid grid-cols-3 gap-4 pt-10">
+                {k70Events[currentIndex].images.filter(Boolean).map((image, index) => (
+                  <Image
+                    key={index}
+                    onClick={() => image.src && openModal(image.src)}
+                    height={220}
+                    src={image}
+                    alt={k70Events[currentIndex]?.title || "Event Image"}
+                    className="shadow-md border-8 border-white"
+                  />
+                ))}
+              </div>
+            ) : null}
+
             <p className="uppercase text-blue-dark bebasNeue tracking-wider text-3xl text-right pt-10">
               {k70Events[currentIndex].title}
             </p>
@@ -94,13 +94,13 @@ export const Events = () => {
           These celebrations will mirror the success of the Everest 70 event in 2023 <Link target="_blank" href="https://www.everest70.com" className="text-blue-light underline">(www.everest70.com)</Link>, showcasing the deep connections and shared history between the two regions. It promises to be a meaningful occasion filled with activities that highlight the enduring impact of this legacy.
         </p>
       </div>
-      {/* <CustomModal
+      <CustomModal
         isOpen={isModalOpen}
         currentIndex={0} // Placeholder for now; update if needed for carousel-like navigation
         images={[modalImage]} // Pass single image as an array
         onClose={closeModal}
         onNavigate={() => { }} // Empty function since we are not navigating between images
-      /> */}
+      />
 
     </>
   )
