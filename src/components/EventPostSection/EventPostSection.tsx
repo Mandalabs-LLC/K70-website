@@ -50,11 +50,11 @@ const EventPostComponent = () => {
             <div className="flex justify-between items-center mb-10 p-[20px_16px] bg-[#ECF7F9] rounded-md border border-[#FAFBFD]">
                 <div className="flex flex-col items-center w-1/3 text-center">
                     <p className="text-lg md:text-xl tracking-wide font-bold">Follow Us On Instagram</p>
-                    <p className="text-lg md:text-xl text-blue-light font-bold">@KANCHENJUNGA70</p>
+                    <p className="text-lg md:text-xl text-blue-light font-bold">@KANGCHENJUNGA70</p>
                 </div>
                 <div className="flex flex-col items-center w-1/3 text-center">
                     <p className="text-lg md:text-xl tracking-wide font-bold">Tag us in your posts</p>
-                    <p className="text-lg md:text-xl text-blue-light font-bold">#KANCHENJUNGA70</p>
+                    <p className="text-lg md:text-xl text-blue-light font-bold">#KANGCHENJUNGA70</p>
                 </div>
             </div>
 

@@ -73,7 +73,7 @@ const ContactForm: React.FC = () => {
                         Select an organization
                     </option>
                     <option value="Himalayan Trust Nepal">Himalayan Trust Nepal</option>
-                    <option value="Kanchenjunga Conservation Area">Kanchenjunga Conservation Area</option>
+                    <option value="Kangchenjunga Conservation Area">Kangchenjunga Conservation Area</option>
                     <option value="Samriddha Pahad">Samriddha Pahad</option>
                     <option value="Nepal Investment Bank Ltd.">Nepal Investment Bank Ltd.</option>
                 </select>

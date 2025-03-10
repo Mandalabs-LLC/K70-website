@@ -43,14 +43,14 @@ export const Future = () => {
             <div className="flex flex-col justify-center items-center bg-white gap-4 px-4 py-8 md:gap-20 md:p-20 text-primary-light text-lg tracking-wider">
                 <p>
                     Samriddha Pahad is a Nepali social organisation with a 13-year track record of enhancing livelihoods in Nepal&apos;s hill
-                    and mountain communities. Since 2016, Samriddha Pahad has been actively working in the Kanchenjunga region in collaboration
+                    and mountain communities. Since 2016, Samriddha Pahad has been actively working in the Kangchenjunga region in collaboration
                     with the KCAMC and aims to empower local communities through sustainable development initiatives, improve access to
                     finance, promote tourism, and enhance overall living standards. <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">www.spnepal.org</a>
                     <br /><br />
-                    Samriddha Pahad in a joint venture partnership with Kanchenjunga Conservation Area Management Council (KCAMC) has developed
-                    Samriddha Kanchenjunga Program for sustainable tourism development in the Kanchenjunga Conservation Area.
+                    Samriddha Pahad in a joint venture partnership with Kangchenjunga Conservation Area Management Council (KCAMC) has developed
+                    Samriddha Kangchenjunga Program for sustainable tourism development in the Kangchenjunga Conservation Area.
                     <br /><br />
-                    Samriddha Kanchenjunga’s holistic program has a five-pillar approach of focused development in the Kanchenjunga region.
+                    Samriddha Kangchenjunga’s holistic program has a five-pillar approach of focused development in the Kangchenjunga region.
                 </p>
 
                 <div className="flex flex-col md:flex-row justify-center gap-8 h-auto w-full">
@@ -71,8 +71,8 @@ export const Future = () => {
 
             </div>
             <h2 className="text-white bebasNeue tracking-widest text-xl md:text-3xl text-center pt-16 pb-16" style={{ background: ' #2B76A3' }}>
-                “Conserving nature whilst empowering communities of Kanchenjunga, the world’s third highest mountain” <br />
-                <p className="text-lg mt-4">– Samriddha Kanchenjunga</p>
+                “Conserving nature whilst empowering communities of Kangchenjunga, the world’s third highest mountain” <br />
+                <p className="text-lg mt-4">– Samriddha Kangchenjunga</p>
             </h2>
 
             {/* Modal */}

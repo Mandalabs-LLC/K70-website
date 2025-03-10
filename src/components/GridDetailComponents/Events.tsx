@@ -4,9 +4,23 @@ import Image from "next/image";
 import background2 from '../../../public/images/background2.jpg';
 import { k70Events } from '../../data/k70events';
 import Link from "next/link";
+import { CustomModal } from "./Gallery";
 
 export const Events = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [modalImage, setModalImage] = useState<string>("");
+
+  const openModal = (imageUrl: string): void => {
+    setModalImage(imageUrl);
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden"; // Disable scrolling
+  };
+
+  const closeModal = (): void => {
+    setIsModalOpen(false);
+    document.body.style.overflow = ""; // Re-enable scrolling
+  };
 
   return (
     <>
@@ -35,7 +49,22 @@ export const Events = () => {
             <p className="text-primary-light text-base md:text-lg tracking-wider">
               {k70Events[currentIndex].content}
             </p>
-            <p className="uppercase text-blue-dark bebasNeue tracking-wider text-3xl text-right">
+            {
+              k70Events[currentIndex].images && (
+                <div className="grid grid-cols-3 gap-4 pt-10">
+                  {k70Events[currentIndex].images && k70Events[currentIndex].images[0] && (
+                    <Image onClick={() => openModal(k70Events[currentIndex].images[0].src)} height={220} src={k70Events[currentIndex].images[0]} alt={k70Events[currentIndex].title} className="shadow-md border-8 border-white" />
+                  )}
+                  {k70Events[currentIndex].images && k70Events[currentIndex].images[1] && (
+                    <Image onClick={() => openModal(k70Events[currentIndex].images[1].src)} height={220} src={k70Events[currentIndex].images[1]} alt={k70Events[currentIndex].title} className="shadow-md border-8 border-white" />
+                  )}
+                  {k70Events[currentIndex].images && k70Events[currentIndex].images[2] && (
+                    <Image onClick={() => openModal(k70Events[currentIndex].images[2].src)} height={220} src={k70Events[currentIndex].images[2]} alt={k70Events[currentIndex].title} className="shadow-md border-8 border-white" />
+                  )}
+                </div>
+              )
+            }
+            <p className="uppercase text-blue-dark bebasNeue tracking-wider text-3xl text-right pt-10">
               {k70Events[currentIndex].title}
             </p>
           </div>
@@ -60,13 +89,18 @@ export const Events = () => {
 
       <div className="flex flex-col justify-center items-center bg-white p-4 md:px-20 md:py-[60px]">
         <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
-          2025 marks the 70th anniversary since the first summit to Kanchenjunga in 1955. It is a voyage of celebration that will honor a legacy inspiring many. Various events are planned to commemorate this milestone, hosted by communities in both Nepal and the United Kingdom.
+          2025 marks the 70th anniversary since the first summit to Kangchenjunga in 1955. It is a voyage of celebration that will honor a legacy inspiring many. Various events are planned to commemorate this milestone, hosted by communities in both Nepal and the United Kingdom.
           <br /><br />
           These celebrations will mirror the success of the Everest 70 event in 2023 <Link target="_blank" href="https://www.everest70.com" className="text-blue-light underline">(www.everest70.com)</Link>, showcasing the deep connections and shared history between the two regions. It promises to be a meaningful occasion filled with activities that highlight the enduring impact of this legacy.
-          <br /><br />
-          celebrations will honor pioneering climbers and foster community engagement while highlighting the region&apos;s rich cultural heritage.
         </p>
       </div>
+      <CustomModal
+        isOpen={isModalOpen}
+        currentIndex={0} // Placeholder for now; update if needed for carousel-like navigation
+        images={[modalImage]} // Pass single image as an array
+        onClose={closeModal}
+        onNavigate={() => { }} // Empty function since we are not navigating between images
+      />
 
     </>
   )

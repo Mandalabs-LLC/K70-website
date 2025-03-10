@@ -72,7 +72,9 @@ export const PlaceInTheWorld = () => {
                 <div className="w-full h-full md:w-1/2 flex gap-4">
 
                     <p className={`text-primary-light text-base text-justify md:text-lg tracking-wider pt-10`}>
-                        Mount Kangchenjunga represents not only a geographical wonder but also an integral part of Nepal’s and India's cultural and ecological expression. Its historical importance, climbing challenges, and current conservation projects make it a focal point of attention for adventurers and environmentalists alike.                    </p>
+                        Mount Kangchenjunga represents not only a geographical wonder but also an integral part of Nepal’s and India&apos;s cultural and ecological expression. Its historical importance, climbing challenges, and current conservation projects make it a focal point of attention for adventurers and environmentalists alike.
+                    </p>
+                    
                     <Image
                         onClick={() => openModal(pray as any)}
                         src={pray}
