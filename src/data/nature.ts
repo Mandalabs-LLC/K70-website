@@ -4,7 +4,7 @@ import cactus from '../../public/images/nature/Nature_cactus.jpg';
 import flora from '../../public/images/nature/Nature_flora.jpg';
 import HimalayanGriffonVulture from '../../public/images/nature/Nature_HimalayanGriffonVulture.jpg';
 import HimalayanYew from '../../public/images/nature/Nature_HimalayanYew.webp';
-import laliguras from '../../public/images/nature/Nature_laliguras.jpg';
+import laliguras from '../../public/images/nature/laligurash.jpg';
 import Mountain from '../../public/images/nature/Nature_Mountain.jpg';
 import redpanda2 from '../../public/images/nature/Nature_redpanda.jpeg';
 import snowleopard from '../../public/images/nature/Nature_snowleopard.jpg';
