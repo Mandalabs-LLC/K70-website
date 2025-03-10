@@ -82,7 +82,7 @@ export const People: React.FC = () => {
                     src={people21}
                     alt="images"
                     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    onClick={() => openModal(people22 as any)} // Open modal on click
+                    onClick={() => openModal(people21 as any)} // Open modal on click
                     className={`shadow-md border-8 border-white cursor-pointer w-auto md:h-[296px] md:w-[300px] 3xl:w-[500px] object-cover`}
                 />
 
