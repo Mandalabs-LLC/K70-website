@@ -8,7 +8,7 @@ import Mountain from '../../public/images/nature/Nature_Mountain.jpg';
 import redpanda2 from '../../public/images/nature/Nature_redpanda.jpeg';
 import snowleopard from '../../public/images/nature/Nature_snowleopard.jpg';
 import Tragopansatyra from '../../public/images/nature/Nature_Tragopansatyra.jpeg';
-import laliguras from '../../public/images/nature/laligurash.jpg';
+import laliguras from '../../public/images/nature/laligurash.webp';
 
 interface natureData {
     content: string;
