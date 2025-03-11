@@ -22,6 +22,9 @@ const beVietnamPro = Be_Vietnam_Pro({
 export const metadata: Metadata = {
     title: "K70",
     description: "70 years completion of climbing",
+    icons: {
+        icon: "/logo.png",
+      }
 };
 
 export default function RootLayout({
