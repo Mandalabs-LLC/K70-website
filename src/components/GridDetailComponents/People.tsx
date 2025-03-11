@@ -3,10 +3,10 @@ import Image from "next/image";
 import background2 from '../../../public/images/background2.jpg';
 import { peopleData } from '../../data/people';
 import { CustomModal } from "./Gallery";
-import people32 from '../../../public/images/people2.jpg';
-import people22 from '../../../public/images/people/people03.jpg';
-import people21 from '../../../public/images/people/people02.jpg'
-import people31 from '../../../public/images/people.jpg';
+import people32 from '../../../public/images/people/People_last_01.png';
+import people22 from '../../../public/images/people/people_3.png';
+import people21 from '../../../public/images/people/people_2.png'
+import people31 from '../../../public/images/people/People_last_02.png';
 
 export const People: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -48,7 +48,7 @@ export const People: React.FC = () => {
                     <div className="w-full h-full lg:w-[55%] flex flex-col items-start">
                         <div className="flex flex-col lg:flex lg:flex-row gap-4">
                             {data.video && (
-                                <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:w-[500px] 3xl:w-[600px] z-20" />
+                                <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:w-[200px] xl:w-[500px] xl:h-[400px] 3xl:w-[600px] z-20" />
                             )}
                             {/* Clickable Image */}
                             <Image
@@ -56,7 +56,7 @@ export const People: React.FC = () => {
                                 alt="images"
                                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 onClick={() => openModal(data.image as any)} // Open modal on click
-                                className={` lg:absolute lg:right-10 lg:top-60 shadow-lg border-8 border-white cursor-pointer w-auto lg:w-[350px] 3xl:w-[450px] object-cover`}
+                                className={` lg:absolute lg:right-10 lg:bottom-20  shadow-lg border-8 border-white cursor-pointer w-auto lg:w-[350px] 3xl:w-[450px] object-cover`}
                             />
                         </div>
                     </div>
@@ -96,22 +96,22 @@ export const People: React.FC = () => {
                 </div>
                 <div className="flex flex-col lg:flex lg:flex-row gap-4 lg:gap-10 lg:w-1/2">
                     <Image
-                        src={people31}
+                        src={people32}
                         alt="images"
                         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                        onClick={() => openModal(people31 as any)} // Open modal on click
-                        className={`shadow-lg border-8 border-white cursor-pointer object-cover`}
+                        onClick={() => openModal(people32 as any)} // Open modal on click
+                        className={`shadow-lg border-8 border-white cursor-pointer lg:w-1/2 object-cover`}
                     />
-                    <div className={''}>
+                    <div className={'w-auto lg:w-1/2 relative'}>
                         <Image
-                            src={people32}
+                            src={people31}
                             alt="images"
                             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                            onClick={() => openModal(people32 as any)} // Open modal on click
-                            className={`shadow-lg border-8 border-white cursor-pointer object-cover `}
+                            onClick={() => openModal(people31 as any)} // Open modal on click
+                            className={`shadow-lg border-8 border-white cursor-pointer h-full object-cover `}
                         />
                         <p
-                            className="bg-white shadow-lg text-blue-light text-xs tracking-wider text-center px-4 pb-2 max-w-[299px]"
+                            className="bg-white shadow-lg text-blue-light text-xs tracking-wider text-center px-4 pb-2 absolute bottom-0 left-0"
                         >
                             Tashi Sherpa, a sherpa on the Kangchenjunga Expedition, 1955
                         </p>

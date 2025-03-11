@@ -20,13 +20,13 @@ interface natureData {
 export const natureData = [
     {
         heading:'nature',
-        content:`The Kangchenjunga Conservation Area (KCA) in eastern Nepal is a diverse region, both in terms of its breathtaking 
-        landscapes and rich biodiversity. This protected area, which encompasses 2,035 square kilometers, also features rapid elevation
-         changes and varied climatic conditions, creating a multitude of habitats that support an impressive array of flora and fauna.
+        content:`The Kangchenjunga Conservation Area (KCA) in Eastern Nepal is a diverse region with breathtaking landscapes and a rich 
+        biodiversity. This protected area, which encompasses 2,035 square kilometres,  features widely varied altitudes and climatic 
+        conditions, creating a multitude of habitats that support an impressive array of flora and fauna.
         <br/><br/>
-        The Kangchenjunga Conservation Area is famous for its magnificent blooming rhododendron (Nepali: gurans) forests in the spring, for
-        the reclusive red panda (habre) that lives in its hemlock-bamboo (thingre salla, malingo) forests, and for the snow        
-        leopard (hiun chituwa) that hunts its icy cliffs. It is also one of the last places in the Himalayas where ancient, 
+        The Kangchenjunga Conservation Area is famous for its magnificent blooming rhododendron (Nepali: <i>gurans</i>) forests in the spring, for
+        the reclusive red panda (<i>habre</i>) that lives in its hemlock-bamboo (<i>thingre salla, malingo</i>) forests, and for the snow        
+        leopard (<i>hiun chituwa</i>) that hunts its icy cliffs. It is also one of the last places in the Himalayas where ancient, 
         roadless, and relatively undisturbed temperate and subalpine forests still exist. The tremendous variety of climate 
         conditions, altitudes, and habitats, combined with low population and development pressures in some of the upper 
         valleys, make the KCA an important biodiversity treasure. Many species that the World Conservation Union has identified
@@ -37,7 +37,7 @@ export const natureData = [
     },  
     {
         content:`The fauna of the KCA is equally diverse and includes several iconic species that inhabit its varied ecosystems. Notable mammals such as
-        the snow leopard, red panda,  Himalayan black bear, blue sheep, and wild dog roam these mountains, each adapted to specific habitats based on
+        the snow leopard, red panda, Himalayan black bear, blue sheep, and wild dog roam these mountains, each adapted to specific habitats based on
         altitude and vegetation type. The presence of these species is indicative of a healthy ecosystem; for instance, snow leopards serve as apex 
         predators that help maintain prey populations. The region also has a rich avian population, with a tremendous variety of bird species thriving
         in its diverse habitats.

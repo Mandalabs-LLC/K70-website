@@ -46,9 +46,9 @@ export const Nature = () => {
 
             {natureDataSecond.map((data, index) => (
                 <div key={index} className={`flex flex-col justify-center items-center text-justify bg-white gap-4 p-4 md:gap-20 md:p-20  ${index % 2 === 0 ? 'bg-opacity-90' : 'opacity-1'}`}>
-                    <div className="flex flex-col-reverse md:flex md:flex-row md:flex-wrap gap-5">
+                    <div className="flex flex-col-reverse md:flex md:flex-row gap-5">
                         {data.images.map((img, imgIndex) => (
-                            <Image key={imgIndex} src={img} alt="fauna" width={324} height={312} onClick={() => openModal(img as any)} className='shadow-md border-8 border-white object-cover' />
+                            <Image key={imgIndex} src={img} alt="fauna" onClick={() => openModal(img as any)} className='lg:h-[250px] lg:w-[250px] xl:h-[312px] xl:w-[324px] shadow-md border-8 border-white object-cover' />
                         ))}
                     </div>
                     <p className="text-primary-light text-base md:text-lg tracking-wider">{data.content}</p>

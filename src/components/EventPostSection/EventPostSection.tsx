@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { gridData } from '@/data/gridData';
 import InstagramImageCard from '@/components/ImageCards/InstagramImageCard';
-import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
+import { FaArrowRightLong,FaArrowLeftLong } from "react-icons/fa6";
 
 const EventPostComponent = () => {
     const [startIndex, setStartIndex] = useState(0);
@@ -49,12 +49,12 @@ const EventPostComponent = () => {
 
             <div className="flex justify-between items-center mb-10 gap-10 p-4 md:px-5 md:py-4 bg-[#ECF7F9] rounded-md border border-[#FAFBFD]">
                 <div className="flex flex-col items-center w-1/2 text-center">
-                    <p className="text-base md:text-xl tracking-wide font-bold">Follow Us On Instagram</p>
-                    <p className="text-lg tracking-widest md:text-xl text-blue-light font-bold bebasNeue">@KANGCHENJUNGA70</p>
+                    <p className="text-base md:text-2xl tracking-wide font-bold">Follow Us On Instagram</p>
+                    <p className="text-lg tracking-widest md:text-3xl text-blue-light bebasNeue">@KANGCHENJUNGA70</p>
                 </div>
                 <div className="flex flex-col items-center w-1/2 text-center">
-                    <p className="text-base md:text-xl tracking-wide font-bold">Tag us in your posts</p>
-                    <p className="text-lg tracking-widest md:text-xl text-blue-light font-bold bebasNeue">#KANGCHENJUNGA70</p>
+                    <p className="text-base md:text-2xl tracking-wide font-bold">Tag us in your posts</p>
+                    <p className="text-lg tracking-widest md:text-3xl text-blue-light bebasNeue">#KANGCHENJUNGA70</p>
                 </div>
             </div>
 
@@ -86,13 +86,13 @@ const EventPostComponent = () => {
                     onClick={handlePrev}
                     className="w-[48px] h-[48px] border-[2px] border-black rounded-full flex justify-center items-center"
                 >
-                    <FaLongArrowAltLeft size={20} />
+                    <FaArrowLeftLong size={20} />
                 </button>
                 <button
                     onClick={handleNext}
                     className="w-[48px] h-[48px] border-[2px] border-black rounded-full flex justify-center items-center"
                 >
-                    <FaLongArrowAltRight size={20} />
+                    <FaArrowRightLong size={20} />
                 </button>
             </div>
 

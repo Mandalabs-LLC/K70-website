@@ -64,7 +64,7 @@ export const climbingHistory: climbingHistoryData[] = [
    
     {
         date: '1973',
-        content: 'Japanese climbers Yutaka Ageta and Takeo Matsuda summit Kangchenjunga West (Yalung Kang) via the southwestern ridge. Matsuda goes missing during the descent.',
+        content: 'Japanese climbers Yutaka Ageta and Takeo Matsuda summit Kangchenjunga West; Matsuda goes missing during descent.',
         image: [japanese],
     },
     {
