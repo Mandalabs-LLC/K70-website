@@ -35,7 +35,7 @@ export const Future = () => {
                     <Image src={data.image} alt="images" className='lg:absolute lg:right-20 z-10 shadow-lg border-8 border-white lg:h-[296px] lg:w-[400px]' onClick={() => openModal(data.image as any)} />
                     <div className="w-full h-full lg:w-1/3 flex flex-col justify-center">
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  lg:text-6xl pb-4 lg:pb-10">{data.heading}</h1>
-                        <p className={`text-primary-light text-base lg:text-lg tracking-wider text-justify`}
+                        <p className={`text-primary-light text-base lg:text-lg tracking-wider text-left lg:text-justify `}
                             dangerouslySetInnerHTML={{ __html: data.content }}></p>
                     </div>
                     <div className=" w-full h-full lg:w-2/3 flex flex-col lg:flex lg:flex-row  items-center">
@@ -47,10 +47,10 @@ export const Future = () => {
                 </div>
             ))}
 
-            <div className="flex flex-col justify-center items-center bg-white gap-4 px-4 py-8 lg:gap-20 lg:p-20 text-primary-light text-lg tracking-wider text-justify">
+            <div className="flex flex-col justify-center items-center bg-white gap-4 px-4 py-8 lg:gap-20 lg:p-20 text-primary-light text-lg tracking-wider text-left lg:text-justify ">
                 <p>
                     <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">Samriddha Pahad</a> is a Nepali social organisation with a 13-year track record of enhancing livelihoods in Nepal&apos;s hill
-                    and mountain communities. Since 2016, <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">Samriddha Pahad</a> has been actively working in the Kangchenjunga region in collaboration
+                    and mountain communities. Since 2016, Samriddha Pahad has been actively working in the Kangchenjunga region in collaboration
                     with the <a href="https://kanchenjunga.org/" target="_blank" className="text-[#2B76A3] underline">KCAMC</a> with the goal of empowering local communities through sustainable development initiatives, improving access
                     to finance, promoting sustainable tourism, and enhancing overall living standards. <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">www.spnepal.org</a>
                     <br /><br />
@@ -64,7 +64,7 @@ export const Future = () => {
                     {futureSecondSectionImages.map((data, index) => (
                         <div key={index} className="flex flex-col items-center gap-6 lg:w-[428px]">
                             <Image src={data.image} alt="img" className="shadow-lg border-8 border-white " onClick={() => openModal(data.image as any)} />
-                            <p className="text-blue-light text-xl text-center font-bold">{data.title}</p>
+                            <p className="text-blue-light text-xl text-left lg:text-center font-bold">{data.title}</p>
                             <h2 dangerouslySetInnerHTML={{ __html: data.content }}></h2>
                         </div>
                     ))}

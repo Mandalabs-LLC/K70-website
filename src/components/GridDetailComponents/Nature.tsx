@@ -29,7 +29,7 @@ export const Nature = () => {
                 loading='lazy'
             />
             {natureData.map((data, index) => (
-                <div key={index} className={`flex flex-col-reverse justify-center items-center bg-white gap-4 p-4 md:gap-20 md:p-20 text-justify ${index % 2 === 0 ? 'md:flex-row bg-opacity-90' : 'md:flex-row-reverse opacity-1'}`}>
+                <div key={index} className={`flex flex-col-reverse justify-center items-center bg-white gap-4 p-4 md:gap-20 md:p-20 text-left lg:text-justify  ${index % 2 === 0 ? 'md:flex-row bg-opacity-90' : 'md:flex-row-reverse opacity-1'}`}>
                     <Image onClick={() => openModal(data.image as any)} src={data.image} alt="images" className={`shadow-md border-8 border-white block lg:hidden ${index===0? 'block':'hidden'}`} />
                     <div className="w-full h-full md:w-1/2 flex flex-col justify-center">
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  md:text-6xl pb-4 md:pb-10">{data.heading}</h1>
@@ -46,7 +46,7 @@ export const Nature = () => {
             ))}
 
             {natureDataSecond.map((data, index) => (
-                <div key={index} className={`flex flex-col justify-center items-center text-justify bg-white gap-4 p-4 md:gap-20 md:p-20  ${index % 2 === 0 ? 'bg-opacity-90' : 'opacity-1'}`}>
+                <div key={index} className={`flex flex-col justify-center items-center text-left lg:text-justify  bg-white gap-4 p-4 md:gap-20 md:p-20  ${index % 2 === 0 ? 'bg-opacity-90' : 'opacity-1'}`}>
                     <div className="flex flex-col-reverse md:flex md:flex-row gap-5">
                         {data.images.map((img, imgIndex) => (
                             <Image key={imgIndex} src={img} alt="fauna" onClick={() => openModal(img as any)} className='lg:h-[250px] lg:w-[250px] xl:h-[312px] xl:w-[324px] shadow-md border-8 border-white object-cover' />

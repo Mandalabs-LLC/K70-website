@@ -93,7 +93,7 @@ const ContactForm: React.FC = () => {
                 >
                     Submit
                 </button>
-                <input type="hidden" name="_next" value={`https://www.kanchenjunga70.com/`}/>
+                <input type="hidden" name="_next" value={`https://www.kanchenjunga70.com?submit=success`}/>
             </div>
         </form>
     );

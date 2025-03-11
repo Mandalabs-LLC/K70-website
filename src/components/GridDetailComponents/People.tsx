@@ -34,7 +34,7 @@ export const People: React.FC = () => {
             {peopleData.map((data, index) => (
                 <div
                     key={index}
-                    className={`relative flex flex-col-reverse justify-center items-center bg-white gap-4 p-4 lg:gap-10 lg:p-20 text-justify ${index % 2 === 0 ? "lg:flex-row bg-opacity-90" : "lg:flex-row-reverse opacity-1"}`}
+                    className={`relative flex flex-col-reverse justify-center items-center bg-white gap-4 p-4 lg:gap-10 lg:p-20 text-left lg:text-justify  ${index % 2 === 0 ? "lg:flex-row bg-opacity-90" : "lg:flex-row-reverse opacity-1"}`}
                 >
                     <Image
                             src={data.image}
@@ -60,7 +60,7 @@ export const People: React.FC = () => {
                 </div>
             ))}
             <div
-                className={`flex flex-col lg:flex lg:flex-row justify-center items-center bg-white gap-4 p-4 lg:gap-10 lg:p-20 text-justify `}
+                className={`flex flex-col lg:flex lg:flex-row justify-center items-center bg-white gap-4 p-4 lg:gap-10 lg:p-20 text-left lg:text-justify  `}
             >
                 <Image
                     src={people21}
@@ -84,7 +84,7 @@ export const People: React.FC = () => {
                 />
 
             </div>
-            <div className="w-full h-full flex flex-col lg:flex lg:flex-row  items-center gap-4 p-4 lg:gap-10 text-justify lg:p-20 bg-white bg-opacity-90">
+            <div className="w-full h-full flex flex-col lg:flex lg:flex-row  items-center gap-4 p-4 lg:gap-10 text-left lg:text-justify  lg:p-20 bg-white bg-opacity-90">
                 <div className="lg:w-1/2">
                         <p>The Rai community, known for its vibrant culture and linguistic diversity, plays a significant role in the region&apos;s social fabric. With 
                             various sub-groups, each with its own dialect and customs, the Rai people celebrate their heritage through lively festivals and elaborate 
