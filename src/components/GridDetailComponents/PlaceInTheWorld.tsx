@@ -36,7 +36,7 @@ export const PlaceInTheWorld = () => {
                 <div key={index} className={`flex flex-col-reverse justify-center items-center bg-white gap-4 p-4 lg:gap-20 lg:px-20 lg:pt-20  ${index % 2 === 0 ? 'lg:flex-row bg-opacity-90' : 'lg:flex-row-reverse opacity-1'}`}>
                     <div className="w-full h-full lg:w-1/2 flex flex-col justify-center">
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  md:text-6xl pb-4 md:pb-10">{data.heading}</h1>
-                        <p className={`text-primary-light text-base md:text-lg tracking-wider text-justify`} dangerouslySetInnerHTML={{ __html: data.content }}></p>
+                        <p className={`text-primary-light text-base md:text-lg tracking-wider text-left lg:text-justify `} dangerouslySetInnerHTML={{ __html: data.content }}></p>
                     </div>
                     <div className="relative w-full h-full lg:w-1/2">
                         {
@@ -71,7 +71,7 @@ export const PlaceInTheWorld = () => {
                 </div>
                 <div className="w-full h-full lg:w-2/3 flex flex-col lg:flex lg:flex-row justify-center items-center gap-4 md:gap-10">
 
-                    <p className={`text-primary-light text-base text-justify md:text-lg tracking-wider `}>
+                    <p className={`text-primary-light text-base text-left lg:text-justify  md:text-lg tracking-wider `}>
                         Mount Kangchenjunga represents not only a geographical wonder but also an integral part of Nepal’s and India&apos;s cultural and ecological expression. Its historical importance, climbing challenges, and current conservation projects make it a focal point of attention for adventurers and environmentalists alike.
                     </p>
                     
@@ -87,7 +87,7 @@ export const PlaceInTheWorld = () => {
             </div>
 
 
-            <div className={`flex flex-col lg:flex lg:flex-row justify-center items-center text-justify bg-white bg-opacity-90 gap-4 p-5 md:p-10 lg:gap-20 lg:px-20`}>
+            <div className={`flex flex-col lg:flex lg:flex-row justify-center items-center text-left lg:text-justify  bg-white bg-opacity-90 gap-4 p-5 md:p-10 lg:gap-20 lg:px-20`}>
 
                 <div className="w-full h-full lg:w-1/2 flex flex-col justify-center">
                     <p className={`text-primary-light text-base md:text-lg tracking-wider`}>

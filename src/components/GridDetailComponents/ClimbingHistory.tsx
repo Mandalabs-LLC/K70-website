@@ -40,7 +40,7 @@ export const ClimbingHistory = () => {
 
                 <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-3xl ">THE LEGACY OF THE FIRST ASCENT OF KANGHENJUNGA</h1>
 
-                <p className={`text-primary-light text-base text-justify lg:text-lg tracking-wider pt-10`}>
+                <p className={`text-primary-light text-base text-left lg:text-justify lg:text-lg tracking-wider pt-10`}>
                     Expedition climbers Joe Brown and George Band were the first to ascend Kangchenjunga, on 25 May 1955, stopping just shy of the summit. The British expedition was led by Charles Evans, who had been deputy leader on the 1953 British Mount Everest expedition.
                     <br /><br />
                     In a remarkable display of humility and reverence for the mountain&apos;s sacred significance to the local Sikkimese people, they chose to leave the final snow cone untouched. This decision reflected their commitment to honour their promise to the Chogyal of the Kingdom of Sikkim.
@@ -112,7 +112,7 @@ export const ClimbingHistory = () => {
                             {data.image.map((img, index: number) => (
                                 <Image onClick={() => openModal(img as any)} key={index} alt="image" src={img} className="shadow-lg border-8 border-white w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover" />
                             ))}
-                            <p className="text-base lg:text-xl text-justify">{data.content}</p>
+                            <p className="text-base lg:text-xl text-left lg:text-justify ">{data.content}</p>
                         </div>
                     </div>
                 ))}
