@@ -50,7 +50,7 @@ export const Future = () => {
             <div className="flex flex-col justify-center items-center bg-white gap-4 px-4 py-8 lg:gap-20 lg:p-20 text-primary-light text-lg tracking-wider text-justify">
                 <p>
                     <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">Samriddha Pahad</a> is a Nepali social organisation with a 13-year track record of enhancing livelihoods in Nepal&apos;s hill
-                    and mountain communities. Since 2016, <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">Samriddha Pahad</a> has been actively working in the Kangchenjunga region in collaboration
+                    and mountain communities. Since 2016, Samriddha Pahad has been actively working in the Kangchenjunga region in collaboration
                     with the <a href="https://kanchenjunga.org/" target="_blank" className="text-[#2B76A3] underline">KCAMC</a> with the goal of empowering local communities through sustainable development initiatives, improving access
                     to finance, promoting sustainable tourism, and enhancing overall living standards. <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">www.spnepal.org</a>
                     <br /><br />

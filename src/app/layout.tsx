@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { socialMediaIcons } from "@/data/socialMediaData";
 import { SocialIcon } from "react-social-icons";
+import { Suspense } from "react";
 
 const bebasNeue = Bebas_Neue({
     subsets: ['latin'],
@@ -35,16 +36,18 @@ export default function RootLayout({
             >
                 <Navbar />
                 {/* Main content */}
-                <main className="flex-grow overflow-x-hidden">
-                    <div className="h-auto w-auto bg-white space-y-4 fixed top-[40vh] right-0 z-50 px-1 py-3 md:px-3 md:py-4">
-                        {socialMediaIcons.map((Icon, index) => (
-                            <div key={index}>
-                                <SocialIcon url={Icon.href} network={Icon.icon} style={{ height: 40, width: 40 }} target="_blank" />
-                            </div>
-                        ))}
-                    </div>
-                    {children}
-                </main>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <main className="flex-grow overflow-x-hidden">
+                        <div className="h-auto w-auto bg-white space-y-4 fixed top-[40vh] right-0 z-50 px-1 py-3 md:px-3 md:py-4">
+                            {socialMediaIcons.map((Icon, index) => (
+                                <div key={index}>
+                                    <SocialIcon url={Icon.href} network={Icon.icon} style={{ height: 40, width: 40 }} target="_blank" />
+                                </div>
+                            ))}
+                        </div>
+                        {children}
+                    </main>
+                </Suspense>
 
                 {/* Footer */}
                 <Footer />

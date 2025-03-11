@@ -30,7 +30,7 @@ export const Partners = () => {
                     {/* Partner 1 */}
                     <div className="bg-[#fff] p-6 rounded-lg shadow-md flex flex-col items-center">
                         <Image src={KCAMCLOGO} alt="KCAMCLOGO" width={200} height={100} className="w-auto h-auto" />
-                        <a href="https://kanchenjunga.org/" target="_" className="text-blue-600 text-2xl font-semibold mt-3 text-center">
+                        <a href="https://kanchenjunga.org/" target="_" className="text-blue-600 text-2xl font-semibold mt-3 text-center underline">
                             Kangchenjunga Conservation Area Management Council (KCAMC)
                         </a>
                         <p className="text-gray-700 mt-2 text-center">
@@ -41,7 +41,7 @@ export const Partners = () => {
                     {/* Partner 2 */}
                     <div className="bg-[#fff] p-6 rounded-lg shadow-md flex flex-col items-center">
                         <Image src={SambriddhaPahadLogo} alt="SamriddhaPahadLogo" width={200} height={100} className="w-auto h-auto" />
-                        <a href="https://www.spnepal.org/" target="_" className="text-blue-600 text-2xl font-semibold mt-3 text-center">
+                        <a href="https://www.spnepal.org/" target="_" className="text-blue-600 text-2xl font-semibold mt-3 text-center underline">
                             Samriddha Pahad
                         </a>
                         <p className="text-gray-700 mt-2 text-center">
