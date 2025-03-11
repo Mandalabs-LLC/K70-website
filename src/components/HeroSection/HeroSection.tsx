@@ -13,7 +13,7 @@ const HeroSection: FC = () => {
             {/* left section */}
             <section className='absolute top-[120px] md:top-[347px] 2xl:top-[410px] md:left-16 w-full md:w-[644px] 2xl:w-[920px] h-auto'>
                 <p className='text-primary bebasNeue px-4 md:px-0 text-2xl md:text-[40px] 2xl:text-5xl tracking-[1px] md:tracking-[2px] 2xl:tracking-[4px] leading-10 md:leading-[3.5rem] 2xl:leading-[4.5rem]'>
-                    Celebrating a lasting legacy and working towards a promising future for Kanchenjunga
+                    Celebrating a lasting legacy and working towards a promising future for Kangchenjunga
                 </p>
                 <p className='bebasNeue text-xl px-4 md:px-0 md:text-3xl 2xl:text-[40px] tracking-[0.5px] md:tracking-[1px] 2xl:tracking-[2px] leading-6 md:leading-[3rem] 2xl:leading-[4rem] bg-gradient-to-b from-[#1B1F2A] to-[#374c81] text-transparent bg-clip-text'>
                     3rd HIGHEST MOUNTAIN IN THE WORLD

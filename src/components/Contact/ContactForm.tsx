@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className="mb-5">
-                <label htmlFor="email">Email Address *</label>
+                <label htmlFor="email">Email Address <b className="text-red-500">*</b></label>
                 <input
                     type="email"
                     name="email"
@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className="mb-5">
-                <label htmlFor="organization">Organization</label>
+                <label htmlFor="organization">Organization Name / Other <b className="text-red-500">*</b></label>
                 <select
                     name="organization"
                     id="organization"
@@ -73,7 +73,7 @@ const ContactForm: React.FC = () => {
                         Select an organization
                     </option>
                     <option value="Himalayan Trust Nepal">Himalayan Trust Nepal</option>
-                    <option value="Kanchenjunga Conservation Area">Kanchenjunga Conservation Area</option>
+                    <option value="Kangchenjunga Conservation Area">Kangchenjunga Conservation Area</option>
                     <option value="Samriddha Pahad">Samriddha Pahad</option>
                     <option value="Nepal Investment Bank Ltd.">Nepal Investment Bank Ltd.</option>
                 </select>
