@@ -48,16 +48,17 @@ export const Events = () => {
           <div className="w-2/3 flex flex-col justify-between">
             <p className="text-primary-light text-base md:text-lg tracking-wider" dangerouslySetInnerHTML={{ __html: k70Events[currentIndex].content }} />
             {k70Events[currentIndex]?.images?.filter(Boolean).length ? (
-              <div className="grid grid-cols-3 gap-4 pt-10">
+              <div className="grid grid-cols-3 gap-4 pt-10 min-h-[220px]">
                 {k70Events[currentIndex].images.map((image, index) => (
-                  <Image
-                    key={index}
-                    onClick={() => image.src && openModal(image.src)}
-                    height={220}
-                    src={image}
-                    alt={k70Events[currentIndex]?.title || "Event Image"}
-                    className="shadow-md border-8 border-white"
-                  />
+                  <div key={index} className="shadow-md border-8 border-white bg-white min-h-[220px]">
+                    <Image
+                      onClick={() => image.src && openModal(image.src)}
+                      height={220}
+                      src={image}
+                      alt={k70Events[currentIndex]?.title || "Event Image"}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 ))}
               </div>
             ) : null}
