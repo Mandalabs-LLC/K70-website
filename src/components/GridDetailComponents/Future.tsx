@@ -51,10 +51,10 @@ export const Future = () => {
                 <p>
                     <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">Samriddha Pahad</a> is a Nepali social organisation with a 13-year track record of enhancing livelihoods in Nepal&apos;s hill
                     and mountain communities. Since 2016, Samriddha Pahad has been actively working in the Kangchenjunga region in collaboration
-                    with the <a href="https://kanchenjunga.org/" target="_blank" className="text-[#2B76A3] underline">KCAMC</a> with the goal of empowering local communities through sustainable development initiatives, improving access
+                    with the KCAMC with the goal of empowering local communities through sustainable development initiatives, improving access
                     to finance, promoting sustainable tourism, and enhancing overall living standards. <a href="https://www.spnepal.org/" target="_blank" className="text-[#2B76A3] underline">www.spnepal.org</a>
                     <br /><br />
-                    In a joint venture partnership with <a href="https://kanchenjunga.org/" target="_blank" className="text-[#2B76A3] underline">Kangchenjunga Conservation Area Management Council (KCAMC)</a>, Samriddha Pahad has
+                    In a joint venture partnership with Kangchenjunga Conservation Area Management Council (KCAMC), Samriddha Pahad has
                     developed the Samriddha Kangchenjunga Program for sustainable tourism development in the Kangchenjunga Conservation Area.
                     <br /><br />
                     Samriddha Kangchenjunga’s holistic program has a five-pillar approach of focused development in the Kangchenjunga region.
@@ -62,7 +62,7 @@ export const Future = () => {
 
                 <div className="flex flex-col lg:flex-row flex-wrap justify-center gap-8 h-auto w-full">
                     {futureSecondSectionImages.map((data, index) => (
-                        <div key={index} className="flex flex-col items-center gap-6 lg:w-[428px]">
+                        <div key={index} className="flex flex-col lg:items-center gap-6 lg:w-[428px]">
                             <Image src={data.image} alt="img" className="shadow-lg border-8 border-white " onClick={() => openModal(data.image as any)} />
                             <p className="text-blue-light text-xl text-left lg:text-center font-bold">{data.title}</p>
                             <h2 dangerouslySetInnerHTML={{ __html: data.content }}></h2>
