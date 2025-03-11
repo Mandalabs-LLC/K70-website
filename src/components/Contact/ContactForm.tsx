@@ -19,15 +19,9 @@ const ContactForm: React.FC = () => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        // Handle form submission (e.g., send data to an API)
-        console.log(formData);
-    };
-
     return (
         <form
-            onSubmit={handleSubmit}
+            action="https://formsubmit.co/info@spnepal.org"  method="POST"
             className="w-full py-10 px-10 md:px-20 bg-blue-dark text-white tracking-wider"
         >
             <p className="bebasNeue uppercase tracking-[0.25rem] text-4xl text-center pb-10">
@@ -99,6 +93,7 @@ const ContactForm: React.FC = () => {
                 >
                     Submit
                 </button>
+                <input type="hidden" name="_next" value={`https://www.kanchenjunga70.com/`}/>
             </div>
         </form>
     );

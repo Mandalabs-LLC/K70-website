@@ -33,7 +33,7 @@ const ContactDetails: FC = () => {
                             <span className='text-blue-light'> <FaMapMarkerAlt /></span>
                             <span className='text-[#6D6D6D] text-base'>Address</span>
                         </p>
-                        <p className='text-black text-xl tracking-wider pl-6'>Sanepa, Lalitpur <br />Nepal </p>
+                        <p className='text-black text-xl tracking-wider pl-6'>Sanepa, Lalitpur, Nepal </p>
                     </div>
                 </div>
                 <p className='text-black text-base tracking-wider text-center'>
