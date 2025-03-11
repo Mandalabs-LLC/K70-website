@@ -23,16 +23,16 @@ const AboutClimbers: FC = () => {
     return (
         <>
 
-            <div className='px-4 md:px-10 py-10 md:py-[6.25rem] 2xl:px-[6.5rem] flex flex-col md:flex-row bg-[#F5F4F3] opacity-95 w-full h-auto gap-5 md:gap-[60px] justify-center items-center'>
+            <div className='px-4 md:px-10 py-10 md:py-[6.25rem] 2xl:px-[6.5rem] flex flex-col md:flex-row bg-[#F5F4F3] bg-opacity-95 w-full h-auto gap-5 md:gap-[60px] justify-center items-center'>
                 <h1 className='block md:hidden bebasNeue text-4xl tracking-widest uppercase bg-gradient-to-t from-[#1B588A] to-[#071724] bg-clip-text text-transparent'>The first ascent of kangchenjunga</h1>
                 <div className='md:w-1/2 flex gap-4 md:gap-10 '>
-                    <div className='relative w-full flex justify-center'>
+                    <div className=''>
                         <Image src={george} alt='george' className='shadow-md border-8 border-white' onClick={() => openModal(george as any)} />
-                        <p className='absolute bottom-4 text-3xl text-white tracking-wider font-semibold w-[150px]'>George Band</p>
+                        <p className='text-base text-[#2B76A3] tracking-wider bg-white text-center pb-2'>George Band</p>
                     </div>
-                    <div className='relative w-full flex justify-center'>
+                    <div className=''>
                         <Image src={joe} alt='joe' className='shadow-md border-8 border-white' onClick={() => openModal(joe as any)} />
-                        <p className='absolute bottom-4 text-3xl text-white tracking-wider font-semibold w-[150px]'>Joe Brown</p>
+                        <p className='text-base text-[#2B76A3] tracking-wider bg-white text-center pb-2'>Joe Brown</p>
                     </div>
                 </div>
                 <div className='md:w-1/2 md:space-y-[60px]'>

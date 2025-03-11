@@ -53,9 +53,9 @@ export const Partners = () => {
             </div>
 
             {/* Section 2: Additional Partners */}
-            <div className="bg-[#fff] opacity-90 w-full py-16 px-6 md:px-16">
+            <div className="bg-[#fff] bg-opacity-90 w-full py-16 px-6 md:px-16">
                 {/* Partners Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-8 md:mt-10">
                     {ourPartners.map((partner, index) => (
                         <Link
                             key={index}
@@ -64,9 +64,9 @@ export const Partners = () => {
                             target="_blank"
                         >
                             {/* Partner Logo */}
-                            <Image alt="logo" src={partner.logo} width={250} height={95} className="w-[200px] h-auto transition-all duration-300 group-hover:scale-105" />
+                            <Image alt="logo" src={partner.logo} width={250} height={95} className="md:block hidden w-[200px] h-auto transition-all duration-300 lg:group-hover:scale-105" />
 
-                            <div className="absolute top-0 left-0 flex flex-col items-center justify-center p-4 bg-[#fff] text-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                            <div className="md:absolute md:top-0 md:left-0 flex flex-col items-center justify-center p-4 bg-[#fff] text-gray-800 rounded-lg shadow-lg md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible transition-all duration-300 z-10">
                                 <Image alt="logo" src={partner.logo} width={150} height={75} className="w-auto h-auto mb-2" />
                                 <h3 className="text-blue-600 text-lg font-semibold underline">{partner.title}</h3>
                                 <p className="text-gray-700 text-sm mt-2">{partner.description}</p>

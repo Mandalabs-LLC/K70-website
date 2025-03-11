@@ -34,8 +34,15 @@ export const People: React.FC = () => {
             {peopleData.map((data, index) => (
                 <div
                     key={index}
-                    className={`relative flex flex-col justify-center items-center bg-white gap-4 p-4 lg:gap-10 lg:p-20 text-justify ${index % 2 === 0 ? "lg:flex-row bg-opacity-90" : "lg:flex-row-reverse opacity-1"}`}
+                    className={`relative flex flex-col-reverse justify-center items-center bg-white gap-4 p-4 lg:gap-10 lg:p-20 text-justify ${index % 2 === 0 ? "lg:flex-row bg-opacity-90" : "lg:flex-row-reverse opacity-1"}`}
                 >
+                    <Image
+                            src={data.image}
+                            alt="images"
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            onClick={() => openModal(data.image as any)} // Open modal on click
+                            className={` lg:absolute lg:right-10 lg:bottom-20  shadow-lg border-8 border-white cursor-pointer w-auto lg:w-[350px] 3xl:w-[450px] object-cover`}
+                        />
                     <div className="w-full h-full lg:w-[45%] flex flex-col justify-center">
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl lg:text-6xl pb-4 lg:pb-10">
                             {data.heading}
@@ -45,20 +52,10 @@ export const People: React.FC = () => {
                         </p>
 
                     </div>
-                    <div className="w-full h-full lg:w-[55%] flex flex-col items-start">
-                        <div className="flex flex-col lg:flex lg:flex-row gap-4">
-                            {data.video && (
-                                <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:w-[200px] xl:w-[500px] xl:h-[400px] 3xl:w-[600px] z-20" />
-                            )}
-                            {/* Clickable Image */}
-                            <Image
-                                src={data.image}
-                                alt="images"
-                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                                onClick={() => openModal(data.image as any)} // Open modal on click
-                                className={` lg:absolute lg:right-10 lg:bottom-20  shadow-lg border-8 border-white cursor-pointer w-auto lg:w-[350px] 3xl:w-[450px] object-cover`}
-                            />
-                        </div>
+                    <div className="w-full h-full lg:w-[55%] flex flex-col items-start"> 
+                        {data.video && (
+                            <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:w-[200px] xl:w-[500px] xl:h-[400px] 3xl:w-[600px] z-20" />
+                        )}
                     </div>
                 </div>
             ))}

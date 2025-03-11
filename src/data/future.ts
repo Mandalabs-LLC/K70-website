@@ -42,7 +42,8 @@ export const futureSecondSectionImages: futureSecondSectionImagesData[] = [
         content: `This pillar of the Samriddha Kangchenjunga Programme focuses on safeguarding the rich ecological heritage and biodiversity
         of the Kangchenjunga region. This pillar ensures that the Kangchenjunga region's unique biodiversity is preserved for future 
         generations while fostering a sustainable balance between ecological and human needs. It focuses on conserving Kangchenjunga’s
-        unique ecosystems through research, species protection, and education. Key actions include supporting  <a href="https://unesco.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> 
+        unique ecosystems through research, species protection, and education. Key actions include supporting 
+         <a href="https://unesco.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> 
         UNESCO</a> Biosphere Reserve
         status, conserving Red Pandas and Blue Sheep, and raising environmental awareness in schools. The program promotes biodiversity
         while creating sustainable livelihoods for local communities.`

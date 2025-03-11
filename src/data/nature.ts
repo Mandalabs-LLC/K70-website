@@ -21,13 +21,13 @@ export const natureData = [
     {
         heading:'nature',
         content:`The Kangchenjunga Conservation Area (KCA) in Eastern Nepal is a diverse region with breathtaking landscapes and a rich 
-        biodiversity. This protected area, which encompasses 2,035 square kilometres,  features widely varied altitudes and climatic 
+        biodiversity. This protected area, which encompasses 2,035 square kilometres, features widely varied altitudes and climatic 
         conditions, creating a multitude of habitats that support an impressive array of flora and fauna.
         <br/><br/>
         The Kangchenjunga Conservation Area is famous for its magnificent blooming rhododendron (Nepali: <i>gurans</i>) forests in the spring, for
         the reclusive red panda (<i>habre</i>) that lives in its hemlock-bamboo (<i>thingre salla, malingo</i>) forests, and for the snow        
-        leopard (<i>hiun chituwa</i>) that hunts its icy cliffs. It is also one of the last places in the Himalayas where ancient, 
-        roadless, and relatively undisturbed temperate and subalpine forests still exist. The tremendous variety of climate 
+        leopard (<i>hiun chituwa</i>) that hunts on its snow-covered slopes. It is one of the last places in the Himalaya where there
+         is still ancient temperate and subalpine forests, with no access by road and relatively undisturbed. The tremendous variety of climate 
         conditions, altitudes, and habitats, combined with low population and development pressures in some of the upper 
         valleys, make the KCA an important biodiversity treasure. Many species that the World Conservation Union has identified
         as critically endangered, endangered, vulnerable, or near threatened worldwide find refuge in the KCA. Numerous species
