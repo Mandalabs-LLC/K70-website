@@ -23,19 +23,19 @@ interface k70Events {
 
 export const k70Events: k70Events[] = [
     {
-        date: '19 April, 2025',
+        date: '18 April, 2025',
         content: `The celebrations will start in the heart of the Kangchenjunga region, with a special event taking place in the scenic village of Lelep, Taplejung, alongside an exhibition of a curated collection of photographs relating to Kangchenjunga. The event will also include members of the local community, KCAMC, and the local government.`,
         title: '- Lelep, Taplejung',
         images: [lelep1, lelep2, lelep3]
     },
     {
-        date: '22 April, 2025',
+        date: '23 April, 2025',
         content: `A celebration will be hosted by the British Ambassador to Nepal at the Ambassador’s residence in Kathmandu.`,
         title: ' - British Ambasadoor’s Residence, Kathmandu',
         images: [british1, british2, british3]
     },
     {
-        date: '23 April, 2025',
+        date: '24 April, 2025',
         content: `The Kangchenjunga 70 celebrations will include an event in Kathmandu, Nepal, bringing together the private sector, media, government stakeholders, and international organizations to pay tribute to the legacy of Kangchenjunga's first ascent. A curated collection of photographs relating to Kangchenjunga will also be exhibited at the event.`,
         title: '- Aloft Hotel, Kathmandu',
         images: [aloft1, aloft2, aloft3]
@@ -51,7 +51,7 @@ export const k70Events: k70Events[] = [
     },
     {
         date: 'SPRING 2026',
-        content: "70 th Anniversary Duke of Edinborough expedition to Kanchecnjunga",
+        content: "70<sup>th</sup> Anniversary Duke of Edinborough expedition to Kanchecnjunga",
         title: 'DETAILS TO FOLLOW'
     }
 ]

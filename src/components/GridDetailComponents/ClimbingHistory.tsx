@@ -45,7 +45,7 @@ export const ClimbingHistory = () => {
                     <br /><br />
                     In a remarkable display of humility and reverence for the mountain&apos;s sacred significance to the local Sikkimese people, they chose to leave the final snow cone untouched. This decision reflected their commitment to honour their promise to the Chogyal of the Kingdom of Sikkim.
                     <br /><br />
-                    The climbing duo was followed the next day by climbers Norman Hardie and Tony Streather.  The expedition also included sirdar Dawa Tensing and deputy sirdar, Annullu – both of whom had climbed to the South Col on the 1953 British Everest expedition - the team doctor, John Clegg, John Jackson, Neil Mather, and Tom McKinnon.
+                    The climbing duo was followed the next day by climbers Norman Hardie and Tony Streather. The expedition also included sirdar Dawa Tensing and deputy sirdar, Annullu – both of whom had climbed to the South Col on the 1953 British Everest expedition - the team doctor, John Clegg, John Jackson, Neil Mather, and Tom McKinnon.
                 </p>
 
                 <div className="flex flex-wrap lg:flex-nowrap gap-5 lg:gap-20 w-full py-10">
@@ -90,7 +90,7 @@ export const ClimbingHistory = () => {
                             {/* Intersection dot */}
                             <div className="lg:hidden absolute -left-[6px] w-4 h-4 bg-[#133F63] rounded-full"></div>
 
-                            <p className="w-auto border border-primary p-2 lg:py-3 lg:px-4 text-2xl lg:text-4xl tracking-wider bebasNeue text-primary">{data.date}</p>
+                            <p className="w-auto border border-primary p-2 lg:py-3 lg:px-4 text-2xl lg:text-4xl tracking-wider bebasNeue text-primary ">{data.date}</p>
                         </div>
 
                         {/* Horizontal and vertical lines with dot at intersection */}
@@ -110,7 +110,7 @@ export const ClimbingHistory = () => {
                             {data.image.map((img, index: number) => (
                                 <Image onClick={() => openModal(img as any)} key={index} alt="image" src={img} className="shadow-lg border-8 border-white w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover" />
                             ))}
-                            <p className="text-base lg:text-xl">{data.content}</p>
+                            <p className="text-base lg:text-xl text-justify">{data.content}</p>
                         </div>
                     </div>
                 ))}

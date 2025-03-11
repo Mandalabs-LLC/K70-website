@@ -113,7 +113,7 @@ export const Gallery: React.FC = () => {
                                     className="shadow-lg"
                                 />
                             </div>
-                            <div className="pt-5 pb-4 text-[14px] font-normal text-gray-500">
+                            <div className={` ${item.description !== '' ? 'pt-5 pb-4 text-[14px] font-normal text-gray-500' : ''}`}>
                                 <p>{item.description}</p>
                             </div>
                         </div>

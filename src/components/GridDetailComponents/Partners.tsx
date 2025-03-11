@@ -61,7 +61,7 @@ export const Partners = () => {
                             className="relative group p-6 space-y-4 flex flex-col items-center text-center bg-[#fff]  transition-all duration-300"
                         >
                             {/* Partner Logo */}
-                            <Image alt="logo" src={partner.logo} width={150} height={75} className="w-auto h-auto transition-all duration-300 group-hover:scale-105" />
+                            <Image alt="logo" src={partner.logo} width={250} height={95} className="w-[200px] h-auto transition-all duration-300 group-hover:scale-105" />
 
                             <div className="absolute top-0 left-0 flex flex-col items-center justify-center p-4 bg-[#fff] text-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
                                 <Image alt="logo" src={partner.logo} width={150} height={75} className="w-auto h-auto mb-2" />
