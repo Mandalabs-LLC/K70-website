@@ -15,7 +15,7 @@ export const Partners = () => {
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl md:text-6xl">
                             OUR CURRENT PARTNERS INCLUDE
                         </h1>
-                        <p className="text-xl tracking-wider text-gray-700 text-justify">
+                        <p className="text-xl tracking-wider text-gray-700 text-left lg:text-justify ">
                             Over the past decade, we have engaged in a collaborative effort involving various partners to bring sustainable change to the region.
                         </p>
                     </div>

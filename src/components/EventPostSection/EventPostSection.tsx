@@ -98,7 +98,7 @@ const EventPostComponent = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col justify-center items-center lg:hidden px-4'>
+            <div className='flex flex-col justify-center items-center lg:hidden mx-auto'>
                 <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
                     {gridData.map((data, index) => (
                         <InstagramImageCard
