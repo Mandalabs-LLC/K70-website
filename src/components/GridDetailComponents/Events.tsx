@@ -93,7 +93,7 @@ export const Events = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center bg-white p-4 md:px-20 md:py-[60px]">
-        <p className="text-primary-light text-base md:text-lg tracking-wider text-center">
+        <p className="text-primary-light text-base md:text-lg tracking-wider text-left lg:text-center">
           2025 marks the 70<sup>th</sup> anniversary since the first summit to Kangchenjunga in 1955. It is a voyage of celebration that will honor a legacy inspiring many. Various events are planned to commemorate this milestone, hosted by communities in both Nepal and the United Kingdom.
           <br /><br />
           These celebrations will mirror the success of the Everest 70 event in 2023 <Link target="_blank" href="https://www.everest70.com" className="text-blue-light underline">(www.everest70.com)</Link>, showcasing the deep connections and shared history between the two regions. It promises to be a meaningful occasion filled with activities that highlight the enduring impact of this legacy.
