@@ -29,7 +29,8 @@ export const Nature = () => {
                 loading='lazy'
             />
             {natureData.map((data, index) => (
-                <div key={index} className={`flex flex-col justify-center items-center bg-white gap-4 p-4 md:gap-20 md:p-20 text-justify ${index % 2 === 0 ? 'md:flex-row bg-opacity-90' : 'md:flex-row-reverse opacity-1'}`}>
+                <div key={index} className={`flex flex-col-reverse justify-center items-center bg-white gap-4 p-4 md:gap-20 md:p-20 text-justify ${index % 2 === 0 ? 'md:flex-row bg-opacity-90' : 'md:flex-row-reverse opacity-1'}`}>
+                    <Image onClick={() => openModal(data.image as any)} src={data.image} alt="images" className={`shadow-md border-8 border-white block lg:hidden ${index===0? 'block':'hidden'}`} />
                     <div className="w-full h-full md:w-1/2 flex flex-col justify-center">
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  md:text-6xl pb-4 md:pb-10">{data.heading}</h1>
                         <p className={`text-primary-light text-base md:text-lg tracking-wider`}
@@ -39,7 +40,7 @@ export const Nature = () => {
                         {data.video && (
                             <video src={data.video} autoPlay muted loop className="shadow-md border-8 border-white object-cover md:h-[365px] md:w-[463px] 3xl:w-[660px] 3xl:h-auto z-20" />
                         )}
-                        <Image onClick={() => openModal(data.image as any)} src={data.image} alt="images" className={`shadow-md border-8 border-white ${index===0? 'lg:absolute lg:right-10 lg:h-[603px] lg:w-[345px]':''}`} />
+                        <Image onClick={() => openModal(data.image as any)} src={data.image} alt="images" className={`shadow-md border-8 border-white ${index===0? 'lg:block hidden lg:absolute lg:right-10 lg:h-[603px] lg:w-[345px]':''}`} />
                     </div>
                 </div>
             ))}

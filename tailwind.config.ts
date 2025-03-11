@@ -13,7 +13,8 @@ const config: Config = {
         'sm': '640px',       // Small devices
         'md': '820px',       // Medium devices
         'lg': '1024px',      // Large devices
-        'xl': '1280px',      // Extra large devices
+        'xl': '1280px', 
+        'xxl': '1440px',
         '2xl': '1596px',     // 2x extra large devices
         '3xl': '1920px',     // Large screen laptops
         '4xl': '2560px',     // Larger monitors

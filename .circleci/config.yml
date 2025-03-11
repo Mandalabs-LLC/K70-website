@@ -1,5 +1,12 @@
 version: 2.1
 
+prod-filter: &prod-filter
+  branches:
+    ignore: /.*/ # Ignore all branches
+  tags:
+    only: /^v[0-9]+\.[0-9]+\.[0-9]+$/ # Only run on version tags
+
+
 executors:
   default:
     docker:
@@ -101,5 +108,24 @@ workflows:
             - build
       - deploy:
           deploy-script: ./scripts/ssh-deploy-qa.sh
+          requires:
+            - package
+
+  deploy-web-prod:
+    jobs:
+      - build:
+          filters:
+            <<: *prod-filter
+      - package:
+          filters:
+            <<: *prod-filter
+          environment: prod
+          requires:
+            - build
+      - deploy:
+          filters:
+            <<: *prod-filter
+          host: $PROD_HOST
+          deploy-script: ./scripts/ssh-deploy-prod.sh
           requires:
             - package

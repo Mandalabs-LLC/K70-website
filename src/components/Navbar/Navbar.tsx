@@ -5,7 +5,7 @@ import logo from '../../../public/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import { RxCross1 } from "react-icons/rx";
 import { footerData } from '@/data/footerData';
 
 const Navbar: FC = () => {
@@ -20,9 +20,13 @@ const Navbar: FC = () => {
                 <Link href='/'>
                     <Image src={logo} alt='K70-logo' className='w-[64px] h-[64px] md:w-[150px] md:h-[150px]' />
                 </Link>
-                <button className='block text-2xl md:hidden' onClick={() => setOpen(!isOpen)}>
-                    <GiHamburgerMenu />
-                </button>
+                {!isOpen ? 
+                    <button className='block text-2xl md:hidden' onClick={() => setOpen(!isOpen)}>
+                        <GiHamburgerMenu />
+                    </button>:
+                    <div className='flex justify-end text-2xl text-[#2B76A3] gap-2' onClick={() => setOpen(!isOpen)}>
+                        <RxCross1 />
+                    </div>}
             </section>
 
             {/* right section */}
@@ -42,21 +46,19 @@ const Navbar: FC = () => {
 
             {/* mobile section */}
             {isOpen &&
-                <section className='block md:hidden absolute h-screen w-full left-0 top-[62px]  bg-white z-50 '>
-                    <div className='flex justify-end p-8 text-2xl text-[#2B76A3] gap-2' onClick={() => setOpen(!isOpen)}>
-                        <p className='text-base'>CLOSE</p> <IoIosCloseCircleOutline />
-                    </div>
-                    <ul className='flex flex-col gap-5 text-primary text-2xl tracking-widest py-3 px-6'>
+                <section className='block md:hidden absolute h-screen w-full left-0 top-[62px] bg-white z-50 '>
+                    
+                    <ul className='flex flex-col gap-4 text-primary text-2xl tracking-widest pt-6 px-6'>
                         {footerData.map((data, index) => (
                             <li 
                                 key={index} 
-                                className={`bebasNeue ${pathname === data.href ? 'text-[#2B76A3]' : 'text-primary'} ${index === 1 ? 'pb-10' : 'pb-0'}`} 
+                                className={`bebasNeue ${pathname === data.href ? 'text-[#2B76A3]' : 'text-primary'} ${index === 1 ? 'pb-5' : 'pb-0'}`} 
                                 onClick={() => setOpen(!isOpen)}>
                                 <Link href={data.href}>{data.section}</Link>
                             </li>
                         ))}
                     </ul>
-                    <button className='flex w-full justify-center py-10' onClick={() => setOpen(!isOpen)}>
+                    <button className='flex w-full justify-center py-5' onClick={() => setOpen(!isOpen)}>
                         <Link href='/contact' className='w-[13rem] bg-blue-dark text-white px-5 py-3 text-center text-xl tracking-widest hover:bg-blue-light'> Get In Touch</Link>
                     </button>
                 </section>
