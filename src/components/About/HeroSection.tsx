@@ -20,17 +20,17 @@ const HeroSection: FC = () => {
                     <Image src={background} alt='k70' className='block md:hidden h-[250px] w-full object-cover' />
 
                     <p className='text-lg tracking-wider text-primary-light'>
-                        Mount Kanchenjunga, standing at an altitude of
+                        Mount Kangchenjunga, standing at an altitude of
                         <span className='text-black font-semibold'>8,586 meters (28,169 feet)</span> is the <span className='text-black font-semibold'>third-highest peak</span> in the world.
-                        The name Kanchenjunga was derived from the <span className='text-black font-semibold'>Tibetan</span> word <span className='text-black font-semibold'>‘Kang-Chhen-Dzo-Nga’</span>
+                        The name Kangchenjunga was derived from the <span className='text-black font-semibold'>Tibetan</span> word <span className='text-black font-semibold'>‘Kang-Chhen-Dzo-Nga’</span>
                         meaning <span className='text-black font-semibold'>‘The Five Treasures of Snow’</span> , which is a sacred representation encompassing
                         <span className='text-black font-semibold'>- gold, silver, grain, gems and sacred religious texts. </span>
                         This majestic peak has long been shrouded in myth and legend, captivating climbers since the early 20th century and revered in folklore and sacred religious texts.
                     </p>
                     <div className='h-auto bg-[#93B5C1] rounded-2xl p-5'>
-                        <p className='text-lg text-primary-light tracking-wider'> The Kanchenjunga region is not merely a destination but a vibrant ecosystem that requires protection and appreciation. Our initiative aims to foster sustainable
+                        <p className='text-lg text-primary-light tracking-wider'> The Kangchenjunga region is not merely a destination but a vibrant ecosystem that requires protection and appreciation. Our initiative aims to foster sustainable
                             tourism in this area, enhancing local livelihoods while ensuring environmental conservation and the preservation of its unique cultural heritage.
-                            The Kanchenjunga 70 event hopes to celebrate the legacy that has inspired many through special events hosted in Nepal and the United Kingdom.
+                            The Kangchenjunga 70 event hopes to celebrate the legacy that has inspired many through special events hosted in Nepal and the United Kingdom.
                             We aim to raise awareness and encourage visitors to explore this stunning area, supporting local communities while protecting the environment.</p>
                     </div>
                 </div>

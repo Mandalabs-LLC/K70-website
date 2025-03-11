@@ -1,7 +1,7 @@
 'use client'
 import React, { FC, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import logo from '../../../public/logo.png';
+import logo from '../../../public/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -42,7 +42,7 @@ const Navbar: FC = () => {
 
             {/* mobile section */}
             {isOpen &&
-                <section className='block md:hidden absolute h-screen w-full left-0 top-[4.5rem]  bg-white z-50 '>
+                <section className='block md:hidden absolute h-screen w-full left-0 top-[62px]  bg-white z-50 '>
                     <div className='flex justify-end p-8 text-2xl text-[#2B76A3] gap-2' onClick={() => setOpen(!isOpen)}>
                         <p className='text-base'>CLOSE</p> <IoIosCloseCircleOutline />
                     </div>
