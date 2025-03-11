@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import logo from '../../../public/logo.png';
+import logo from '../../../public/logo_without_tagline.svg';
 import Image from 'next/image';
 import { footerData } from '@/data/footerData';
 import Link from 'next/link';
