@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        'xxs': '400px',
         'xs': '480px',       // Extra small devices
         'sm': '640px',       // Small devices
         'md': '820px',       // Medium devices
