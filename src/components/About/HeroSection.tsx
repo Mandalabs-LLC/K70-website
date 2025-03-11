@@ -20,7 +20,7 @@ const HeroSection: FC = () => {
                     <Image src={background} alt='k70' className='block md:hidden h-[250px] w-full object-cover' />
 
                     <p className='text-lg tracking-wider text-primary-light'>
-                        Mount Kangchenjunga, standing at an altitude of
+                        Mount Kangchenjunga, standing at an altitude of&nbsp;
                         <span className='text-black font-semibold'>8,586 meters (28,169 feet)</span> is the <span className='text-black font-semibold'>third-highest peak</span> in the world.
                         The name Kangchenjunga was derived from the <span className='text-black font-semibold'>Tibetan</span> word <span className='text-black font-semibold'>‘Kang-Chhen-Dzo-Nga’</span>
                         meaning <span className='text-black font-semibold'>‘The Five Treasures of Snow’</span> , which is a sacred representation encompassing

@@ -19,7 +19,7 @@ export const futureData = [
         content: ` <a href="https://kanchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> 
         Kangchenjunga Conservation Area Management Council (KCAMC)</a> was formed in 2003 under the provision of 
         Conservation Area Management Regulation 2001 (Government Management) with the goal of mobilizing local communities
-        to serve as the active managers of the KCA. <a href="https://kanchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> KCAMC</a>
+        to serve as the active managers of the KCA. KCAMC
         and its affiliated bodies are working in conservation and sustainable
         development activities in line with directives of Government of Nepal, Department of National Park and Wildlife Conservation.
         <a href="https://kanchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> https://kanchenjunga.org/ </a>`,

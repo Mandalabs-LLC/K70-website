@@ -49,7 +49,7 @@ export const Events = () => {
             <p className="text-primary-light text-base md:text-lg tracking-wider" dangerouslySetInnerHTML={{ __html: k70Events[currentIndex].content }} />
             {k70Events[currentIndex]?.images?.filter(Boolean).length ? (
               <div className="grid grid-cols-3 gap-4 pt-10">
-                {k70Events[currentIndex].images.filter(Boolean).map((image, index) => (
+                {k70Events[currentIndex].images.map((image, index) => (
                   <Image
                     key={index}
                     onClick={() => image.src && openModal(image.src)}
