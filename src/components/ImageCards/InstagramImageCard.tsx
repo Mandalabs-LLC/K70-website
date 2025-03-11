@@ -9,9 +9,9 @@ interface InstagramImageCardProps {
     link: string;
 }
 
-const InstagramImageCard: FC<InstagramImageCardProps> = ({ imageUrl, altText, link }) => {
+const  InstagramImageCard: FC<InstagramImageCardProps> = ({ imageUrl, altText, link }) => {
     return (
-        <div className="relative w-[290px] h-[288px] md:w-[410px] md:h-[378px] 2xl:w-[410px] 2xl:h-[461px] opacity-90 rounded-md overflow-hidden shadow-lg group">
+        <div className="relative w-[170px] h-[170px] md:w-[200px] md:h-[200px] lg:w-[260px] lg:h-[280px] xl:w-[340px] xl:h-[361px] xxl:w-[410px] xxl:h-[451px] 2xl:w-[410px] 2xl:h-[461px] opacity-90 overflow-hidden shadow-lg group">
             {/* Image */}
             <Image src={imageUrl} alt={altText} fill className="object-cover" />
             

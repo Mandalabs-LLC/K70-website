@@ -7,10 +7,10 @@ interface socialMediaIcons {
 export const socialMediaIcons: socialMediaIcons[] = [
     {
         icon: 'facebook',
-        href: "https://www.facebook.com/"
+        href: "https://www.facebook.com/SamriddhaPahadSP?mibextid=LQQJ4d"
     },
     {
         icon: 'instagram',
-        href: "https://www.instagram.com/"
+        href: "https://www.instagram.com/samriddhapahad?igsh=aWFobTgzYTFvNGZj"
     },
 ];

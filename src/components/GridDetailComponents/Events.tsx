@@ -30,7 +30,7 @@ export const Events = () => {
         className=' -z-40 fixed w-full h-screen top-[4.5rem] md:top-[12rem] left-0 object-cover'
         loading='lazy'
       />
-      <div className="bg-white opacity-90 w-full h-auto flex flex-col  p-4 md:px-20 md:py-[60px]">
+      <div className="bg-white bg-opacity-90 w-full h-auto flex flex-col  p-4 md:px-20 md:py-[60px]">
         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  md:text-6xl pb-4 md:pb-6 z-10">Celebrations</h1>
 
         <div className="hidden md:flex gap-[160px] my-[60px]">
@@ -49,7 +49,7 @@ export const Events = () => {
             <p className="text-primary-light text-base md:text-lg tracking-wider" dangerouslySetInnerHTML={{ __html: k70Events[currentIndex].content }} />
             {k70Events[currentIndex]?.images?.filter(Boolean).length ? (
               <div className="grid grid-cols-3 gap-4 pt-10">
-                {k70Events[currentIndex].images.filter(Boolean).map((image, index) => (
+                {k70Events[currentIndex].images.map((image, index) => (
                   <Image
                     key={index}
                     onClick={() => image.src && openModal(image.src)}
@@ -69,16 +69,22 @@ export const Events = () => {
 
         </div>
 
+        {/* mobile view */}
         <div className="flex flex-col md:hidden gap-6 ">
           {k70Events.map((data, index) => (
             <div key={index} className="border border-black space-y-5">
               <p className="uppercase bebasNeue tracking-wider border-b border-black text-blue-light text-2xl px-5 py-3">{data.date}</p>
-              <p className="text-primary-light text-base tracking-wider px-5">
-                {data.content}
-              </p>
+              <p className="text-primary-light text-base tracking-wider px-5" dangerouslySetInnerHTML={{ __html: data.content }}/>
               <p className="uppercase text-blue-dark bebasNeue tracking-wider text-2xl text-right px-5 pb-3">
                 {data.title}
               </p>
+              {data.images?.filter(Boolean).length ? (
+                <div className="flex flex-wrap gap-4 pb-5 justify-center items-center">
+                  {data.images.filter(Boolean).map((image, index) => (
+                    <Image key={index} src={image} alt={data.title || "Event Image"} className="shadow-md border-8 border-white w-[151px] h-[112px]" onClick={() => openModal(image.src)} />
+                  ))}
+                </div>
+              ) : null}
             </div>
           ))}
         </div>

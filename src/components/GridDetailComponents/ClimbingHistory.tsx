@@ -36,7 +36,7 @@ export const ClimbingHistory = () => {
                 loading='lazy'
             />
 
-            <div className={`flex flex-col  bg-white opacity-95 p-5 lg:pt-20 lg:pb-20 lg:px-20`}>
+            <div className={`flex flex-col bg-white bg-opacity-95 p-5 lg:pt-20 lg:pb-20 lg:px-20`}>
 
                 <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-3xl ">THE LEGACY OF THE FIRST ASCENT OF KANGHENJUNGA</h1>
 
@@ -60,8 +60,8 @@ export const ClimbingHistory = () => {
                                 objectFit="cover"
                                 className="shadow-lg"
                             />
-                            <div className="pt-5 pb-4 text-[16px] font-normal text-gray-500">
-                                <p className="text-blue-dark">{data.name}</p>
+                            <div className="pt-5 pb-4 text-[16px] font-normal text-gray-500 bg-white w-full text-center">
+                                <p className="text-blue-dark bg-white">{data.name}</p>
                             </div>
                         </div>
                     ))}
@@ -74,7 +74,7 @@ export const ClimbingHistory = () => {
 
             </div>
 
-            <div className='w-full h-auto bg-white opacity-80 px-4 py-4 lg:px-[62px] 2xl:px-[112px] lg:py-[56px]'>
+            <div className='w-full h-auto bg-white bg-opacity-80 px-4 py-4 lg:px-[62px] 2xl:px-[112px] lg:py-[56px]'>
                 <h1 className="text-2xl lg:text-6xl tracking-widest pb-10 lg:pb-[72px] bebasNeue text-blue-dark text-center">Timeline of significant Climbs of Kangchenjunga</h1>
                 {climbingHistory.map((data: climbingHistoryData, index: number) => (
                     <div key='index' className={`relative flex flex-col w-full  ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
@@ -90,7 +90,9 @@ export const ClimbingHistory = () => {
                             {/* Intersection dot */}
                             <div className="lg:hidden absolute -left-[6px] w-4 h-4 bg-[#133F63] rounded-full"></div>
 
-                            <p className="w-auto border border-primary p-2 lg:py-3 lg:px-4 text-2xl lg:text-4xl tracking-wider bebasNeue text-primary ">{data.date}</p>
+                            <p className="w-auto border border-primary p-2 lg:py-3 lg:px-4 text-2xl lg:text-4xl tracking-wider bebasNeue text-primary "
+                             dangerouslySetInnerHTML={{ __html: data.date }}>
+                            </p>
                         </div>
 
                         {/* Horizontal and vertical lines with dot at intersection */}
@@ -106,7 +108,7 @@ export const ClimbingHistory = () => {
                         </div>
 
                         {/* Right content */}
-                        <div className={`w-full pl-[25%] lg:pl-0  lg:w-1/2 flex flex-col gap-4 items-center py-5 lg:py-[34px] ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+                        <div className={`w-full pl-[25%] lg:pl-0  lg:w-1/2 flex flex-col gap-4 items-center py-5 lg:py-[34px] opacity-1 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                             {data.image.map((img, index: number) => (
                                 <Image onClick={() => openModal(img as any)} key={index} alt="image" src={img} className="shadow-lg border-8 border-white w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover" />
                             ))}
