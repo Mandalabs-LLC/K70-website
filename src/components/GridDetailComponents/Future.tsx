@@ -64,7 +64,7 @@ export const Future = () => {
                         <div key={index} className="flex flex-col items-center gap-6 lg:w-[428px]">
                             <Image src={data.image} alt="img" className="shadow-lg border-8 border-white " onClick={() => openModal(data.image as any)} />
                             <p className="text-blue-light text-xl text-center font-bold">{data.title}</p>
-                            <h2>{data.content}</h2>
+                            <h2 dangerouslySetInnerHTML={{ __html: data.content }}></h2>
                         </div>
                     ))}
                 </div>

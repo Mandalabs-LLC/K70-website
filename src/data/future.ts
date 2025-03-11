@@ -16,13 +16,13 @@ interface futureData {
 export const futureData = [
     {
         heading: 'future',
-        content: ` <a href="https://kangchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> 
+        content: ` <a href="https://kanchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> 
         Kangchenjunga Conservation Area Management Council (KCAMC)</a> was formed in 2003 under the provision of 
         Conservation Area Management Regulation 2001 (Government Management) with the goal of mobilizing local communities
-        to serve as the active managers of the KCA. <a href="https://kangchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> KCAMC</a>
+        to serve as the active managers of the KCA. <a href="https://kanchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> KCAMC</a>
         and its affiliated bodies are working in conservation and sustainable
         development activities in line with directives of Government of Nepal, Department of National Park and Wildlife Conservation.
-        <a href="https://kangchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> https://kanchenjunga.org/ </a>`,
+        <a href="https://kanchenjunga.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> https://kanchenjunga.org/ </a>`,
         image: future,
         video: '/video/future_video.mp4'
     },
@@ -41,8 +41,9 @@ export const futureSecondSectionImages: futureSecondSectionImagesData[] = [
         title: "Pillar I: Environment and Conservation",
         content: `This pillar of the Samriddha Kangchenjunga Programme focuses on safeguarding the rich ecological heritage and biodiversity
         of the Kangchenjunga region. This pillar ensures that the Kangchenjunga region's unique biodiversity is preserved for future 
-        generations while fostering a sustainable balance between ecological and human needs. It focuses on conserving Kangchenjunga’s
-        unique ecosystems through research, species protection, and education. Key actions include supporting UNESCO Biosphere Reserve
+        generations while fostering a sustainable balance between ecological and human needs. It focuses on conserving Kangchenjunga’s
+        unique ecosystems through research, species protection, and education. Key actions include supporting  <a href="https://unesco.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> 
+        UNESCO</a> Biosphere Reserve
         status, conserving Red Pandas and Blue Sheep, and raising environmental awareness in schools. The program promotes biodiversity
         while creating sustainable livelihoods for local communities.`
     },
@@ -50,7 +51,7 @@ export const futureSecondSectionImages: futureSecondSectionImagesData[] = [
         image: piller2,
         title: "Pillar II: Sustainable Tourism Infrastructure",
         content: `This pillar focuses on improving essential infrastructure to support eco-tourism while preserving the environment. Key 
-        initiatives include the development of the park with the tourist information and permit center,  establishing porter capacity 
+        initiatives include the development of the park with the tourist information and permit center, establishing porter capacity 
         building and welfare center, clean drinking water systems in the community villages and high mountain camps, sanitation 
         facilities, renewable energy projects, trail development and maintenance, and a waste management system to enhance visitor
         experience and community well-being. Also, the introduction of Building Codes (bylaws) in the region to protect the local
