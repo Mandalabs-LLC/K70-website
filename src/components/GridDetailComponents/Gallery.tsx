@@ -110,7 +110,7 @@ export const Gallery: React.FC = () => {
                                     width={800}
                                     height={600}
                                     objectFit="cover"
-                                    className="shadow-lg"
+                                    className=""
                                 />
                             </div>
                             <div className={` ${item.description !== '' ? 'pt-5 pb-4 text-[14px] font-normal text-gray-500' : ''}`}>

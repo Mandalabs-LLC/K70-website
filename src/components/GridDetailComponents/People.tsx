@@ -46,9 +46,9 @@ export const People: React.FC = () => {
 
                     </div>
                     <div className="w-full h-full lg:w-[55%] flex flex-col items-start">
-                        <div className="flex flex-col lg:flex lg:flex-row gap-4 justify-center items-center">
+                        <div className="flex flex-col lg:flex lg:flex-row gap-4">
                             {data.video && (
-                                <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:w-[200px] xl:w-[500px] 3xl:w-[600px] z-20" />
+                                <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:w-[200px] xl:w-[500px] xl:h-[400px] 3xl:w-[600px] z-20" />
                             )}
                             {/* Clickable Image */}
                             <Image
@@ -56,7 +56,7 @@ export const People: React.FC = () => {
                                 alt="images"
                                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 onClick={() => openModal(data.image as any)} // Open modal on click
-                                className={` lg:absolute lg:right-10  shadow-lg border-8 border-white cursor-pointer w-auto lg:w-[350px] 3xl:w-[450px] object-cover`}
+                                className={` lg:absolute lg:right-10 lg:bottom-20  shadow-lg border-8 border-white cursor-pointer w-auto lg:w-[350px] 3xl:w-[450px] object-cover`}
                             />
                         </div>
                     </div>

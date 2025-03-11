@@ -31,7 +31,7 @@ const Footer: FC = () => {
                 <div className='text-base text-primary space-y-5 2xl:space-y-10 tracking-wider'>
                     <h2 className='text-xl uppercase bebasNeue tracking-[0.25rem]'>CONTACT INFORMATION</h2>
                     <p className='flex items-center gap-2'><FaMapMarkerAlt /> Sanepa, Lalitpur Nepal </p>
-                    <p className='flex items-center gap-2'><MdMail /> info@spnepal.org.np </p>
+                    <p className='flex items-center gap-2'><MdMail /> info@spnepal.org </p>
                     <p className='flex items-center gap-2'><FaPhoneAlt /> +977 01-5904990 , 5904991</p>
                 </div>
 

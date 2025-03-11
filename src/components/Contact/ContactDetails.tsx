@@ -19,7 +19,7 @@ const ContactDetails: FC = () => {
                             <span className='text-blue-light'><MdEmail /></span>
                             <span className='text-[#6D6D6D] text-base'> Mail</span>
                         </p>
-                        <p className='text-black text-xl tracking-wider pl-6'>info@spnepal.org.np</p>
+                        <p className='text-black text-xl tracking-wider pl-6'>info@spnepal.org</p>
                     </div>
                     <div className='space-y-1'>
                         <p className='flex items-center gap-2 '>
@@ -38,7 +38,7 @@ const ContactDetails: FC = () => {
                 </div>
                 <p className='text-black text-base tracking-wider text-center'>
                     If you would like to learn more about our initiatives or discuss potential collaborations, please contact Sanjeev Neupane at
-                    <Link href='mailto:info@spnepal.org.np' className='text-blue-light underline pl-2'>info@spnepal.org.np</Link>
+                    <Link href='mailto:info@spnepal.org' className='text-blue-light underline pl-2'>info@spnepal.org</Link>
                 </p>
             </div>
         </div>
