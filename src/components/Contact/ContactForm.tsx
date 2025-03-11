@@ -76,6 +76,7 @@ const ContactForm: React.FC = () => {
                     <option value="Kangchenjunga Conservation Area">Kangchenjunga Conservation Area</option>
                     <option value="Samriddha Pahad">Samriddha Pahad</option>
                     <option value="Nepal Investment Bank Ltd.">Nepal Investment Bank Ltd.</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 

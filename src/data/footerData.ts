@@ -13,7 +13,7 @@ export const footerData: FooterItem[] = [
       href: '/about',
     },
     {
-      section: 'place in world',
+      section: 'place in the world',
       href: '/details/place-in-the-world',
     },
     {
