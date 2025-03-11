@@ -38,7 +38,7 @@ const AboutClimbers: FC = () => {
                 <div className='md:w-1/2 md:space-y-[60px]'>
                     <h1 className='hidden md:block bebasNeue text-4xl tracking-widest uppercase bg-gradient-to-t from-[#1B588A] to-[#071724] bg-clip-text text-transparent'>The first ascent of kangchenjunga</h1>
                     <p className='text-primary-light text-lg tracking-wider'>The first people to reach the summit of Kangchenjunga were
-                        <span className='text-xl text-black font-bold'>Joe Brown</span> and <span className='text-xl text-black font-bold'>George Band</span>, members of a British expedition, on&nbsp;
+                        <span className='text-xl text-black font-bold'> Joe Brown </span> and <span className='text-xl text-black font-bold'>George Band</span>, members of a British expedition, on&nbsp;
                         <span className='text-xl text-black font-bold'>25 May 1955</span>.
                         Kangchenjunga, being the <span className='text-xl text-black font-bold'>third-highest</span> mountain <span className='text-xl text-black font-bold'>(8,586 meters)</span> with pristine beauty, has not been extensively explored by trekkers.
                         Fewer than 1,000 international tourists visit the Kangchenjunga area annually, a number significantly lower than regions like Annapurna and Everest. <br /><br />

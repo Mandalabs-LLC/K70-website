@@ -41,7 +41,7 @@ export const Partners = () => {
                     {/* Partner 2 */}
                     <div className="bg-[#fff] p-6 rounded-lg shadow-md flex flex-col items-center">
                         <Image src={SambriddhaPahadLogo} alt="SamriddhaPahadLogo" width={200} height={100} className="w-auto h-auto" />
-                        <a href="https://www.spnepal.org/" className="text-blue-600 text-2xl font-semibold mt-3 text-center">
+                        <a href="https://www.spnepal.org/" target="_" className="text-blue-600 text-2xl font-semibold mt-3 text-center">
                             Samriddha Pahad
                         </a>
                         <p className="text-gray-700 mt-2 text-center">
@@ -68,7 +68,7 @@ export const Partners = () => {
 
                             <div className="md:absolute md:top-0 md:left-0 flex flex-col items-center justify-center p-4 bg-[#fff] text-gray-800 rounded-lg shadow-lg md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible transition-all duration-300 z-10">
                                 <Image alt="logo" src={partner.logo} width={150} height={75} className="w-auto h-auto mb-2" />
-                                <h3 className="text-blue-600 text-lg font-semibold underline">{partner.title}</h3>
+                                <h3 className={`text-lg font-semibold ${partner.link ==='#' ? 'text-black no-underline' : 'text-blue-600 underline'}`}>{partner.title}</h3>
                                 <p className="text-gray-700 text-sm mt-2">{partner.description}</p>
                             </div>
                         </Link>
