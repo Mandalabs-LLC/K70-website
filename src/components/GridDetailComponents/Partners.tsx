@@ -10,16 +10,16 @@ export const Partners = () => {
             {/* Section 1: Main Partners */}
             <div className="flex flex-col items-center min-h-screen p-6 lg:p-20 space-y-10">
                 {/* Left Section - Content */}
-                <div className="w-full flex flex-col lg:flex lg:flex-row gap-5 lg:gap-10">
+                <div className="w-full flex flex-col-reverse lg:flex lg:flex-row gap-5 lg:gap-10">
                     <div className="w-full lg:w-1/2">
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl md:text-6xl">
                             OUR CURRENT PARTNERS INCLUDE
                         </h1>
-                        <p className="text-xl tracking-wider text-gray-700 text-left lg:text-justify ">
+                        <p className="text-base md:text-xl tracking-wider text-gray-700 text-left lg:text-justify ">
                             Over the past decade, we have engaged in a collaborative effort involving various partners to bring sustainable change to the region.
                         </p>
                     </div>
-                    <div className=" w-full lg:w-1/2 flex flex-col">
+                    <div className=" w-full lg:w-1/2 flex flex-col shadow-md border-8 border-white object-cover">
                         <video src="/video/partners.mp4" autoPlay muted loop className="w-full h-full object-cover" />
                     </div>
                 </div>
@@ -30,7 +30,7 @@ export const Partners = () => {
                     {/* Partner 1 */}
                     <div className="bg-[#fff] p-6 rounded-lg shadow-md flex flex-col items-center">
                         <Image src={KCAMCLOGO} alt="KCAMCLOGO" width={200} height={100} className="w-auto h-auto" />
-                        <a href="https://kanchenjunga.org/" target="_" className="text-blue-600 text-2xl font-semibold mt-3 text-center underline">
+                        <a href="https://kanchenjunga.org/" target="_" className="text-blue-600 text-lg lg:text-2xl font-semibold mt-3 text-center underline">
                             Kangchenjunga Conservation Area Management Council (KCAMC)
                         </a>
                         <p className="text-gray-700 mt-2 text-center">
@@ -41,7 +41,7 @@ export const Partners = () => {
                     {/* Partner 2 */}
                     <div className="bg-[#fff] p-6 rounded-lg shadow-md flex flex-col items-center">
                         <Image src={SambriddhaPahadLogo} alt="SamriddhaPahadLogo" width={200} height={100} className="w-auto h-auto" />
-                        <a href="https://www.spnepal.org/" target="_" className="text-blue-600 text-2xl font-semibold mt-3 text-center underline">
+                        <a href="https://www.spnepal.org/" target="_" className="text-blue-600 text-lg lg:text-2xl font-semibold mt-3 text-center underline">
                             Samriddha Pahad
                         </a>
                         <p className="text-gray-700 mt-2 text-center">

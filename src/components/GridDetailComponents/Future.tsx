@@ -31,8 +31,8 @@ export const Future = () => {
             />
             {futureData.map((data, index) => (
                 <div key={index} className={`relative flex flex-col-reverse justify-center items-center bg-white gap-4 p-4 lg:gap-20 lg:p-20  ${index % 2 === 0 ? 'lg:flex-row bg-opacity-90' : 'lg:flex-row-reverse opacity-1'}`}>
-                    <Image src={kcamcLogo} alt='kcamc_logo' width={296} height={104} className="lg:absolute lg:right-20 lg:bottom-20" />
                     <Image src={data.image} alt="images" className='lg:absolute lg:right-20 z-10 shadow-lg border-8 border-white lg:h-[296px] lg:w-[400px]' onClick={() => openModal(data.image as any)} />
+                    <Image src={kcamcLogo} alt='kcamc_logo' width={296} height={104} className="lg:absolute lg:right-20 lg:bottom-10 xxl:bottom-20 " />
                     <div className="w-full h-full lg:w-1/3 flex flex-col justify-center">
                         <h1 className="uppercase text-blue-dark bebasNeue tracking-widest text-4xl  lg:text-6xl pb-4 lg:pb-10">{data.heading}</h1>
                         <p className={`text-primary-light text-base lg:text-lg tracking-wider text-left lg:text-justify `}
@@ -40,7 +40,7 @@ export const Future = () => {
                     </div>
                     <div className=" w-full h-full lg:w-2/3 flex flex-col lg:flex lg:flex-row  items-center">
                         {data.video && (
-                            <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:h-[465px] lg:w-[563px] 3xl:w-auto z-20" />
+                            <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:h-[450px] lg:w-[400px] xxl:h-[465px] xxl:w-[563px] 3xl:w-auto z-20" />
                         )}
                         
                     </div>

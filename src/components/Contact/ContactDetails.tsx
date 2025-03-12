@@ -19,21 +19,21 @@ const ContactDetails: FC = () => {
                             <span className='text-blue-light'><MdEmail /></span>
                             <span className='text-[#6D6D6D] text-base'> Mail</span>
                         </p>
-                        <p className='text-black text-xl tracking-wider pl-6'>info@spnepal.org</p>
+                        <p className='text-black text-base xl:text-xl tracking-wider pl-6'>info@spnepal.org</p>
                     </div>
                     <div className='space-y-1'>
                         <p className='flex items-center gap-2 '>
                             <span className='text-blue-light'><FaPhoneAlt /></span>
                             <span className='text-[#6D6D6D] text-base'>Contact Number</span>
                         </p>
-                        <p className='text-black text-xl tracking-wider pl-6'>+977 01-5904990, 5904991</p>
+                        <p className='text-black xl:text-xl tracking-wider pl-6'>+977 01-5904990, 5904991</p>
                     </div>
                     <div className='space-y-1'>
                         <p className='flex items-center gap-2 '>
                             <span className='text-blue-light'> <FaMapMarkerAlt /></span>
                             <span className='text-[#6D6D6D] text-base'>Address</span>
                         </p>
-                        <p className='text-black text-xl tracking-wider pl-6'>Sanepa, Lalitpur, Nepal </p>
+                        <p className='text-black xl:text-xl tracking-wider pl-6'>Sanepa, Lalitpur, Nepal </p>
                     </div>
                 </div>
                 <p className='text-black text-base tracking-wider text-center'>
