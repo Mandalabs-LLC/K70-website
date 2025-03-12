@@ -12,13 +12,13 @@ const Footer: FC = () => {
         <div className='h-auto w-full bg-blue px-5 md:px-20 py-10'>
 
             {/* top section */}
-            <section className='flex flex-col-reverse gap-10 md:flex-row  md:gap-0 justify-between items-center'>
+            <section className='flex flex-col-reverse gap-10 md:flex-row  md:gap-5 justify-between items-center'>
                 <div className='block md:hidden text-center space-y-2 pb-10'>
                     <p className='border-b border-primary text-base' > Cookies </p>
                     <p className='border-b border-primary text-base' >Privacy Policy </p>
                     <p className='border-b border-primary text-base' >Terms & Conditions </p>
                 </div>
-                <div >
+                <div className=''>
                     <Image src={logo} alt='logo' className='h-[200px] w-[200px] 2xl:h-[300px] 2xl:w-[300px]' />
                 </div>
                 <div className='hidden md:grid grid-cols-5 gap-5 2xl:gap-10'>

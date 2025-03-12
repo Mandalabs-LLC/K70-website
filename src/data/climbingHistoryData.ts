@@ -83,7 +83,7 @@ export const climbingHistory: climbingHistoryData[] = [
         image: [phurba],
     },
     {
-        date: '1980<span style="font-size: 25px;">s</span> - 1990<span style="font-size: 25px;">s</span>',
+        date: '1980<span style="font-size: 70%;">s</span> - 1990<span style="font-size: 70%;">s</span>',
         content: "Several expeditions occur, including a notable solo ascent by climber Jerzy Kukuczka in 1991.",
         image: [pnenines],
     },

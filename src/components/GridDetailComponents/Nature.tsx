@@ -38,7 +38,7 @@ export const Nature = () => {
                     </div>
                     <div className=" w-full h-full md:w-1/2 flex flex-col md:flex md:flex-row gap-4 items-center">
                         {data.video && (
-                            <video src={data.video} autoPlay muted loop className="shadow-md border-8 border-white object-cover md:h-[365px] md:w-[463px] 3xl:w-[660px] 3xl:h-auto z-20" />
+                            <video src={data.video} autoPlay muted loop className="shadow-md border-8 border-white object-cover md:h-[465px] md:w-[325px] xxl:h-[365px] xxl:w-[463px] 3xl:w-[660px] 3xl:h-auto z-20" />
                         )}
                         <Image onClick={() => openModal(data.image as any)} src={data.image} alt="images" className={`shadow-md border-8 border-white ${index===0? 'lg:block hidden lg:absolute lg:right-10 lg:h-[603px] lg:w-[345px]':''}`} />
                     </div>
@@ -49,7 +49,7 @@ export const Nature = () => {
                 <div key={index} className={`flex flex-col justify-center items-center text-left lg:text-justify  bg-white gap-4 p-4 md:gap-20 md:p-20  ${index % 2 === 0 ? 'bg-opacity-90' : 'opacity-1'}`}>
                     <div className="flex flex-col-reverse md:flex md:flex-row gap-5">
                         {data.images.map((img, imgIndex) => (
-                            <Image key={imgIndex} src={img} alt="fauna" onClick={() => openModal(img as any)} className='lg:h-[250px] lg:w-[250px] xl:h-[312px] xl:w-[324px] shadow-md border-8 border-white object-cover' />
+                            <Image key={imgIndex} src={img} alt="fauna" onClick={() => openModal(img as any)} className='lg:h-[250px] lg:w-[250px] xxl:h-[312px] xxl:w-[324px] shadow-md border-8 border-white object-cover' />
                         ))}
                     </div>
                     <p className="text-primary-light text-base md:text-lg tracking-wider">{data.content}</p>

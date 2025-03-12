@@ -12,7 +12,7 @@ const HeroSection: FC = () => {
                 loading='lazy'
             />
             <div className='flex w-full md:h-[900px] bg-[#F5F4F3] opacity-95 px-4 md:pl-20 py-20 relative overflow-x-hidden overflow-y-hidden'>
-                <div className='relative w-full md:w-[64%] space-y-6 md:space-y-[48px] top-[25px] md:top-[144px]'>
+                <div className='relative w-full md:w-[62%] xxl:w-[64%] space-y-6  xxl:space-y-[48px] top-[25px] md:top-[144px]'>
                     <h2 className='text-4xl md:text-6xl bebasNeue tracking-widest bg-clip-text text-transparent bg-[url("/images/clipImage.png")] bg-cover'>
                         70 years of <br /> Majestic Mountain
                     </h2>
