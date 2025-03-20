@@ -1,7 +1,7 @@
 'use client'
 import React, { FC, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import logo from '../../../public/logo.svg';
+import logo from '../../../public/logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -16,9 +16,9 @@ const Navbar: FC = () => {
         <div className='fixed bg-[#FAFBFD] top-0 z-[1000] w-full flex flex-col md:flex-row justify-between px-5 md:px-20 h-[4rem] md:h-[8rem]'>
 
             {/* left section */}
-            <section className='w-full md:w-auto flex items-center justify-between'>
+            <section className='w-full md:w-auto flex items-center justify-between my-auto'>
                 <Link href='/'>
-                    <Image src={logo} alt='K70-logo' className='w-[64px] h-[64px] md:w-[150px] md:h-[150px]' />
+                    <Image src={logo} alt='K70-logo' className='w-[78px] h-[45px] md:w-[165px] md:h-[95px]' />
                 </Link>
                 {!isOpen ? 
                     <button className='block text-2xl md:hidden' onClick={() => setOpen(!isOpen)}>
