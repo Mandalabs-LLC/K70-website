@@ -18,7 +18,7 @@ const Navbar: FC = () => {
             {/* left section */}
             <section className='w-full md:w-auto flex items-center justify-between'>
                 <Link href='/'>
-                    <Image src={logo} alt='K70-logo' className='w-[64px] h-[64px] md:w-[150px] md:h-[150px]' />
+                    <Image src={logo} alt='K70-logo' className='w-[74px] h-[74px] md:w-[175px] md:h-[175px]' />
                 </Link>
                 {!isOpen ? 
                     <button className='block text-2xl md:hidden' onClick={() => setOpen(!isOpen)}>
