@@ -51,7 +51,7 @@ const AboutClimbers: FC = () => {
                 currentIndex={0} // Placeholder for now; update if needed for carousel-like navigation
                 images={[modalImage]} // Pass single image as an array
                 onClose={closeModal}
-                onNavigate={() => { }} // Empty function since we are not navigating between images
+                // onNavigate={() => { }} // Empty function since we are not navigating between images
             />
 
         </>
