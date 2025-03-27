@@ -66,7 +66,6 @@ import Image66 from '../../public/images/gallery/img66.jpg';
 import Image67 from '../../public/images/gallery/img67.jpg';
 import Image68 from '../../public/images/gallery/img68.jpg';
 import Image69 from '../../public/images/gallery/img69.jpg';
-import Image70 from '../../public/images/gallery/img70.jpg';
 
 export const galleryData = [
     {
@@ -391,11 +390,6 @@ export const galleryData = [
     },
     {
         "imageUrl": Image66,
-        "title": "",
-        "description": ""
-    },
-    {
-        "imageUrl": Image70,
         "title": "",
         "description": ""
     },

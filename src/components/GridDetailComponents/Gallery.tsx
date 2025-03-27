@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { FaRegTimesCircle } from "react-icons/fa";
 import { galleryData } from "@/data/gallery";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-// import background2 from '../../../public/images/background2.jpg';
+import Masonry from "react-responsive-masonry";
 
 interface ModalProps {
     isOpen: boolean;
     currentIndex: number;
     images: (StaticImageData | string)[];
     onClose: () => void;
-    onNavigate: (direction: 'next' | 'prev') => void;
 }
 
 export const CustomModal: React.FC<ModalProps> = ({
@@ -55,7 +53,6 @@ export const CustomModal: React.FC<ModalProps> = ({
     );
 };
 
-// Gallery Component
 interface GalleryItem {
     imageUrl: StaticImageData | string;
     title: string;
@@ -65,69 +62,111 @@ interface GalleryItem {
 export const Gallery: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const [columnCount, setColumnCount] = useState<number>(4);
+    const galleryRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const calculateColumns = () => {
+            if (typeof window === 'undefined') return 4;
+            const width = window.innerWidth;
+            if (width >= 1200) return 4;
+            if (width >= 900) return 3;
+            if (width >= 600) return 2;
+            return 1;
+        };
+
+        // Set initial column count
+        setColumnCount(calculateColumns());
+
+        // Handle responsive column count
+        const handleResize = () => {
+            setColumnCount(calculateColumns());
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const openModal = (index: number): void => {
         setCurrentIndex(index);
         setIsModalOpen(true);
-        document.body.style.overflow = "hidden"; // Disable scrolling
+        document.body.style.overflow = "hidden";
     };
 
     const closeModal = (): void => {
         setIsModalOpen(false);
-        document.body.style.overflow = ""; // Re-enable scrolling
+        document.body.style.overflow = "";
     };
 
-    const navigateCarousel = (direction: 'next' | 'prev'): void => {
-        if (direction === 'next') {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % galleryData.length);
-        } else {
-            setCurrentIndex((prevIndex) =>
-                prevIndex === 0 ? galleryData.length - 1 : prevIndex - 1
-            );
-        }
+    // Create an array of arrays to distribute images evenly
+    const distributeImages = () => {
+        const columns: GalleryItem[][] = Array.from({ length: columnCount }, () => []);
+        
+        galleryData.forEach((item, index) => {
+            const columnIndex = index % columnCount;
+            columns[columnIndex].push(item);
+        });
+
+        return columns;
     };
+
+    const distributedImages = distributeImages();
 
     return (
-        <div className="p-10 bg-[#F5F0EC]">
-            {/* <Image
-                src={background2}
-                alt="Hero_Section_Images"
-                className="-z-40 fixed w-full h-screen top-[4.5rem] md:top-[12rem] left-0 object-cover bg[#F5F0EC]"
-                loading="lazy"
-            /> */}
-            <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 600: 2, 900: 3, 1200: 4 }}>
-                <Masonry columnsCount={2} gutter="20px" className="mb-10">
-                    {galleryData.map((item: GalleryItem, index: number) => (
-                        <div key={index} className="relative group p-2 bg-white">
-                            <div
-                                className="w-full relative cursor-pointer"
-                                onClick={() => openModal(index)}
+        <div 
+            ref={galleryRef} 
+            className="p-10 bg-[#F5F0EC]"
+        >
+            <div className="flex gap-5">
+                {distributedImages.map((column, colIndex) => (
+                    <div 
+                        key={colIndex} 
+                        className="flex-1 flex flex-col gap-5"
+                    >
+                        {column.map((item, index) => (
+                            <div 
+                                key={`${colIndex}-${index}`} 
+                                className="w-full bg-white p-2"
                             >
-                                <Image
-                                    src={item.imageUrl}
-                                    alt={item.title}
-                                    layout="responsive"
-                                    width={800}
-                                    height={600}
-                                    objectFit="cover"
-                                    className=""
-                                />
+                                <div
+                                    className="w-full relative cursor-pointer"
+                                    onClick={() => {
+                                        // Find the actual index in the original galleryData
+                                        const globalIndex = galleryData.findIndex(
+                                            (dataItem) => 
+                                                dataItem.imageUrl === item.imageUrl && 
+                                                dataItem.title === item.title
+                                        );
+                                        openModal(globalIndex);
+                                    }}
+                                >
+                                    <Image
+                                        src={item.imageUrl}
+                                        alt={item.title}
+                                        layout="responsive"
+                                        width={800}
+                                        height={600}
+                                        objectFit="cover"
+                                        quality={85}
+                                        className="w-full"
+                                    />
+                                </div>
+                                {item.description && (
+                                    <div className="mt-2 text-[14px] font-normal text-gray-500">
+                                        <p>{item.description}</p>
+                                    </div>
+                                )}
                             </div>
-                            <div className={` ${item.description !== '' ? 'pt-5 pb-4 text-[14px] font-normal text-gray-500' : ''}`}>
-                                <p>{item.description}</p>
-                            </div>
-                        </div>
-                    ))}
-                </Masonry>
-            </ResponsiveMasonry>
+                        ))}
+                    </div>
+                ))}
+            </div>
 
-            {/* Modal */}
             <CustomModal
                 isOpen={isModalOpen}
                 currentIndex={currentIndex}
                 images={galleryData.map((item) => item.imageUrl)}
                 onClose={closeModal}
-                onNavigate={navigateCarousel}
             />
         </div>
     );
