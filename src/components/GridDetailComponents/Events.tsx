@@ -50,10 +50,10 @@ export const Events = () => {
             {k70Events[currentIndex]?.images?.filter(Boolean).length ? (
               <div className="grid grid-cols-3 gap-4 pt-10 min-h-[220px]">
                 {k70Events[currentIndex].images.map((image, index) => (
-                  <div key={index} className="shadow-md border-8 border-white bg-white min-h-[220px]">
+                  <div key={index} className="shadow-md border-8 border-white bg-white min-h-[150px]">
                     <Image
                       onClick={() => image.src && openModal(image.src)}
-                      height={220}
+                      height={150}
                       src={image}
                       alt={k70Events[currentIndex]?.title || "Event Image"}
                       className="w-full h-full object-cover"

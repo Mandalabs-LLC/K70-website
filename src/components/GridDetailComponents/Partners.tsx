@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import KCAMCLOGO from '../../../public/images/kcamcSmallLogo.svg';
+import KCAMCLOGO from '../../../public/images/kcamcLogo.svg';
 import SambriddhaPahadLogo from '../../../public/images/samridhhapahadLogo.svg';
 import { ourPartners } from '../../data/partners';
 
@@ -53,7 +53,7 @@ export const Partners = () => {
             </div>
 
             {/* Section 2: Additional Partners */}
-            <div className="bg-[#fff] bg-opacity-90 w-full py-16 px-6 md:px-16">
+            <div className="bg-[#fff] bg-opacity-90 w-full py-10 px-6 md:px-16">
                 {/* Partners Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-8 md:mt-10">
                     {ourPartners.map((partner, index) => (
@@ -64,7 +64,13 @@ export const Partners = () => {
                             target="_blank"
                         >
                             {/* Partner Logo */}
-                            <Image alt="logo" src={partner.logo} width={250} height={95} className="md:block hidden w-[200px] h-auto transition-all duration-300 lg:group-hover:scale-105" />
+                            <Image 
+                                alt="logo" 
+                                src={partner.logo} 
+                                width={250} 
+                                height={95} 
+                                className="md:block hidden w-[200px] h-[95px] object-contain mx-auto transition-all duration-300 lg:group-hover:scale-105" 
+                            />
 
                             <div className="md:absolute md:top-0 md:left-0 flex flex-col items-center justify-center p-4 bg-[#fff] text-gray-800 rounded-lg shadow-lg md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible transition-all duration-300 z-10">
                                 <Image alt="logo" src={partner.logo} width={150} height={75} className="w-auto h-auto mb-2" />
@@ -74,8 +80,6 @@ export const Partners = () => {
                         </Link>
                     ))}
                 </div>
-
-
             </div>
 
             {/* Section 3: Call to Action */}
