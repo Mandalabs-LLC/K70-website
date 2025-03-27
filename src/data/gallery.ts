@@ -266,11 +266,6 @@ export const galleryData = [
         "description": "Siniolchu, Sikkim, by Vittorio Sella, 1899, *NHR - taken during the Kangchenjunga expedition of 1899."
     },
     {
-        "imageUrl": Image71,
-        "title": "",
-        "description": ""
-    },
-    {
         "imageUrl": Image43,
         "title": "",
         "description": ""

@@ -8,6 +8,7 @@ import snv from '../../public/images/partners/snv.png';
 import unesco from '../../public/images/partners/unesco.png';
 import wwf from '../../public/images/partners/wwf.png';
 import AlternativeEnergyPromotionCenter from '../../public/images/partners/alternative.png';
+import BritishEmbassyKathmandu from '../../public/images/partners/britishEmbassy.png';
 import ntb from '../../public/images/partners/ntb.png';
 import business360 from '../../public/images/partners/business360.png';
 import designcell from '../../public/images/partners/designcell.png';
@@ -34,6 +35,12 @@ export const ourPartners:Partner[] =[
         description: "AEPC will facilitate access to renewable energy and water management resources in the Kangchenjunga region to implement sustainable energy solutions.",
         link:"https://www.aepc.gov.np/",
         logo: AlternativeEnergyPromotionCenter,
+    },
+    {
+        title: "British Embassy Kathmandu",
+        description: "",
+        link:"https://www.gov.uk/world/organisations/british-embassy-kathmandu",
+        logo: BritishEmbassyKathmandu,
     },
     {
         title: "Business 360",
