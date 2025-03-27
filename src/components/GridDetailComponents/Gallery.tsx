@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { FaRegTimesCircle } from "react-icons/fa";
 import { galleryData } from "@/data/gallery";
-import Masonry from "react-responsive-masonry";
 
 interface ModalProps {
     isOpen: boolean;

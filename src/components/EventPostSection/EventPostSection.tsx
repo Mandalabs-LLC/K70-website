@@ -50,7 +50,12 @@ const EventPostComponent = () => {
             <div className="flex justify-between items-center mb-10 gap-10 p-4 md:px-5 md:py-4 bg-[#ECF7F9] border border-[#FAFBFD]">
                 <div className="flex flex-col items-center w-1/2 text-center">
                     <p className="text-base md:text-2xl tracking-wide font-bold">Follow Us On Instagram</p>
-                    <p className="text-lg tracking-widest md:text-3xl text-blue-light bebasNeue">@samriddhapahad</p>
+                    <p 
+                        className="text-lg tracking-widest md:text-3xl text-blue-light bebasNeue cursor-pointer"
+                        onClick={() => window.open('https://www.instagram.com/samriddhapahad?igsh=aWFobTgzYTFvNGZj', '_blank')}
+                    >
+                        @samriddhapahad
+                    </p>
                 </div>
                 <div className="flex flex-col items-center w-1/2 text-center">
                     <p className="text-base md:text-2xl tracking-wide font-bold">Tag us in your posts</p>
