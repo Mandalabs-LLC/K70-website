@@ -57,6 +57,7 @@ export const Events = () => {
                       src={image}
                       alt={k70Events[currentIndex]?.title || "Event Image"}
                       className="w-full h-full object-cover"
+                      priority
                     />
                   </div>
                 ))}
