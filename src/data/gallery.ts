@@ -271,7 +271,6 @@ export const galleryData = [
         "title": "",
         "description": ""
     },
-    
     {
         "imageUrl": Image44,
         "title": "",
