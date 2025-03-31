@@ -65,7 +65,6 @@ import Image66 from '../../public/images/gallery/img66.jpg';
 import Image67 from '../../public/images/gallery/img67.jpg';
 import Image68 from '../../public/images/gallery/img68.jpg';
 import Image69 from '../../public/images/gallery/img69.jpg';
-import Image70 from '../../public/images/gallery/img70.jpg';
 
 export const galleryData = [
     {
@@ -259,11 +258,6 @@ export const galleryData = [
         "description": "Siniolchu, Sikkim, by Vittorio Sella, 1899, *NHR - taken during the Kangchenjunga expedition of 1899."
     },
     {
-        "imageUrl": Image39,
-        "title": "",
-        "description": "Siniolchu, Sikkim, by Vittorio Sella, 1899, *NHR - taken during the Kangchenjunga expedition of 1899."
-    },
-    {
         "imageUrl": Image43,
         "title": "",
         "description": ""
@@ -297,7 +291,7 @@ export const galleryData = [
     {
         "imageUrl": Image47,
         "title": "",
-        "description": ""
+        "description": " "
     },
     {
         "imageUrl": Image48,
@@ -322,7 +316,7 @@ export const galleryData = [
     {
         "imageUrl": Image53,
         "title": "",
-        "description": ""
+        "description": " "
     },
     {
         "imageUrl": Image54,
@@ -347,7 +341,7 @@ export const galleryData = [
     {
         "imageUrl": Image58,
         "title": "",
-        "description": ""
+        "description": " "
     },
     {
         "imageUrl": Image59,
@@ -386,11 +380,6 @@ export const galleryData = [
     },
     {
         "imageUrl": Image66,
-        "title": "",
-        "description": ""
-    },
-    {
-        "imageUrl": Image70,
         "title": "",
         "description": ""
     },
