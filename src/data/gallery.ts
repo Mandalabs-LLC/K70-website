@@ -39,7 +39,6 @@ import Image38 from '../../public/images/gallery/img38.jpg';
 import Image39 from '../../public/images/gallery/img39.jpg';
 import Image40 from '../../public/images/gallery/img40.jpg';
 import Image41 from '../../public/images/gallery/img41.jpg';
-import Image42 from '../../public/images/gallery/img42.jpg';
 import Image43 from '../../public/images/gallery/img43.jpg';
 import Image44 from '../../public/images/gallery/img44.jpg';
 import Image45 from '../../public/images/gallery/img45.jpg';
@@ -279,11 +278,7 @@ export const galleryData = [
         "title": "",
         "description": ""
     },
-    {
-        "imageUrl": Image42,
-        "title": "",
-        "description": ""
-    },
+    
     {
         "imageUrl": Image44,
         "title": "",
@@ -362,7 +357,7 @@ export const galleryData = [
     {
         "imageUrl": Image60,
         "title": "",
-        "description": ""
+        "description": " "
     },
     {
         "imageUrl": Image61,
