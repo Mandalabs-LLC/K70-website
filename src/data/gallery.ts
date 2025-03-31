@@ -36,7 +36,6 @@ import Image35 from '../../public/images/gallery/img35.jpg';
 import Image36 from '../../public/images/gallery/img36.jpg';
 import Image37 from '../../public/images/gallery/img37.jpg';
 import Image38 from '../../public/images/gallery/img38.jpg';
-import Image39 from '../../public/images/gallery/img39.jpg';
 import Image40 from '../../public/images/gallery/img40.jpg';
 import Image41 from '../../public/images/gallery/img41.jpg';
 import Image43 from '../../public/images/gallery/img43.jpg';
