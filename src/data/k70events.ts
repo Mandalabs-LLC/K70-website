@@ -52,7 +52,7 @@ export const k70Events: k70Events[] = [
     },
     {
         date: 'SPRING 2026',
-        content: "70<sup>th</sup> Anniversary Duke of Edinborough expedition to Kanchecnjunga",
+        content: "70<sup>th</sup> Anniversary Duke of Edinborough expedition to Kangchenjunga",
         title: 'DETAILS TO FOLLOW'
     }
 ]
