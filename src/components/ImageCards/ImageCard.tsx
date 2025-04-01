@@ -19,6 +19,7 @@ const ImageCard: FC<ImageCardProps> = ({ title, imageUrl, link }) => {
           src={imageUrl}
           alt={title}
           className='object-cover w-full h-full hover:scale-110 transition-transform duration-300 z-10'
+          priority
         />
       </Link>
     </div>

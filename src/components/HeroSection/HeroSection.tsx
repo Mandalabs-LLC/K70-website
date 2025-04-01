@@ -8,7 +8,7 @@ import background from '../../../public/images/background.jpg';
 const HeroSection: FC = () => {
     return (
         <div className='relative h-[684px] 2xl:h-[844px]'>
-            <Image src={background} alt='K70_mountain' className='w-full h-full object-cover opacity-50' />
+            <Image src={background} alt='K70_mountain' className='w-full h-full object-cover opacity-50' priority />
 
             {/* left section */}
             <section className='absolute top-[120px] md:top-[347px] 2xl:top-[410px] md:left-16 w-full md:w-[400px] xl:w-[500px]  xxl:w-[644px] 2xl:w-[920px] h-auto'>
@@ -26,16 +26,19 @@ const HeroSection: FC = () => {
                     src={group} 
                     alt='group' 
                     className='bg-white absolute right-1/2 translate-x-[20%] md:right-[16%] top-[456px] md:top-[190px] w-[200px] h-[123px] md:w-[265px] md:h-[189px] 2xl:w-[359px] 2xl:h-[255px] border-8 border-white' 
+                    priority
                 />
                 <Image 
                     src={map} 
                     alt='map' 
                     className='bg-white absolute right-1/2 translate-x-1/2 md:right-[15%] top-[555px] md:top-[330px] 2xl:top-[380px] w-[200px] h-[123px] md:w-[285px] md:h-[189px] 2xl:w-[359px] 2xl:h-[255px] border-8 border-white z-30' 
+                    priority
                 />
                 <Image 
                     src={threepeople} 
                     alt='threepeople' 
                     className='bg-white absolute right-1/2 translate-x-[90%] md:right-[26%] bottom-[126px] md:bottom-[40px] w-[180px] h-[123px] md:w-[265px] md:h-[189px] 2xl:w-[359px] 2xl:h-[255px] border-8 border-white' 
+                    priority
                 />
                 <div className='absolute right-1/2 translate-x-1/2 md:right-[34.5%] top-[290px] h-[175px] w-[300px] md:top-[300px] 2xl:top-[350px] md:w-[333px] md:h-[248px] 2xl:w-[451px] 2xl:h-[328px] border-8 border-white flex justify-center items-center z-40'>
                     <video 
@@ -44,6 +47,7 @@ const HeroSection: FC = () => {
                         muted 
                         loop 
                         className='-z-10 object-cover h-[165px] w-full md:h-[238px] 2xl:h-[320px] bg-white' 
+                    
                     />
                 </div>
             </section>
