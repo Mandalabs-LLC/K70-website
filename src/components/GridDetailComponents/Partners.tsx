@@ -72,7 +72,7 @@ export const Partners = () => {
                                 className="md:block hidden w-[200px] h-[95px] object-contain mx-auto transition-all duration-300 lg:group-hover:scale-105" 
                             />
 
-                            <div className="md:absolute md:top-0 md:left-0 flex flex-col items-center justify-center p-4 bg-[#fff] text-gray-800 rounded-lg shadow-lg md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible transition-all duration-300 z-10">
+                            <div className="md:absolute md:top-0 md:left-0  w-full md:min-w-[350px] flex flex-col items-center justify-center p-4 bg-[#fff] text-gray-800 rounded-lg shadow-lg md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible transition-all duration-300 z-10">
                                 <Image alt="logo" src={partner.logo} width={150} height={75} className="w-auto h-auto mb-2" />
                                 <h3 className={`text-lg font-semibold ${partner.link ==='#' ? 'text-black no-underline' : 'text-blue-600 underline'}`}>{partner.title}</h3>
                                 <p className="text-gray-700 text-sm mt-2">{partner.description}</p>
