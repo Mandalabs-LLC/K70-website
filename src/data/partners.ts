@@ -21,6 +21,7 @@ import trekagency from '../../public/images/partners/trekagency.png';
 import blueberry from '../../public/images/partners/blueberry.png';
 import naott from '../../public/images/partners/naott.png';
 import nepalmountaineering from '../../public/images/partners/nepalmountaineering.png';
+import preserving_legacies from '../../public/images/partners/preservinglegacieshorizontal.png';
 
 interface Partner {
     title: string;
@@ -113,6 +114,12 @@ export const ourPartners:Partner[] =[
         description: "Anchors the holistic development and promotion of Kangchenjunga by providing various support to attract the tourists to the Kangchenjunga Conservation Area.",
         link:"https://ntb.gov.np/",
         logo: ntb,
+    },
+    {
+        title: "Preserving Legacies",
+        description: "",
+        link:"https://www.heritageadapts.org/",
+        logo: preserving_legacies,
     },
     {
         title: "Red Panda Network",

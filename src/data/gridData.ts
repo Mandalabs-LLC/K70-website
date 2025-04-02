@@ -5,13 +5,14 @@ import future from '../../public/images/future.jpg';
 import k70events from '../../public/images/K70events.jpg';
 import partners from '../../public/images/partners.jpg';
 import gallery from '../../public/images/gallery.jpg';
-import nature from '../../public/images/nature.jpg';
+import nature from '../../public/images/nature.png';
 import { StaticImageData } from 'next/image';
 
 interface GridItem {
     event: string;
     link: string;
-    photo: StaticImageData
+    photo: StaticImageData;
+    credit?:string;
 }
 
 export const gridData: GridItem[] = [
@@ -28,7 +29,8 @@ export const gridData: GridItem[] = [
     {
         event: "nature",
         link: "/details/nature",
-        photo: nature
+        photo: nature,
+        credit:'RPN/Nima Dawa Sherpa',
     },
     {
         event: "climbing history",
