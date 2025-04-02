@@ -13,11 +13,13 @@ export default function Home() {
 
   return (
     <>
-     {submit === "success" && <PopupMessage/>}
-      <HeroSection/>
-      <GridSection/>
-      <EventPostComponent />
-      <ContactSection/>
+      {submit === "success" && <PopupMessage />}
+      <div className="min-h-screen">
+        <HeroSection />
+        <GridSection />
+        <EventPostComponent />
+        <ContactSection />
+      </div>
     </>
   );
 }

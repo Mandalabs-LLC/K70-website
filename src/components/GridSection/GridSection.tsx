@@ -11,6 +11,7 @@ const GridSection: FC = () => {
             title={data.event}
             imageUrl={data.photo}
             link={data.link}
+            credit={data.credit}
           />
         ))}
       </div>

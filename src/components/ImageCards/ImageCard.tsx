@@ -6,9 +6,10 @@ interface ImageCardProps {
   title: string;
   imageUrl: StaticImageData;
   link: string;
+  credit?:string;
 }
 
-const ImageCard: FC<ImageCardProps> = ({ title, imageUrl, link }) => {
+const ImageCard: FC<ImageCardProps> = ({ title, imageUrl, link, credit }) => {
   return (
     <div className='relative w-auto h-[288px] xl:h-[288px] 2xl:h-[378px] overflow-hidden border-[1.5px] border-[#93B5C1]'>
       <Link href={link}>
@@ -21,6 +22,7 @@ const ImageCard: FC<ImageCardProps> = ({ title, imageUrl, link }) => {
           className='object-cover w-full h-full hover:scale-110 transition-transform duration-300 z-10'
           priority
         />
+        <p className='absolute bottom-2 right-2 text-[9px] text-white'>{credit}</p>
       </Link>
     </div>
   );

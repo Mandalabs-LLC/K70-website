@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { gridData } from '@/data/gridData';
+import { galleryData } from '@/data/gallery';
 import InstagramImageCard from '@/components/ImageCards/InstagramImageCard';
 import { FaArrowRightLong,FaArrowLeftLong } from "react-icons/fa6";
 
 const EventPostComponent = () => {
     const [startIndex, setStartIndex] = useState(0);
     const [imagesToShow, setImagesToShow] = useState(3);
+    const carouselData = galleryData.slice(55, 65);
 
     // Function to handle the responsive display of images
     const handleResize = () => {
@@ -29,15 +30,12 @@ const EventPostComponent = () => {
 
     // Carousel navigation handlers for infinite scrolling
     const handlePrev = () => {
-        setStartIndex((prev) => (prev - 1 + gridData.length) % gridData.length);
+        setStartIndex((prev) => (prev - 1 + carouselData.length) % carouselData.length);
     };
 
     const handleNext = () => {
-        setStartIndex((prev) => (prev + 1) % gridData.length);
+        setStartIndex((prev) => (prev + 1) % carouselData.length);
     };
-
-    // To make the infinite loop work, append the first item to the end of the list
-    const carouselData = [...gridData, gridData[0]]; // Cloning the first item at the end
 
     return (
         <div className="py-10 md:px-20 bg-[#FAFBFD]">
@@ -78,8 +76,8 @@ const EventPostComponent = () => {
                                 className="min-w-[calc(100%/3)] 2xl:min-w-[calc(100%/4)] flex-shrink-0"
                             >
                                 <InstagramImageCard
-                                    link={data.link}
-                                    imageUrl={data.photo}
+                                    link={"/details/gallery"}
+                                    imageUrl={data.imageUrl}
                                     altText={`Post ${index + 1}`}
                                 />
                             </div>
@@ -105,11 +103,11 @@ const EventPostComponent = () => {
 
             <div className='flex flex-col justify-center items-center lg:hidden mx-auto'>
                 <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-                    {gridData.map((data, index) => (
+                    {carouselData.map((data, index) => (
                         <InstagramImageCard
                             key={index}
-                            link={data.link}
-                            imageUrl={data.photo}
+                            link={"/details/gallery"}
+                            imageUrl={data.imageUrl}
                             altText={`Post ${index + 1}`}
                         />
                     ))}
