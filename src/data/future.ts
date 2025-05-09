@@ -1,10 +1,32 @@
 import { StaticImageData } from "next/image";
 import future from '../../public/images/future/future.jpg';
-import piller1 from '../../public/images/future/piller1.jpg';
-import piller2 from '../../public/images/future/piller2.jpg';
-import piller3 from '../../public/images/future/piller3.jpg';
-import piller4 from '../../public/images/future/piller4.jpg';
-import piller5 from '../../public/images/future/piller5.jpg';
+import piller1 from '@/../public/images/future/pillar1.png';
+import piller2 from '@/../public/images/future/Pillar2.png';
+import piller3 from '@/../public/images/future/pillar3.png';
+import piller4 from '@/../public/images/future/pillar4.png';
+import piller5 from '@/../public/images/future/pillar5.png';
+import {
+    worldlink,
+    nimb,
+    redpanda,
+    sedra,
+    snv,
+    unesco,
+    wwf,
+    AlternativeEnergyPromotionCenter,
+    logo,
+    designcell,
+    giz,
+    himalayanTrust,
+    nationaltrust,
+    blueberry,
+    naott,
+    nepalmountaineering,
+    keep,
+    gov,
+    ntc,
+    actionnepal,
+} from './partnerImages'
 
 interface futureData {
     content: string;
@@ -28,57 +50,135 @@ export const futureData = [
     },
 ]
 
-interface futureSecondSectionImagesData {
-    image: StaticImageData;
-    title: string;
-    content: string;
-
+interface tourismData {
+    pillars: {
+        id: number;
+        title: string;
+        description: string;
+        image: StaticImageData;
+        initiatives: string[];
+        logos: {
+            name: string;
+            image: StaticImageData;
+        }[];
+    }[];
 }
 
-export const futureSecondSectionImages: futureSecondSectionImagesData[] = [
-    {
-        image: piller1,
-        title: "Pillar I: Environment and Conservation",
-        content: `This pillar of the Samriddha Kangchenjunga Programme focuses on safeguarding the rich ecological heritage and biodiversity
-        of the Kangchenjunga region. This pillar ensures that the Kangchenjunga region's unique biodiversity is preserved for future 
-        generations while fostering a sustainable balance between ecological and human needs. It focuses on conserving Kangchenjunga’s
-        unique ecosystems through research, species protection, and education. Key actions include supporting 
-         <a href="https://unesco.org/" style="color:#2B76A3; text-decoration: underline;" target="_blank"> 
-        UNESCO</a> Biosphere Reserve
-        status, conserving Red Pandas and Blue Sheep, and raising environmental awareness in schools. The program promotes biodiversity
-        while creating sustainable livelihoods for local communities.`
-    },
-    {
-        image: piller2,
-        title: "Pillar II: Sustainable Tourism Infrastructure",
-        content: `This pillar focuses on improving essential infrastructure to support eco-tourism while preserving the environment. Key 
-        initiatives include the development of the park with the tourist information and permit center, establishing porter capacity 
-        building and welfare center, clean drinking water systems in the community villages and high mountain camps, sanitation 
-        facilities, renewable energy projects, trail development and maintenance, and a waste management system to enhance visitor
-        experience and community well-being. Also, the introduction of Building Codes (bylaws) in the region to protect the local
-        architecture and culture and the support of telecom and internet service providers to expand their network coverage.`
-    },
-    {
-        image: piller3,
-        title: "Pillar III: Community Human Capital & Economic Development",
-        content: `This aims to empower local communities by enhancing skills, creating employment opportunities, and supporting
-        small businesses. It includes capacity building of lodges/hotels/tea houses, porter training and certification program, vocational
-        education to produce skilled manpower, capacity building for conservation and tourism stakeholders, and management planning for 
-        sustainable development. It will also provide technical support to KCAMC to develop a management plan that serves as a master plan
-        for the development of KCA.`
-    },
-    {
-        image: piller4,
-        title: "Pillar IV: Smart Technologies",
-        content: `Integrates modern technology to improve conservation efforts, visitor experiences, and connectivity. Activities 
-        include upgrading websites and management systems, expanding mobile and internet networks, and using tech tools 
-        for effective monitoring and management.`
-    },
-    {
-        image: piller5,
-        title: "Pillar V: Destination Marketing",
-        content: `Seeks to promote Kangchenjunga as a leading eco-tourism destination through strategic marketing efforts. This
-        includes organizing events, producing high-quality content, enhancing digital platforms, and revising policies for sustainable tourism revenue.`
-    },
-
-]
+export const tourismData: tourismData = {
+    pillars: [
+        {
+            id: 1,
+            title: "Environment and Conservation",
+            description: "Pillar I: Environment and Conservation",
+            image: piller1,
+            initiatives: [
+                "i. UNESCO bio-sphere programme",
+                "ii. Red panda habitat protection project",
+                "iii. Climate smart and tourism school project",
+                "iv. Snow leopard habitat protection project",
+                "v. Conservation nursery project",
+                "vi. Rangeland conservation project",
+                "vii. Sustainable forest management",
+                "viii. Water resources management"
+            ],
+            logos: [
+                { name: "WWF", image: wwf },
+                { name: "Red Panda Network", image: redpanda },
+                { name: "Nepal Government", image: gov },
+                { name: "National Trust for Nature Conservation", image: nationaltrust },
+                { name: "UNESCO", image: unesco }
+            ]
+        },
+        {
+            id: 2,
+            title: "Sustainable Tourism Infrastructure",
+            description: "Pillar II: Sustainable Tourism Infrastructure",
+            image: piller2,
+            initiatives: [
+                "i. Kangchenjunga park center",
+                "ii. Tourist information and exhibition center",
+                "iii. Tourist ticket counter",
+                "iv. Community multi-purpose training center",
+                "v. Kangchenjunga porter and welfare center",
+                "vi. Clean energy",
+                "vii. Waste management",
+                "viii. Clean drinking water project",
+                "ix. Community sanitation programme",
+                "x. Trail development and management",
+                "xi. KCA building codes/guidelines",
+                "xii. KCA check posts",
+                "xiii. Resting station",
+                "xiv. Porter shelter",
+                "xv. High altitude health center"
+            ],
+            logos: [
+                { name: "SNV", image: snv },
+                { name: "Alternative Energy Promotion Centre", image: AlternativeEnergyPromotionCenter },
+                { name: "The Blueberry Hill Charitable Trust", image: blueberry },
+                { name: "GIZ", image: giz },
+                { name: "Design Cell", image: designcell },
+                { name: "NIMB", image: nimb }
+            ] 
+        },
+        {
+            id: 3,
+            title: "Community Human Capital & Economic Development",
+            description: "Pillar III: Community Human Capital & Economic Development",
+            image: piller3,
+            initiatives: [
+                "i. Institutional capacity",
+                "ii. Building of KCAMC (governance & management)",
+                "iii. Development of KCAMC 5th management plan (2025/26-2029/30)",
+                "iv. Enterprise development (forest based, tourism, livelihoods)",
+                "v. Capacity building of service providers and service standardization",
+                "vi. Tourism skills and vocational training",
+                "vii. Agriculture and supply chain management",
+                "viii. Porter training",
+                "ix. Capacity building of community institution (access to finance)",
+                "x. Improving service skills in transportation"
+            ],
+            logos: [
+                { name: "Himalayan", image: himalayanTrust },
+                { name: "Nepal Mountaineering Association", image: nepalmountaineering },
+                { name: "SERDAC", image: sedra },
+                { name: "SNV", image: snv },
+                { name: "Action Nepal", image: actionnepal },
+                { name: "Kathmandu Environmental Education", image: keep }
+            ]
+        },
+        {
+            id: 4,
+            title: "Smart Technologies",
+            description: "Pillar IV: Smart Technologies",
+            image: piller4,
+            initiatives: [
+                "i. Digital strategy for KCA (10 Years)",
+                "ii. Management information system for KCA",
+                "iii. Visitor safety management system",
+                "iv. Digital monitoring system",
+                "v. Expansion of connectivity (mobile and internet network)"
+            ],
+            logos: [
+                { name: "Nepal Government", image: gov },
+                { name: "Nepal Telecom", image: ntc },
+                { name: "World Link", image: worldlink }
+            ]
+        },
+        {
+            id: 5,
+            title: "Destination Marketing",
+            description: "Pillar V: Destination Marketing",
+            image: piller5,
+            initiatives: [
+                "i. KCA tourism development plan",
+                "ii. KCA tourism product development",
+                "iii. Destination promotion events and activities (K70)",
+                "iv. Private sector engagement in tourism promotion"
+            ],
+            logos: [
+                { name: "Kanchenjunga", image: logo },
+                { name: "Nepal Association of Tour & Travel Agents", image: naott }
+            ]
+        }
+    ]
+};
