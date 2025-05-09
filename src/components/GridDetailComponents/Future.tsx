@@ -2,7 +2,7 @@
 import Image from "next/image";
 import background2 from '../../../public/images/background2.jpg';
 import { futureData } from '../../data/future';
-import { futureSecondSectionImages } from '../../data/future';
+import { tourismData } from '../../data/future';
 import { CustomModal } from "./Gallery";
 import { useState } from "react";
 import kcamcLogo from '../../../public/images/kcamcLogo.svg'
@@ -10,6 +10,7 @@ import kcamcLogo from '../../../public/images/kcamcLogo.svg'
 export const Future = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [modalImage, setModalImage] = useState<string>("");
+    const [activePillar, setActivePillar] = useState(1);
 
     const openModal = (imageUrl: string): void => {
         setModalImage(imageUrl);
@@ -21,6 +22,13 @@ export const Future = () => {
         setIsModalOpen(false);
         document.body.style.overflow = ""; // Re-enable scrolling
     };
+
+    const handleHover = (pillarId: number) => {
+        setActivePillar(pillarId);
+    };
+
+    const activePillarData = tourismData?.pillars?.find(pillar => pillar.id === activePillar);
+
     return (
         <>
             <Image
@@ -42,7 +50,7 @@ export const Future = () => {
                         {data.video && (
                             <video src={data.video} autoPlay muted loop className="shadow-lg border-8 border-white object-cover lg:h-[450px] lg:w-[400px] xxl:h-[465px] xxl:w-[563px] 3xl:w-auto z-20" />
                         )}
-                        
+
                     </div>
                 </div>
             ))}
@@ -60,14 +68,67 @@ export const Future = () => {
                     Samriddha Kangchenjunga’s holistic program has a five-pillar approach of focused development in the Kangchenjunga region.
                 </p>
 
-                <div className="flex flex-col lg:flex-row flex-wrap justify-center gap-8 h-auto w-full">
-                    {futureSecondSectionImages.map((data, index) => (
-                        <div key={index} className="flex flex-col lg:items-center gap-6 lg:w-[428px]">
-                            <Image src={data.image} alt="img" className="shadow-lg border-8 border-white " onClick={() => openModal(data.image as any)} />
-                            <p className="text-blue-light text-xl text-left lg:text-center font-bold">{data.title}</p>
-                            <h2 dangerouslySetInnerHTML={{ __html: data.content }}></h2>
+                <div className="flex flex-col bg-white ">
+                    {/* Navigation Tabs */}
+                    <div className="flex gap-5 w-full">
+                        {tourismData?.pillars?.map((pillar) => (
+                            <div
+                                key={pillar?.id}
+                                className={`flex-1 px-3 py-2 text-left cursor-pointer transition-all duration-300 rounded-sm  ${activePillar === pillar.id
+                                    ? 'bg-[#024B66] text-white'
+                                    : 'bg-[#EAEFFA] text-[#2B76A3] hover:bg-[#D0D8EE]'
+                                    }`}
+                                onMouseEnter={() => handleHover(pillar.id)}
+                            >
+                                <div className="text-sm xl:text-base">{pillar.description}</div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Content Area */}
+                    <div className="container mx-auto px-4 pt-8 flex-grow ">
+                        <div className="flex flex-col md:flex-row gap-8">
+                            {/* Left Column - Image */}
+                            <div className="md:w-1/2 ">
+                                <div className="p-2 border-4 border-white shadow-lg">
+                                    {activePillarData?.image && <Image
+                                        src={activePillarData?.image}
+                                        alt={activePillarData?.title}
+                                        className="w-full h-auto object-cover"
+                                        onClick={() => openModal(activePillarData?.image as any)}
+                                    />}
+                                </div>
+                            </div>
+
+                            {/* Right Column - Content */}
+                            <div className="md:w-1/2">
+                                <h2 className="text-xl font-bold text-[#2B76A3] mb-5">{activePillarData?.description}</h2>
+                                <div className="">
+                                    <ul className="gap-2 xl:h-[320px] flex flex-col xl:flex-wrap">
+                                        {activePillarData?.initiatives.map((initiative, index) => (
+                                            <li key={index} className="text-[#1B1F2ACC] text-sm 2xl:text-base ">{initiative}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    ))}
+
+                        {/* Partners/Logos Section */}
+                        <div className="mt-2 ">
+                            <div className="flex flex-wrap gap-8 justify-center items-center">
+                                {activePillarData?.logos.map((logo, index) => (
+                                    <div key={index} className="w-40 h-20 flex items-center justify-center">
+                                        <Image
+                                            src={logo.image}
+                                            alt={logo.name}
+                                            className="max-w-full max-h-full object-contain"
+                                             onClick={() => openModal(logo.image as any)}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -82,7 +143,7 @@ export const Future = () => {
                 currentIndex={0} // Placeholder for now; update if needed for carousel-like navigation
                 images={[modalImage]} // Pass single image as an array
                 onClose={closeModal}
-                // onNavigate={() => { }} // Empty function since we are not navigating between images
+            // onNavigate={() => { }} // Empty function since we are not navigating between images
             />
 
         </>
