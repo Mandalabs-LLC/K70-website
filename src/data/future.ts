@@ -68,8 +68,8 @@ export const tourismData: tourismData = {
     pillars: [
         {
             id: 1,
-            title: "Environment and Conservation",
-            description: "Pillar I: Environment and Conservation",
+            title: "Pillar I",
+            description: "Environment and Conservation",
             image: piller1,
             initiatives: [
                 "i. UNESCO bio-sphere programme",
@@ -91,8 +91,8 @@ export const tourismData: tourismData = {
         },
         {
             id: 2,
-            title: "Sustainable Tourism Infrastructure",
-            description: "Pillar II: Sustainable Tourism Infrastructure",
+            title: "Pillar II",
+            description: "Sustainable Tourism Infrastructure",
             image: piller2,
             initiatives: [
                 "i. Kangchenjunga park center",
@@ -122,8 +122,8 @@ export const tourismData: tourismData = {
         },
         {
             id: 3,
-            title: "Community Human Capital & Economic Development",
-            description: "Pillar III: Community Human Capital & Economic Development",
+            title: "Pillar III",
+            description: "Community Human Capital & Economic Development",
             image: piller3,
             initiatives: [
                 "i. Institutional capacity",
@@ -148,8 +148,8 @@ export const tourismData: tourismData = {
         },
         {
             id: 4,
-            title: "Smart Technologies",
-            description: "Pillar IV: Smart Technologies",
+            title: "Pillar IV",
+            description: "Smart Technologies",
             image: piller4,
             initiatives: [
                 "i. Digital strategy for KCA (10 Years)",
@@ -166,8 +166,8 @@ export const tourismData: tourismData = {
         },
         {
             id: 5,
-            title: "Destination Marketing",
-            description: "Pillar V: Destination Marketing",
+            title: "Pillar V",
+            description: "Destination Marketing",
             image: piller5,
             initiatives: [
                 "i. KCA tourism development plan",

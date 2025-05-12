@@ -46,27 +46,29 @@ export const Events = () => {
           </div>
 
           <div className="w-2/3 flex flex-col justify-between">
-            <p className="text-primary-light text-base md:text-lg tracking-wider" dangerouslySetInnerHTML={{ __html: k70Events[currentIndex].content }} />
-            {k70Events[currentIndex]?.images?.filter(Boolean).length ? (
-              <div className="grid grid-cols-3 gap-4 pt-10 min-h-[220px]">
-                {k70Events[currentIndex].images.map((image, index) => (
-                  <div key={index} className="shadow-md border-8 border-white bg-white min-h-[150px]">
-                    <Image
-                      onClick={() => image.src && openModal(image.src)}
-                      height={150}
-                      src={image}
-                      alt={k70Events[currentIndex]?.title || "Event Image"}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
-                  </div>
-                ))}
-              </div>
-            ) : null}
+            {k70Events.map((data, index) => (
+              <div key={index} className={"" + (index === currentIndex ? 'block' : 'hidden')}>
+                <p className="text-primary-light text-base md:text-lg tracking-wider" dangerouslySetInnerHTML={{ __html: data?.content }} />
+                <div className="grid grid-cols-3 gap-4 pt-10 min-h-[220px]">
+                  {data?.images?.map((image, index) => (
+                    <div key={index} className="shadow-md border-8 border-white bg-white min-h-[150px]">
+                      <Image
+                        onClick={() => image.src && openModal(image.src)}
+                        height={150}
+                        src={image}
+                        alt={data?.title || "Event Image"}
+                        className="w-full h-full object-cover"
+                        priority
+                      />
+                    </div>
+                  ))}
+                </div>
 
-            <p className="uppercase text-blue-dark bebasNeue tracking-wider text-3xl text-right pt-10">
-              {k70Events[currentIndex].title}
-            </p>
+                <p className="uppercase text-blue-dark bebasNeue tracking-wider text-3xl text-right pt-10">
+                  {data?.title}
+                </p>
+              </div>
+            ))}
           </div>
 
         </div>
@@ -76,7 +78,7 @@ export const Events = () => {
           {k70Events.map((data, index) => (
             <div key={index} className="border border-black space-y-5">
               <p className="uppercase bebasNeue tracking-wider border-b border-black text-blue-light text-2xl px-5 py-3">{data.date}</p>
-              <p className="text-primary-light text-base tracking-wider px-5" dangerouslySetInnerHTML={{ __html: data.content }}/>
+              <p className="text-primary-light text-base tracking-wider px-5" dangerouslySetInnerHTML={{ __html: data.content }} />
               <p className="uppercase text-blue-dark bebasNeue tracking-wider text-2xl text-right px-5 pb-3">
                 {data.title}
               </p>
@@ -105,7 +107,7 @@ export const Events = () => {
         currentIndex={0} // Placeholder for now; update if needed for carousel-like navigation
         images={[modalImage]} // Pass single image as an array
         onClose={closeModal}
-        // onNavigate={() => { }} // Empty function since we are not navigating between images
+      // onNavigate={() => { }} // Empty function since we are not navigating between images
       />
 
     </>
