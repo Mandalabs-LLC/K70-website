@@ -28,7 +28,7 @@ export const Future = () => {
     };
 
     const activePillarData = tourismData?.pillars?.find(pillar => pillar.id === activePillar);
-
+    
     return (
         <>
             <Image
@@ -87,51 +87,58 @@ export const Future = () => {
 
                     {/* Content Area */}
                     <div className="container mx-auto px-4 pt-8 flex-grow ">
-                        <div className="flex flex-col md:flex-row gap-8">
-                            {/* Left Column - Image */}
-                            <div className="md:w-1/2 ">
-                                <div className="p-2 border-4 border-white shadow-lg">
-                                    {activePillarData?.image && <Image
-                                        src={activePillarData?.image}
-                                        alt={activePillarData?.title}
-                                        className="w-full h-auto object-cover"
-                                        onClick={() => openModal(activePillarData?.image as any)}
-                                    />}
-                                </div>
-                            </div>
 
-                            {/* Right Column - Content */}
-                            <div className="md:w-1/2">
-                                <h2 className="text-xl font-bold text-[#2B76A3] mb-5">{activePillarData?.description}</h2>
-                                <div className="">
-                                    <ul className="gap-2 xl:h-[320px] flex flex-col xl:flex-wrap">
-                                        {activePillarData?.initiatives.map((initiative, index) => (
-                                            <li key={index} className="text-[#1B1F2ACC] text-sm 2xl:text-base ">{initiative}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Partners/Logos Section */}
-                        <div className="mt-2 ">
-                            <div className="flex flex-wrap gap-8 justify-center items-center">
-                                {activePillarData?.logos.map((logo, index) => (
-                                    <div key={index} className="w-40 h-20 flex items-center justify-center">
-                                        <Image
-                                            src={logo.image}
-                                            alt={logo.name}
-                                            className="max-w-full max-h-full object-contain"
-                                             onClick={() => openModal(logo.image as any)}
-                                        />
+                        {tourismData.pillars.map((pillar) => (
+                            <div key={pillar.id} className={`${activePillar === pillar.id ? 'block' : 'hidden'}`}>
+                                <div className='flex flex-col md:flex-row gap-8'>
+                                    {/* Left Column - Image */}
+                                    <div className="md:w-1/2 ">
+                                        <div className="p-2 border-4 border-white shadow-lg">
+                                            {pillar?.image && <Image
+                                                src={pillar?.image}
+                                                alt={pillar?.title}
+                                                className="w-full h-auto object-cover"
+                                                onClick={() => openModal(activePillarData?.image as any)}
+                                            />}
+                                        </div>
                                     </div>
-                                ))}
+
+                                    {/* Right Column - Content */}
+                                    <div className="md:w-1/2">
+                                        <h2 className="text-xl font-bold text-[#2B76A3] mb-5">{pillar?.description}</h2>
+                                        <div className="">
+                                            <ul className="gap-2 xl:h-[320px] flex flex-col xl:flex-wrap">
+                                                {pillar?.initiatives.map((initiative, index) => (
+                                                    <li key={index} className="text-[#1B1F2ACC] text-sm 2xl:text-base ">{initiative}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Partners/Logos Section */}
+                                < div className="mt-2 " >
+                                    <div className="flex flex-wrap gap-8 justify-center items-center">
+                                        {pillar?.logos.map((logo, index) => (
+                                            <div key={index} className="w-40 h-20 flex items-center justify-center">
+                                                <Image
+                                                    src={logo.image}
+                                                    alt={logo.name}
+                                                    className="max-w-full max-h-full object-contain"
+                                                    onClick={() => openModal(logo.image as any)}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        ))}
+
+
+
                     </div>
                 </div>
 
-            </div>
+            </div >
             <h2 className="text-white bebasNeue tracking-widest text-xl lg:text-3xl text-center pt-16 pb-16 bg-[#024B66]">
                 “Conserving nature whilst empowering communities of Kangchenjunga, the world’s third highest mountain” <br />
                 <p className="text-lg mt-4">– Samriddha Kangchenjunga</p>
