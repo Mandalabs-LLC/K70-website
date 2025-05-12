@@ -26,8 +26,6 @@ export const Future = () => {
     const handleHover = (pillarId: number) => {
         setActivePillar(pillarId);
     };
-
-    const activePillarData = tourismData?.pillars?.find(pillar => pillar.id === activePillar);
     
     return (
         <>
@@ -98,7 +96,7 @@ export const Future = () => {
                                                 src={pillar?.image}
                                                 alt={pillar?.title}
                                                 className="w-full h-auto object-cover"
-                                                onClick={() => openModal(activePillarData?.image as any)}
+                                                onClick={() => openModal(pillar?.image as any)}
                                             />}
                                         </div>
                                     </div>
