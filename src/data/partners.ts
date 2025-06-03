@@ -27,6 +27,9 @@ import {
   gov,
   ntc,
   actionnepal,
+  bfc,
+  luma,
+  reed
 } from './partnerImages'
 
 interface Partner {
@@ -54,6 +57,12 @@ export const ourPartners:Partner[] =[
         description: "",
         link:"https://www.gov.uk/world/organisations/british-embassy-kathmandu",
         logo: BritishEmbassyKathmandu,
+    },
+    {
+        title: "Business & Finance Consulting",
+        description: "",
+        link:"https://bfconsulting.com/",
+        logo: bfc,
     },
     {
         title: "Business 360",
@@ -102,6 +111,12 @@ export const ourPartners:Partner[] =[
         description: "",
         link:"https://keepnepal.org/",
         logo: keep,
+    },
+    {
+        title: "Luma Collectives",
+        description: "",
+        link:"https://www.luma-collective.com/",
+        logo: luma,
     },
     {
         title: "Nepal Association of Tours and Travel Agents",
@@ -156,6 +171,12 @@ export const ourPartners:Partner[] =[
         description: "Red Panda Network will collaborate with Samriddha Kangchenjunga Program to protect endangered wildlife and promote biodiversity conservation. Their programs will support K70's efforts to raise awareness about wildlife protection.",
         link:"https://redpandanetwork.org/",
         logo: redpanda,
+    },
+    {
+        title: "Rural Education and Environment Development Center",
+        description: "",
+        link:"https://reednepal.org/",
+        logo: reed,
     },
     {
         title: "SEDRA Project/Business and Finance Consulting",
